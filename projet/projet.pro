@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    tache.cpp
+    tache.cpp \
+    tachemanager.cpp
 
 HEADERS  += mainwindow.h \
-    tache.h
+    tache.h \
+    tachemanager.h
 
 FORMS    += mainwindow.ui

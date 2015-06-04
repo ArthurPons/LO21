@@ -1,16 +1,22 @@
 #ifndef TACHE_H
 #define TACHE_H
 
+#include<QString>
+#include<QVector>
+#include "tache.cpp"
+
 class Tache
 {
 protected:
-    Qstring titre;
-    Qstring description;
-    std::vector<*Tache> precedence;
+    QString titre;
+    QString description;
+    QVector<Tache*> precedence;
 
 public:
-    Tache();
-    ~Tache();
+    Tache(QString t,QString d);
+    //~Tache();
+    QString getTitre() const {return titre;}
+    QString getDescription() const {return description;}
 };
 
 #endif // TACHE_H

@@ -1,12 +1,14 @@
 #include "tache.h"
 
-Tache::Tache()
+Tache::Tache(QString t, QString d):
+    titre(t),description(d),precedence(0)
 {
 
 }
 
+/*
 Tache::~Tache()
 {
 
 }
-
+*/
