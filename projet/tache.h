@@ -13,6 +13,7 @@ class Tache
 private:
     Tache(const QString& id, const QString& t,const QString& d, Projet *p);
     Tache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de, Projet *p);
+    ~Tache();
     // Rajouter constructeur par recopie et opérateur =
 
 protected:
@@ -25,13 +26,10 @@ protected:
     Projet* projet;
 
 public:
-    //~Tache();
     Projet* getProjet() const {return projet;}
     QString getIdentifiant() const {return identifiant;}
     QString getTitre() const {return titre;}
     QString getDescription() const {return description;}
-    void const setProjet(Projet *p){projet=p;}
-
 };
 
 #endif // TACHE_H

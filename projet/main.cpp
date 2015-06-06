@@ -5,6 +5,7 @@
 #include<qDebug>
 #include "tache.h"
 #include "projet.h"
+#include "projetmanager.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,13 +13,16 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    Projet projet1("projet1","pdescription1");
+    ProjetManager& pm=ProjetManager::Instance();
 
-    projet1.createAddTache("t1","titre1","description1",&projet1);
+    Projet* projet1=pm.createProjet("Projet1","DescriptionProjet1");
 
-    Tache* tache=projet1.getTache("t1");
-    qDebug()<<tache->getDescription();
-    projet1.createAddTache("t1","titre1","description1",&projet1);
+    qDebug()<<projet1->getTitre();
+
+    Tache* tache1=projet1->createAddTache("t1","titre1","description1");
+
+    qDebug()<<tache1->getProjet()->getDescription();
+
 
     return a.exec();
 }

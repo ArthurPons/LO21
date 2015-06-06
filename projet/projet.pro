@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     tache.cpp \
-    projet.cpp
+    projet.cpp \
+    projetmanager.cpp
 
 HEADERS  += mainwindow.h \
     tache.h \
     tachemanager.h \
-    projet.h
+    projet.h \
+    projetmanager.h
 
 FORMS    += mainwindow.ui
