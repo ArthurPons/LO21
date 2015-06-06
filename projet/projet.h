@@ -4,6 +4,7 @@
 #include<QVector>
 #include<QDate>
 #include "tache.h"
+#include "tacheunitaire.h"
 
 class Projet
 {
@@ -16,7 +17,7 @@ private:
     QVector<Tache*> listeTaches;
     Projet(const QString& t, const QString& d);
     Projet(const QString& t, const QString& d, const QDate& dd, const QDate& de);
-    //~Projet();
+    ~Projet();
 
 public:
     QString getTitre()const{return titre;}

@@ -12,6 +12,7 @@ ProjetManager::ProjetManager()
 ProjetManager::~ProjetManager()
 {
     qDebug()<<"Destruction de ProjetManager";
+    listeProjets.~QVector();
 }
 
 ProjetManager& ProjetManager::Instance()

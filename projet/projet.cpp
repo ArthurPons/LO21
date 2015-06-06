@@ -20,12 +20,13 @@ Projet::Projet(const QString& t, const QString& d, const QDate& dd, const QDate&
 
 //Le destructeur détruit les tâches qui sont associées au projet
 
-/*
-~Projet()
-{
 
+Projet::~Projet()
+{
+    qDebug()<<"Destruction du Projet"<<titre;
+    listeTaches.~QVector();
 }
-*/
+
 
 //Récupère une tâche en fonction de son identifiant
 

@@ -13,7 +13,7 @@ class Tache
 private:
     Tache(const QString& id, const QString& t,const QString& d, Projet *p);
     Tache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de, Projet *p);
-    ~Tache();
+    virtual ~Tache();
     // Rajouter constructeur par recopie et opérateur =
 
 protected:

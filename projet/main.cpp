@@ -24,5 +24,7 @@ int main(int argc, char *argv[])
     qDebug()<<tache1->getProjet()->getDescription();
 
 
+
+
     return a.exec();
 }
