@@ -37,42 +37,79 @@ Tache* Projet::getTache(const QString& id)
         if(id==listeTaches.at(i)->getIdentifiant())
             return listeTaches.at(i);
     }
-    qDebug()<<"La Tache n'est pas liee au projet"<<getTitre();
+    qDebug()<<"La Tache"<<id<<"n'est pas liee au projet"<<getTitre();
     return 0;
 }
 
 //Créer puis ajoute une tâche au projet
 
-Tache* Projet::createAddTache(const QString& id, const QString& t,const QString& d)
+TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
+                                const int dur, const bool pre)
 {
-    Tache* tache;
-    tache = new Tache(id, t, d, this);
+    TacheUnitaire* tache;
+    tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
 
     int n=listeTaches.size();
     for(int i=0;i<n;i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
-            qDebug()<<"La tache est deja liee au projet"<<getTitre();
+            qDebug()<<"La tache unitaire"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
     listeTaches.append(tache);
-    qDebug()<<"Tache"<<id<<"ajoutee au projet"<<getTitre();
+    qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
 }
 
-Tache* Projet::createAddTache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de)
+TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, const QString& desc,
+                                const QDate& dd, const QDate& de, const int dur, const bool pre)
 {
-    Tache* tache;
-    tache = new Tache(id, t, d, dd, de, this);
+    TacheUnitaire* tache;
+    tache = new TacheUnitaire(id, tit, desc, dd, de, dur, pre, this);
 
     int n=listeTaches.size();
     for(int i=0;i<n;i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
-            qDebug()<<"La tache"<<id<<"est deja liee au projet"<<getTitre();
+            qDebug()<<"La tache unitaire "<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
     listeTaches.append(tache);
-    qDebug()<<"Tache"<<id<<"ajoutee au projet"<<getTitre();
+    qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
+    return tache;
+}
+
+TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit, const QString &desc)
+{
+    TacheComposite* tache;
+    tache = new TacheComposite(id, tit, desc, this);
+
+    int n=listeTaches.size();
+    for(int i=0;i<n;i++)
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
+            qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
+            delete tache;
+            return 0;
+        }
+    listeTaches.append(tache);
+    qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
+    return tache;
+}
+
+TacheComposite* Projet::addtacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
+                                  const QDate& de)
+{
+    TacheComposite* tache;
+    tache = new TacheComposite(id, tit, desc, dd, de, this);
+
+    int n=listeTaches.size();
+    for(int i=0;i<n;i++)
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
+            qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
+            delete tache;
+            return 0;
+        }
+    listeTaches.append(tache);
+    qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
 }

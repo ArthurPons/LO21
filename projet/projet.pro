@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     tache.cpp \
     projet.cpp \
     projetmanager.cpp \
-    tacheunitaire.cpp
+    tacheunitaire.cpp \
+    tachecomposite.cpp
 
 HEADERS  += mainwindow.h \
     tache.h \
     tachemanager.h \
     projet.h \
     projetmanager.h \
-    tacheunitaire.h
+    tacheunitaire.h \
+    tachecomposite.h
 
 FORMS    += mainwindow.ui

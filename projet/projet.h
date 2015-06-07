@@ -5,6 +5,7 @@
 #include<QDate>
 #include "tache.h"
 #include "tacheunitaire.h"
+#include "tachecomposite.h"
 
 class Projet
 {
@@ -24,8 +25,13 @@ public:
     QString getDescription()const{return description;}
     //QString getDescription()const{return description;}
     //QString getDatedispo()const{return datedispo;}
-    Tache* createAddTache(const QString& id, const QString& t,const QString& d);
-    Tache* createAddTache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de);
+    TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
+                                    const int dur, const bool pre);
+    TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit, const QString& desc, const QDate& dd, const QDate& de,
+                                    const int dur, const bool pre);
+    TacheComposite* addTacheComposite(const QString &id, const QString &tit, const QString &desc);
+    TacheComposite* addtacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
+                                      const QDate& de);
     Tache* getTache(const QString& id);
 };
 

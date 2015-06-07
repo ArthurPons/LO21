@@ -9,14 +9,14 @@ class Projet;
 
 class Tache
 {
-    friend class Projet;
 private:
-    Tache(const QString& id, const QString& t,const QString& d, Projet *p);
-    Tache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de, Projet *p);
-    virtual ~Tache();
     // Rajouter constructeur par recopie et opérateur =
 
 protected:
+    Tache(const QString& id, const QString& t,const QString& d, Projet *p);
+    Tache(const QString& id, const QString& t, const QString& d, const QDate& dd, const QDate& de, Projet *p);
+    virtual ~Tache()=0;
+
     QString identifiant;
     QString titre;
     QString description;
