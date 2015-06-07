@@ -16,7 +16,7 @@ private:
 
 
 public:
-
+    void addSousTache(Tache *tache);
 
 };
 

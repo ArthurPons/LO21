@@ -32,8 +32,7 @@ Projet::~Projet()
 
 Tache* Projet::getTache(const QString& id)
 {
-    int n=listeTaches.size();
-    for(int i=0;i<n;i++){
+    for(int i=0;i<listeTaches.size();i++){
         if(id==listeTaches.at(i)->getIdentifiant())
             return listeTaches.at(i);
     }
@@ -44,13 +43,11 @@ Tache* Projet::getTache(const QString& id)
 //Créer puis ajoute une tâche au projet
 
 TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
-                                const int dur, const bool pre)
+                                        const int dur, const bool pre)
 {
-    TacheUnitaire* tache;
-    tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
+    TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
 
-    int n=listeTaches.size();
-    for(int i=0;i<n;i++)
+    for(int i=0;i<listeTaches.size();i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache unitaire"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
@@ -62,13 +59,11 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,co
 }
 
 TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, const QString& desc,
-                                const QDate& dd, const QDate& de, const int dur, const bool pre)
+                                        const QDate& dd, const QDate& de, const int dur, const bool pre)
 {
-    TacheUnitaire* tache;
-    tache = new TacheUnitaire(id, tit, desc, dd, de, dur, pre, this);
+    TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dd, de, dur, pre, this);
 
-    int n=listeTaches.size();
-    for(int i=0;i<n;i++)
+    for(int i=0;i<listeTaches.size();i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache unitaire "<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
@@ -81,11 +76,9 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, c
 
 TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit, const QString &desc)
 {
-    TacheComposite* tache;
-    tache = new TacheComposite(id, tit, desc, this);
+    TacheComposite* tache = new TacheComposite(id, tit, desc, this);
 
-    int n=listeTaches.size();
-    for(int i=0;i<n;i++)
+    for(int i=0;i<listeTaches.size();i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
@@ -99,11 +92,9 @@ TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit,
 TacheComposite* Projet::addtacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
                                   const QDate& de)
 {
-    TacheComposite* tache;
-    tache = new TacheComposite(id, tit, desc, dd, de, this);
+    TacheComposite* tache = new TacheComposite(id, tit, desc, dd, de, this);
 
-    int n=listeTaches.size();
-    for(int i=0;i<n;i++)
+    for(int i=0;i<listeTaches.size();i++)
         if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;

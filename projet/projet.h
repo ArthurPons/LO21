@@ -23,8 +23,10 @@ private:
 public:
     QString getTitre()const{return titre;}
     QString getDescription()const{return description;}
-    //QString getDescription()const{return description;}
-    //QString getDatedispo()const{return datedispo;}
+    QVector<Tache*> getlisteTaches()const{return listeTaches;}
+    QDate getDatedispo()const{return datedispo;}
+    QDate getDateecheance()const{return dateecheance;}
+
     TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
                                     const int dur, const bool pre);
     TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit, const QString& desc, const QDate& dd, const QDate& de,

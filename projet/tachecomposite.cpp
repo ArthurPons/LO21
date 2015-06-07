@@ -19,3 +19,32 @@ TacheComposite::~TacheComposite()
     qDebug()<<"Suppression de la tache composite"<<identifiant;
 }
 
+void TacheComposite::addSousTache(Tache* tache)
+{
+    Projet* projetTacheAjoutee = tache->getProjet();
+    Projet* projetTacheComposite = getProjet();
+
+    if(projetTacheAjoutee!=projetTacheComposite)
+    {
+        qDebug()<<"La tache composite"<<identifiant<<"et la tache"<<tache->getIdentifiant()
+                <<"n'appartiennent pas au meme projet, ajout impossible";
+        return;
+    }
+
+    if(tache->getTachemere()!=0)
+    {
+        qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja liee a la tache composite"
+                <<tache->getTachemere()->getIdentifiant();
+        return;
+    }
+
+    for(int i=0;i<listeSousTaches.size();i++)
+        if(tache->getIdentifiant()==listeSousTaches.at(i)->getIdentifiant()){
+            qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja une sous tache de"<<getTitre();
+            return;
+        }
+    listeSousTaches.append(tache);
+    tache->setTachemere(this);
+    qDebug()<<"La tache"<<tache->getIdentifiant()<<"a ete ajoutee en tant que sous tache de"<<getTitre();
+}
+

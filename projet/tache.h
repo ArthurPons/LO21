@@ -6,6 +6,7 @@
 #include<QVector>
 
 class Projet;
+class TacheComposite;
 
 class Tache
 {
@@ -24,12 +25,16 @@ protected:
     QDate dateecheance;
     QVector<Tache*> precedence;
     Projet* projet;
+    TacheComposite* tachemere;
 
 public:
     Projet* getProjet() const {return projet;}
     QString getIdentifiant() const {return identifiant;}
     QString getTitre() const {return titre;}
     QString getDescription() const {return description;}
+    TacheComposite* getTachemere() const {return tachemere;}
+    void setTachemere(TacheComposite *mere);
+
 };
 
 #endif // TACHE_H
