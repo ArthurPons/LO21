@@ -17,6 +17,7 @@ private:
 
 public:
     void addSousTache(Tache *tache);
+    QVector<Tache*> getListeSousTaches() const {return listeSousTaches;}
 
 };
 

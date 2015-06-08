@@ -6,6 +6,7 @@
 #include<QVector>
 
 class Projet;
+class TacheUnitaire;
 class TacheComposite;
 
 class Tache
@@ -21,20 +22,22 @@ protected:
     QString identifiant;
     QString titre;
     QString description;
-    QDate datedispo;
-    QDate dateecheance;
-    QVector<Tache*> precedence;
+    QDate dateDispo;
+    QDate dateEcheance;
+    QVector<Tache*> listeTachesMeresPrecedence;
     Projet* projet;
-    TacheComposite* tachemere;
+    TacheComposite* tacheMereComposite;
 
 public:
     Projet* getProjet() const {return projet;}
     QString getIdentifiant() const {return identifiant;}
     QString getTitre() const {return titre;}
     QString getDescription() const {return description;}
-    TacheComposite* getTachemere() const {return tachemere;}
-    void setTachemere(TacheComposite *mere);
-
+    TacheComposite* getTacheMereComposite() const {return tacheMereComposite;}
+    QVector<Tache*> getListeTachesMeresPrecedence() const {return listeTachesMeresPrecedence;}
+    void setTacheMereComposite(TacheComposite* mere);
+    void addPrecedence(TacheComposite* precedence);
+    void addPrecedence(TacheUnitaire* precedence);
 };
 
 #endif // TACHE_H

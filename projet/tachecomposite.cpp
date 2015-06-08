@@ -31,10 +31,10 @@ void TacheComposite::addSousTache(Tache* tache)
         return;
     }
 
-    if(tache->getTachemere()!=0)
+    if(tache->getTacheMereComposite()!=0)
     {
         qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja liee a la tache composite"
-                <<tache->getTachemere()->getIdentifiant();
+                <<tache->getTacheMereComposite()->getIdentifiant();
         return;
     }
 
@@ -44,7 +44,7 @@ void TacheComposite::addSousTache(Tache* tache)
             return;
         }
     listeSousTaches.append(tache);
-    tache->setTachemere(this);
+    tache->setTacheMereComposite(this);
     qDebug()<<"La tache"<<tache->getIdentifiant()<<"a ete ajoutee en tant que sous tache de"<<getTitre();
 }
 

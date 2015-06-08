@@ -23,8 +23,12 @@ int main(int argc, char *argv[])
     TacheComposite* tache3=projet1->addTacheComposite("t3","titre3","desc3");
     TacheComposite* tache4=projet1->addTacheComposite("t4","titre4","desc4");
 
-    tache3->addSousTache(tache2);
-    tache4->addSousTache(tache3);
+    tache1->addPrecedence(tache2);
+    tache1->addPrecedence(tache3);
+
+    QVector<Tache*> precedencesTache1=tache1->getListeTachesMeresPrecedence();
+    for(int i=0;i<precedencesTache1.size();i++)
+        qDebug()<<"La tache"<<precedencesTache1.at(i)->getIdentifiant()<<"precede la tache"<<tache1->getIdentifiant();
 
     return a.exec();
 }
