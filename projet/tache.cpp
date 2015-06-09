@@ -2,6 +2,7 @@
 #include<iostream>
 #include "tache.h"
 #include "projet.h"
+#include "tachecomposite.h"
 
 Tache::Tache(const QString &id, const QString &t, const QString &d, Projet* p):
     identifiant(id),titre(t),description(d),projet(p),tacheMereComposite(0)
@@ -43,7 +44,14 @@ bool Tache::checkPrecedence(Tache* precedence)
     if(listeTachesMeresPrecedence.contains(precedence)||this==precedence){
         return 0;
     }
+
     for(int i=0;i<precedence->getListeTachesMeresPrecedence().size();i++){
+        TacheComposite* precedenceComposite=dynamic_cast<TacheComposite*>(precedence->getListeTachesMeresPrecedence().at(i));
+        if(precedenceComposite!=0)
+            for(int j=0;j<precedenceComposite->getListeSousTaches().size();j++){
+               if(!checkPrecedence(precedenceComposite->getListeSousTaches().at(j)))
+                   return 0;
+            }
         if(!checkPrecedence(precedence->getListeTachesMeresPrecedence().at(i))){
             return 0;
         }
