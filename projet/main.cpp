@@ -20,16 +20,16 @@ int main(int argc, char *argv[])
 
     TacheUnitaire* tache1=projet1->addTacheUnitaire("t1","titre1","description1",30,1);
     TacheUnitaire* tache2=projet1->addTacheUnitaire("t2","titre2","description2",30,1);
-    TacheComposite* tache3=projet1->addTacheComposite("t3","titre3","desc3");
-    TacheComposite* tache4=projet1->addTacheComposite("t4","titre4","desc4");
-    TacheComposite* tache5=projet1->addTacheComposite("t5","titre2","description2");
+    TacheUnitaire* tache3=projet1->addTacheUnitaire("t3","titre2","description2",30,1);
+    TacheComposite* tache4=projet1->addTacheComposite("t4","titre3","desc3");
+    TacheComposite* tache5=projet1->addTacheComposite("t5","titre4","desc4");
+    TacheComposite* tache6=projet1->addTacheComposite("t6","titre2","description2");
 
-    tache5->addSousTache(tache1);
-
-    tache3->addPrecedence(tache5);
-    tache2->addPrecedence(tache3);
-    tache2->addPrecedence(tache4);
-    tache1->addPrecedence(tache2);
+    tache4->addSousTache(tache1);
+    tache4->addSousTache(tache3);
+    tache5->addSousTache(tache4);
+    tache5->addSousTache(tache2);
+    tache1->addPrecedence(tache5);
 
     //Question : Est-ce qu'une sous-tâche peut précéder sa tache mêre ?
 

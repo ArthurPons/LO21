@@ -45,13 +45,24 @@ bool Tache::checkPrecedence(Tache* precedence)
         return 0;
     }
 
+    TacheComposite* tachecompo=dynamic_cast<TacheComposite*>(precedence);
+    if(tachecompo!=0){
+        for(int i=0;i<tachecompo->getListeSousTaches().size();i++){
+            for(int j=0;j<tachecompo->getProjet()->getlisteTaches().size();j++){
+                if(!tachecompo->getListeSousTaches().at(i)->checkPrecedence(tachecompo->getProjet()->getlisteTaches().at(j)))
+                    return 0;
+            }
+        }
+    }
+
     for(int i=0;i<precedence->getListeTachesMeresPrecedence().size();i++){
         TacheComposite* precedenceComposite=dynamic_cast<TacheComposite*>(precedence->getListeTachesMeresPrecedence().at(i));
-        if(precedenceComposite!=0)
+        if(precedenceComposite!=0){
             for(int j=0;j<precedenceComposite->getListeSousTaches().size();j++){
                if(!checkPrecedence(precedenceComposite->getListeSousTaches().at(j)))
                    return 0;
             }
+        }
         if(!checkPrecedence(precedence->getListeTachesMeresPrecedence().at(i))){
             return 0;
         }

@@ -40,11 +40,11 @@ void TacheComposite::addSousTache(Tache* tache)
 
     for(int i=0;i<listeSousTaches.size();i++)
         if(tache->getIdentifiant()==listeSousTaches.at(i)->getIdentifiant()){
-            qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja une sous tache de"<<getTitre();
+            qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja une sous tache de"<<getIdentifiant();
             return;
         }
     listeSousTaches.append(tache);
     tache->setTacheMereComposite(this);
-    qDebug()<<"La tache"<<tache->getIdentifiant()<<"a ete ajoutee en tant que sous tache de"<<getTitre();
+    qDebug()<<"La tache"<<tache->getIdentifiant()<<"a ete ajoutee en tant que sous tache de"<<getIdentifiant();
 }
 
