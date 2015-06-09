@@ -24,8 +24,11 @@ int main(int argc, char *argv[])
     TacheComposite* tache4=projet1->addTacheComposite("t4","titre4","desc4");
 
     tache1->addPrecedence(tache2);
+    tache2->addPrecedence(tache3);
+    tache3->addPrecedence(tache4);
+    tache4->addPrecedence(tache1);
 
-
+    //Question : Est-ce qu'une sous-tâche peut précéder sa tache mêre ?
 
     /*
     QVector<Tache*> precedencesTache1=tache1->getListeTachesMeresPrecedence();

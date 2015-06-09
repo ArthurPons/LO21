@@ -36,8 +36,9 @@ public:
     TacheComposite* getTacheMereComposite() const {return tacheMereComposite;}
     QVector<Tache*> getListeTachesMeresPrecedence() const {return listeTachesMeresPrecedence;}
     void setTacheMereComposite(TacheComposite* mere);
-    void addPrecedence(TacheComposite* precedence);
-    void addPrecedence(TacheUnitaire* precedence);
+
+    bool checkPrecedence(Tache* precedence);
+    void addPrecedence(Tache* precedence);
 };
 
 #endif // TACHE_H
