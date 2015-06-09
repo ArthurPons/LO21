@@ -29,7 +29,9 @@ int main(int argc, char *argv[])
     tache4->addSousTache(tache3);
     tache5->addSousTache(tache4);
     tache5->addSousTache(tache2);
-    tache1->addPrecedence(tache5);
+    tache1->addPrecedence(tache6);
+    tache6->addPrecedence(tache5);
+
 
     //Question : Est-ce qu'une sous-tâche peut précéder sa tache mêre ?
 

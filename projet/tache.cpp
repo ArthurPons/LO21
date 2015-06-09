@@ -29,6 +29,7 @@ void Tache::setTacheMereComposite(TacheComposite *mere)
 void Tache::addPrecedence(Tache* precedence)
 {
     if(checkPrecedence(precedence)){
+        precedence->getListeTachesFillesPrecedence().append(this);
         listeTachesMeresPrecedence.append(precedence);
         qDebug()<<"La tache"<<precedence->getIdentifiant()<<"precede la tache"<<identifiant;
         return;
@@ -41,17 +42,20 @@ void Tache::addPrecedence(Tache* precedence)
 
 bool Tache::checkPrecedence(Tache* precedence)
 {
+    qDebug()<<"entree!";
+
     if(listeTachesMeresPrecedence.contains(precedence)||this==precedence){
+        qDebug()<<"Je vais buguer parce que la tache"<<precedence->getIdentifiant()
+                <<"ne peut pas être precedence de"<<identifiant;
         return 0;
     }
 
     TacheComposite* tachecompo=dynamic_cast<TacheComposite*>(precedence);
+
     if(tachecompo!=0){
         for(int i=0;i<tachecompo->getListeSousTaches().size();i++){
-            for(int j=0;j<tachecompo->getProjet()->getlisteTaches().size();j++){
-                if(!tachecompo->getListeSousTaches().at(i)->checkPrecedence(tachecompo->getProjet()->getlisteTaches().at(j)))
-                    return 0;
-            }
+            if(!checkPrecedence(tachecompo->getListeSousTaches().at(i)))
+                return 0;
         }
     }
 
