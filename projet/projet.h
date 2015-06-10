@@ -34,6 +34,9 @@ public:
     TacheComposite* addTacheComposite(const QString &id, const QString &tit, const QString &desc);
     TacheComposite* addTacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
                                       const QDate& de);
+    void suppTache(TacheUnitaire* tache);
+    void suppTache(TacheComposite* tache);
+
     Tache* getTache(const QString& id);
 };
 

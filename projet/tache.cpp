@@ -74,3 +74,10 @@ bool Tache::checkPrecedence(Tache* precedence)
     return 1;
 }
 
+void Tache::suppPrecedence(Tache* precedence)
+{
+    for(int i=0;i<listeTachesMeresPrecedence.size();i++){
+        if(listeTachesMeresPrecedence.at(i)==precedence)
+            listeTachesMeresPrecedence.remove(i);
+    }
+}
