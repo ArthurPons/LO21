@@ -32,7 +32,7 @@ public:
     TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit, const QString& desc, const QDate& dd, const QDate& de,
                                     const int dur, const bool pre);
     TacheComposite* addTacheComposite(const QString &id, const QString &tit, const QString &desc);
-    TacheComposite* addtacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
+    TacheComposite* addTacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
                                       const QDate& de);
     Tache* getTache(const QString& id);
 };

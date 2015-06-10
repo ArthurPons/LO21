@@ -89,7 +89,7 @@ TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit,
     return tache;
 }
 
-TacheComposite* Projet::addtacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
+TacheComposite* Projet::addTacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
                                   const QDate& de)
 {
     TacheComposite* tache = new TacheComposite(id, tit, desc, dd, de, this);

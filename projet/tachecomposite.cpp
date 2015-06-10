@@ -24,6 +24,11 @@ void TacheComposite::addSousTache(Tache* tache)
     Projet* projetTacheAjoutee = tache->getProjet();
     Projet* projetTacheComposite = getProjet();
 
+    if(tache->getDateDispo()<dateDispo || tache->getDateEcheance()>dateEcheance){
+        qDebug()<<"Les dates ne collent pas pour les taches"<<identifiant<<tache->getIdentifiant();
+        return;
+    }
+
     if(projetTacheAjoutee!=projetTacheComposite)
     {
         qDebug()<<"La tache composite"<<identifiant<<"et la tache"<<tache->getIdentifiant()
@@ -43,6 +48,7 @@ void TacheComposite::addSousTache(Tache* tache)
             qDebug()<<"La tache"<<tache->getIdentifiant()<<"est deja une sous tache de"<<getIdentifiant();
             return;
         }
+
     listeSousTaches.append(tache);
     tache->setTacheMereComposite(this);
     qDebug()<<"La tache"<<tache->getIdentifiant()<<"a ete ajoutee en tant que sous tache de"<<getIdentifiant();

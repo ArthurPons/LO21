@@ -25,7 +25,6 @@ protected:
     QDate dateDispo;
     QDate dateEcheance;
     QVector<Tache*> listeTachesMeresPrecedence;
-    QVector<Tache*> listeTachesFillesPrecedence;
     Projet* projet;
     TacheComposite* tacheMereComposite;
 
@@ -34,9 +33,10 @@ public:
     QString getIdentifiant() const {return identifiant;}
     QString getTitre() const {return titre;}
     QString getDescription() const {return description;}
+    QDate getDateDispo() const {return dateDispo;}
+    QDate getDateEcheance() const {return dateEcheance;}
     TacheComposite* getTacheMereComposite() const {return tacheMereComposite;}
     QVector<Tache*> getListeTachesMeresPrecedence() const {return listeTachesMeresPrecedence;}
-    QVector<Tache*> getListeTachesFillesPrecedence() const {return listeTachesFillesPrecedence;}
     void setTacheMereComposite(TacheComposite* mere);
 
     bool checkPrecedence(Tache* precedence);
