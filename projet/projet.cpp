@@ -105,66 +105,43 @@ TacheComposite* Projet::addTacheComposite(const QString& id, const QString& tit,
 
 void Projet::suppTache(TacheUnitaire* tache)
 {
-    //Suppression de tous les endroits où il est marqué comme une précédence
-
     for(int i=0;i<listeTaches.size();i++){
 
-        qDebug()<<"J'en suis a"<<listeTaches.at(i)->getIdentifiant();
+        //Suppression de tous les endroits où il est marqué comme une précédence
 
-        for(int k=0;i<listeTaches.at(k)->getListeTachesMeresPrecedence().size();k++){
-            qDebug()<<"Precedence"<<listeTaches.at(k)->getListeTachesMeresPrecedence().at(k)->getIdentifiant();
-        }
-
-        for(int j=0;j<listeTaches.at(i)->getListeTachesMeresPrecedence().size();j++){
-            if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache){
-                qDebug()<<"J'enleve la precedence"<<listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)->getIdentifiant();
+        for(int j=0;j<listeTaches.at(i)->getListeTachesMeresPrecedence().size();j++)
+            if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache)
                 listeTaches.at(i)->suppPrecedence(tache);
-            }
-        }
-    }
 
-    //Suppression dans le projet
+        //Suppression dans le projet
 
-    for(int i=0;i<listeTaches.size();i++){
-        if(listeTaches.at(i)==tache){
-            qDebug()<<"J'enleve la tache de la liste";
+        if(listeTaches.at(i)==tache)
             listeTaches.remove(i);
-            //listeTaches.squeeze();
-        }
-    }
 
+    }
     delete tache;
+    //tache=NULL;
 }
 
 void Projet::suppTache(TacheComposite* tache)
 {
-    //Suppression de tous les endroits où il est marqué comme une précédence
-
     for(int i=0;i<listeTaches.size();i++){
 
-        qDebug()<<"J'en suis a"<<listeTaches.at(i)->getIdentifiant();
+        //Suppression de tous les endroits où il est marqué comme une précédence
 
-        for(int k=0;i<listeTaches.at(k)->getListeTachesMeresPrecedence().size();k++){
-            qDebug()<<"Precedence"<<listeTaches.at(k)->getListeTachesMeresPrecedence().at(k)->getIdentifiant();
-        }
-
-        for(int j=0;j<listeTaches.at(i)->getListeTachesMeresPrecedence().size();j++){
-            if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache){
-                qDebug()<<"J'enleve la precedence"<<listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)->getIdentifiant();
+        for(int j=0;j<listeTaches.at(i)->getListeTachesMeresPrecedence().size();j++)
+            if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache)
                 listeTaches.at(i)->suppPrecedence(tache);
-            }
-        }
-    }
 
-    //Suppression dans le projet
+        //Suppression dans le projet
 
-    for(int i=0;i<listeTaches.size();i++){
-        if(listeTaches.at(i)==tache){
-            qDebug()<<"J'enleve la tache de la liste";
+        if(listeTaches.at(i)==tache)
             listeTaches.remove(i);
-            //listeTaches.squeeze();
-        }
-    }
 
+        if(listeTaches.at(i)->getTacheMereComposite()==tache->getTacheMereComposite())
+            delete listeTaches.at(i)->getTacheMereComposite();
+
+    }
     delete tache;
+    tache=NULL;
 }

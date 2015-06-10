@@ -18,7 +18,7 @@ TacheUnitaire::TacheUnitaire(const QString& id, const QString& tit, const QStrin
 TacheUnitaire::~TacheUnitaire()
 {
 
-    qDebug()<<"Suppression de la tache unitaire"<<identifiant;
+    qDebug()<<"Debut de la suppression de la tache unitaire"<<identifiant;
 }
 
 

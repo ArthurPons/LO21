@@ -30,33 +30,26 @@ int main(int argc, char *argv[])
     TacheComposite* tache5=projet1->addTacheComposite("t5","titre4","desc4");
     TacheComposite* tache6=projet1->addTacheComposite("t6","titre2","description2");
 
+    tache4->addSousTache(tache5);
+
+    qDebug()<<tache5->getTacheMereComposite()->getIdentifiant();
+
     qDebug()<<projet1->getlisteTaches().size();
 
-    for(int i=0;i<projet1->getlisteTaches().size();i++){
-        qDebug()<<projet1->getlisteTaches().at(i)->getIdentifiant();
-    }
-
-    //projet1->suppTache(tache1);
     projet1->suppTache(tache4);
 
-    for(int i=0;i<projet1->getlisteTaches().size();i++){
-        qDebug()<<projet1->getlisteTaches().at(i)->getIdentifiant();
-    }
+    qDebug()<<tache4;
+
+    //tache4=NULL;
 
     qDebug()<<projet1->getlisteTaches().size();
 
-    tache3->addPrecedence(tache2);
-    tache3->addPrecedence(tache1);
-
-    qDebug()<<tache3->getListeTachesMeresPrecedence().size();
-
-    projet1->suppTache(tache2);
-
-    qDebug()<<tache3->getListeTachesMeresPrecedence().size();
-
-    for(int i=0;i<tache3->getListeTachesMeresPrecedence().size();i++)
-        qDebug()<<tache3->getListeTachesMeresPrecedence().at(i)->getIdentifiant();
-
+    /*
+    if(tache5->getTacheMereComposite())
+        qDebug()<<tache5->getTacheMereComposite()->getIdentifiant();
+    else
+        qDebug()<<"vide";
+    */
     //Question : Est-ce qu'une sous-tâche peut précéder sa tache mêre ?
 
     /*

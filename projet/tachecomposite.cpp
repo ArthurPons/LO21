@@ -16,7 +16,7 @@ TacheComposite::TacheComposite(const QString& id, const QString& tit, const QStr
 
 TacheComposite::~TacheComposite()
 {
-    qDebug()<<"Suppression de la tache composite"<<identifiant;
+    qDebug()<<"Debut de suppression de la tache composite"<<identifiant;
 }
 
 void TacheComposite::addSousTache(Tache* tache)
