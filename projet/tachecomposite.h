@@ -10,7 +10,7 @@ private:
     TacheComposite(const QString& id, const QString& tit, const QString& desc, Projet *p);
     TacheComposite(const QString& id, const QString& tit, const QString& desc, const QDate& dd,
                    const QDate& de, Projet *p);
-    ~TacheComposite();
+    virtual ~TacheComposite();
 
     QVector<Tache*> listeSousTaches;
 

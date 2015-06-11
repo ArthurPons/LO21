@@ -125,6 +125,8 @@ void Projet::suppTache(TacheUnitaire* tache)
 
 void Projet::suppTache(TacheComposite* tache)
 {
+    tache->getListeSousTaches().clear();
+
     for(int i=0;i<listeTaches.size();i++){
 
         //Suppression de tous les endroits où il est marqué comme une précédence
@@ -133,15 +135,15 @@ void Projet::suppTache(TacheComposite* tache)
             if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache)
                 listeTaches.at(i)->suppPrecedence(tache);
 
+        //Suppression de toutes les sous-taches
+
+        if(listeTaches.at(i)->getTacheMereComposite()==tache)
+            delete listeTaches.at(i);
+
         //Suppression dans le projet
 
         if(listeTaches.at(i)==tache)
             listeTaches.remove(i);
-
-        if(listeTaches.at(i)->getTacheMereComposite()==tache->getTacheMereComposite())
-            delete listeTaches.at(i)->getTacheMereComposite();
-
     }
     delete tache;
-    tache=NULL;
 }

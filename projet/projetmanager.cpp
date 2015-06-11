@@ -56,17 +56,22 @@ Projet* ProjetManager::createProjet(const QString& t, const QString& d, const QD
 
 void ProjetManager::suppProjet(Projet* projet)
 {
-    for(int i=0;i<projet->getListeTaches().size();i++){
-        TacheUnitaire* tache=static_cast<TacheUnitaire*>(projet->getListeTaches().at(i));
-        qDebug()<<tache->getDuree()<<"Duree tache unitaire";
+    while(!projet->getListeTaches().empty()){
+        TacheUnitaire* tache=dynamic_cast<TacheUnitaire*>(projet->getListeTaches().at(0));
+        qDebug()<<projet->getListeTaches().at(0)->getIdentifiant();
         if(tache){
             qDebug()<<tache->getIdentifiant()<<"Tache unitaire";
-            //projet->suppTache(tache);
-        }
-        else{
-            qDebug()<<"Tache composite";
-            //tache=static_cast<TacheComposite*>(projet->getListeTaches().at(i));
-            //projet->suppTache(tache);
+            projet->suppTache(tache);
+        } else {
+            TacheComposite* tache1=dynamic_cast<TacheComposite*>(projet->getListeTaches().at(0));
+            qDebug()<<tache1->getIdentifiant()<<"Tache composite";
+            projet->suppTache(tache1);
         }
     }
+    for(int i=0;i<listeProjets.size();i++)
+        if(listeProjets.at(i)==projet)
+            listeProjets.remove(i);
+
+    delete projet;
 }
+
