@@ -1,10 +1,10 @@
 #include "eventmanager.h"
 
-EventManager::EventManager(QWidget *parent) : QWidget(parent)
+EventManager::EventManager()
 {
 
 }
 
-void addEvent(Event* evt){
+void EventManager::addEvent(Event* evt){
     events.push_back(evt);
 }

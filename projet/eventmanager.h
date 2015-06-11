@@ -2,13 +2,16 @@
 #define EVENTMANAGER_H
 
 #include <QWidget>
+#include <QVector>
+#include <QDialog>
 
-class EventManager : public QDialog
+class Event;
+
+class EventManager
 {
-    Q_OBJECT
 public:
-    explicit EventManager(QWidget *parent = 0);
-    vector<Event> events;
+    EventManager();
+    QVector<Event*> events;
     void addEvent(Event* evt);
     void deleteEvent(Event* evt);
 

@@ -15,9 +15,13 @@ private:
     QVector<Projet*> listeProjets;
 
 public:
+    static ProjetManager& Instance();
+
     Projet* createProjet(const QString& t, const QString& d);
     Projet* createProjet(const QString& t, const QString& d, const QDate& dd, const QDate& de);
-    static ProjetManager& Instance();
+
+
+    void suppProjet(Projet* projet);
 
 };
 

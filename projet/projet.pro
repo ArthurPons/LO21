@@ -18,7 +18,11 @@ SOURCES += main.cpp\
     projet.cpp \
     projetmanager.cpp \
     tacheunitaire.cpp \
-    tachecomposite.cpp
+    tachecomposite.cpp \
+    event.cpp \
+    eventmanager.cpp \
+    interface.cpp \
+    listeprojets.cpp
 
 HEADERS  += mainwindow.h \
     tache.h \
@@ -26,6 +30,10 @@ HEADERS  += mainwindow.h \
     projet.h \
     projetmanager.h \
     tacheunitaire.h \
-    tachecomposite.h
+    tachecomposite.h \
+    event.h \
+    eventmanager.h \
+    interface.h \
+    listeprojets.h
 
 FORMS    += mainwindow.ui

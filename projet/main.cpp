@@ -6,12 +6,16 @@
 #include "tache.h"
 #include "projet.h"
 #include "projetmanager.h"
+#include "event.h"
+#include "eventmanager.h"
+#include "interface.h"
+#include "listeprojets.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    w.show();
+    //w.show();
 
     ProjetManager& pm=ProjetManager::Instance();
 
@@ -30,19 +34,7 @@ int main(int argc, char *argv[])
     TacheComposite* tache5=projet1->addTacheComposite("t5","titre4","desc4");
     TacheComposite* tache6=projet1->addTacheComposite("t6","titre2","description2");
 
-    tache4->addSousTache(tache5);
-
-    qDebug()<<tache5->getTacheMereComposite()->getIdentifiant();
-
-    qDebug()<<projet1->getlisteTaches().size();
-
-    projet1->suppTache(tache4);
-
-    qDebug()<<tache4;
-
-    //tache4=NULL;
-
-    qDebug()<<projet1->getlisteTaches().size();
+    pm.suppProjet(projet1);
 
     /*
     if(tache5->getTacheMereComposite())
@@ -57,6 +49,10 @@ int main(int argc, char *argv[])
     for(int i=0;i<precedencesTache1.size();i++)
         qDebug()<<"La tache"<<precedencesTache1.at(i)->getIdentifiant()<<"precede la tache"<<tache1->getIdentifiant();
     */
+
+    Interface f;
+    f.setFixedSize(1300,500);
+    //f.show();
 
     return a.exec();
 }

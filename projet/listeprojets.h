@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QDialog>
 
 class ListeProjets : public QDialog
 {

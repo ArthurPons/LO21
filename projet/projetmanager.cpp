@@ -53,3 +53,20 @@ Projet* ProjetManager::createProjet(const QString& t, const QString& d, const QD
     qDebug()<<"Projet"<<t<<"ajoutee";
     return projet;
 }
+
+void ProjetManager::suppProjet(Projet* projet)
+{
+    for(int i=0;i<projet->getListeTaches().size();i++){
+        TacheUnitaire* tache=static_cast<TacheUnitaire*>(projet->getListeTaches().at(i));
+        qDebug()<<tache->getDuree()<<"Duree tache unitaire";
+        if(tache){
+            qDebug()<<tache->getIdentifiant()<<"Tache unitaire";
+            //projet->suppTache(tache);
+        }
+        else{
+            qDebug()<<"Tache composite";
+            //tache=static_cast<TacheComposite*>(projet->getListeTaches().at(i));
+            //projet->suppTache(tache);
+        }
+    }
+}

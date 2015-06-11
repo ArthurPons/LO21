@@ -23,7 +23,7 @@ private:
 public:
     QString getTitre()const{return titre;}
     QString getDescription()const{return description;}
-    QVector<Tache*> getlisteTaches()const{return listeTaches;}
+    QVector<Tache*> getListeTaches()const{return listeTaches;}
     QDate getDatedispo()const{return datedispo;}
     QDate getDateecheance()const{return dateecheance;}
 
