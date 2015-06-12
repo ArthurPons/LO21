@@ -16,13 +16,9 @@ Projet::Projet(const QString& t, const QString& d, const QDate& dd, const QDate&
     qDebug()<<"Creation du projet"<<t;
 }
 
-//Le destructeur détruit les tâches qui sont associées au projet
-
-
 Projet::~Projet()
 {
     qDebug()<<"Destruction du Projet"<<titre;
-    listeTaches.~QVector();
 }
 
 
@@ -43,18 +39,33 @@ Tache* Projet::getTache(const QString& id)
 TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
                                         const int dur, const bool pre)
 {
+    //On créer une instance de la classe pour faire des tests dessus
+
     TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
 
+    //On ne souhaite pas avoir deux tâches possédants les même identifiants
+    //Si ça ne va pas on supprime l'instance temporaire
+
     for(int i=0;i<listeTaches.size();i++)
-        if(tache==listeTaches.at(i)){
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache unitaire"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
+
+    //Si c'est bon on l'ajoute à la liste des taches
+
+    if(dur<=0){
+        qDebug()<<"La durée doit être supérieure à 0";
+        return 0;
+    }
+
     listeTaches.append(tache);
     qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
 }
+
+//Idem pour le constructeur surchargé
 
 TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, const QString& desc,
                                         const QDate& dd, const QDate& de, const int dur, const bool pre)
@@ -62,11 +73,22 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, c
     TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dd, de, dur, pre, this);
 
     for(int i=0;i<listeTaches.size();i++)
-        if(tache==listeTaches.at(i)){
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache unitaire "<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
+
+    if(dd>de){
+        qDebug()<<"La date de dispo doit être inférieure à celle d'echeance";
+        return 0;
+    }
+
+    if(dur<=0){
+        qDebug()<<"La durée doit être supérieure à 0";
+        return 0;
+    }
+
     listeTaches.append(tache);
     qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
@@ -77,11 +99,12 @@ TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit,
     TacheComposite* tache = new TacheComposite(id, tit, desc, this);
 
     for(int i=0;i<listeTaches.size();i++)
-        if(tache==listeTaches.at(i)){
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
+
     listeTaches.append(tache);
     qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
@@ -93,11 +116,17 @@ TacheComposite* Projet::addTacheComposite(const QString& id, const QString& tit,
     TacheComposite* tache = new TacheComposite(id, tit, desc, dd, de, this);
 
     for(int i=0;i<listeTaches.size();i++)
-        if(tache==listeTaches.at(i)){
+        if(tache->getIdentifiant()==listeTaches.at(i)->getIdentifiant()){
             qDebug()<<"La tache composite"<<id<<"est deja liee au projet"<<getTitre();
             delete tache;
             return 0;
         }
+
+    if(dd>de){
+        qDebug()<<"La date de dispo doit être inférieure à celle d'echeance";
+        return 0;
+    }
+
     listeTaches.append(tache);
     qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
@@ -120,7 +149,6 @@ void Projet::suppTache(TacheUnitaire* tache)
 
     }
     delete tache;
-    //tache=NULL;
 }
 
 void Projet::suppTache(TacheComposite* tache)

@@ -6,8 +6,7 @@
 #include "tache.h"
 #include "projet.h"
 #include "projetmanager.h"
-#include "event.h"
-#include "eventmanager.h"
+#include "evenement.h"
 #include "interface.h"
 #include "listeprojets.h"
 
@@ -25,7 +24,6 @@ int main(int argc, char *argv[])
     QDate de1(2015,9,6);
     QDate dd2(2015,9,10);
     QDate de2(2015,9,11);
-
 
     TacheUnitaire* tache3=projet1->addTacheUnitaire("t3","titre2","description2",30,1);
     TacheComposite* tache4=projet1->addTacheComposite("t4","titre3","desc3");

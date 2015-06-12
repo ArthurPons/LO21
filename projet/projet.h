@@ -7,6 +7,8 @@
 #include "tacheunitaire.h"
 #include "tachecomposite.h"
 
+//Composition entre projet et Tache, projet endosse le rôle d'un TacheManager
+
 class Projet
 {
     friend class ProjetManager;
@@ -26,6 +28,7 @@ public:
     QVector<Tache*> getListeTaches()const{return listeTaches;}
     QDate getDatedispo()const{return datedispo;}
     QDate getDateecheance()const{return dateecheance;}
+    Tache* getTache(const QString& id);
 
     TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,
                                     const int dur, const bool pre);
@@ -37,7 +40,6 @@ public:
     void suppTache(TacheUnitaire* tache);
     void suppTache(TacheComposite* tache);
 
-    Tache* getTache(const QString& id);
 };
 
 #endif // PROJET_H

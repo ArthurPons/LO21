@@ -4,6 +4,9 @@
 #include<QVector>
 #include "projet.h"
 
+//Composition entre ProjetManager et Projet
+//Design Pattern Singleton
+
 class ProjetManager
 {
 private:
@@ -20,9 +23,7 @@ public:
     Projet* createProjet(const QString& t, const QString& d);
     Projet* createProjet(const QString& t, const QString& d, const QDate& dd, const QDate& de);
 
-
     void suppProjet(Projet* projet);
-
 };
 
 #endif // PROJETMANAGER_H
