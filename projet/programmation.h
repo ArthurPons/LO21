@@ -2,24 +2,27 @@
 #define PROGRAMMATION_H
 
 #include <QDate>
+#include<QString>
 #include "Tache.h"
+
+class ProgrammationManager;
+class ProgrammationTache;
 
 class Programmation
 {
     friend class ProgrammationManager;
+protected:
+    Programmation(QString id, QDate dat, int hd, int hf);
+    virtual ~Programmation();
 
-private:
-    Programmation(int id, QDate dat, int hd, int hf);
-    ~Programmation();
-
-    int identifiant;
+    QString identifiant;
     QDate date;
     int heureDebut;
     int heureFin;
 
 
 public:
-    int getIdentifiant() const {return identifiant;}
+    QString getIdentifiant() const {return identifiant;}
     QDate getDate() const {return date;}
     int getHeureDebut() const {return heureDebut;}
     int getHeureFin() const {return heureFin;}

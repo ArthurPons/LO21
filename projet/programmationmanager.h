@@ -3,6 +3,7 @@
 
 #include<QVector>
 #include "Programmation.h"
+#include "ProgrammationTache.h"
 
 class ProgrammationManager
 {
@@ -19,7 +20,7 @@ public:
 
     QVector<Programmation*> getListeProgrammation()const{return listeProgrammation;}
 
-    Programmation* createProgrammationTache(int id, QDate dat, int hd, int hf, Tache *ta);
+    ProgrammationTache* addProgrammationTache(QString id, QDate dat, int hd, int hf, Tache *ta);
     void suppProgrammation(Programmation* prog);
 };
 

@@ -5,9 +5,10 @@
 
 class ProgrammationTache : public Programmation
 {
+    friend class ProgrammationManager;
 private:
-    ProgrammationTache(int id, QDate dat, int hd, int hf, Tache *ta);
-    ~ProgrammationTache();
+    ProgrammationTache(QString id, QDate dat, int hd, int hf, Tache *ta);
+    virtual ~ProgrammationTache();
 
     Tache* tache;
 
