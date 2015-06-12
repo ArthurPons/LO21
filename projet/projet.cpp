@@ -10,12 +10,6 @@ Projet::Projet(const QString& t, const QString& d):
     qDebug()<<"Creation du projet"<<t;
 }
 
-Projet::Projet(const QString& t, const QString& d, const QDate& dd, const QDate& de):
-    titre(t),description(d),datedispo(dd),dateecheance(de)
-{
-    qDebug()<<"Creation du projet"<<t;
-}
-
 Projet::~Projet()
 {
     qDebug()<<"Destruction du Projet"<<titre;
@@ -53,12 +47,18 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,co
             return 0;
         }
 
-    //Si c'est bon on l'ajoute à la liste des taches
+    //On vérifie que la durée de la tâche soit supérieure à 0
 
     if(dur<=0){
         qDebug()<<"La durée doit être supérieure à 0";
+        delete tache;
         return 0;
     }
+
+    //Si c'est bon on l'ajoute à la liste des taches et on met à jour la date d'échéance du projet
+
+    if(tache->getDateEcheance()>dateEcheance)
+        dateEcheance=tache->getDateEcheance();
 
     listeTaches.append(tache);
     qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
@@ -81,13 +81,18 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit, c
 
     if(dd>de){
         qDebug()<<"La date de dispo doit être inférieure à celle d'echeance";
+        delete tache;
         return 0;
     }
 
     if(dur<=0){
         qDebug()<<"La durée doit être supérieure à 0";
+        delete tache;
         return 0;
     }
+
+    if(tache->getDateEcheance()>dateEcheance)
+        dateEcheance=tache->getDateEcheance();
 
     listeTaches.append(tache);
     qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
@@ -104,6 +109,9 @@ TacheComposite* Projet::addTacheComposite(const QString &id, const QString &tit,
             delete tache;
             return 0;
         }
+
+    if(tache->getDateEcheance()>dateEcheance)
+        dateEcheance=tache->getDateEcheance();
 
     listeTaches.append(tache);
     qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
@@ -124,8 +132,12 @@ TacheComposite* Projet::addTacheComposite(const QString& id, const QString& tit,
 
     if(dd>de){
         qDebug()<<"La date de dispo doit être inférieure à celle d'echeance";
+        delete tache;
         return 0;
     }
+
+    if(tache->getDateEcheance()>dateEcheance)
+        dateEcheance=tache->getDateEcheance();
 
     listeTaches.append(tache);
     qDebug()<<"La tache composite"<<id<<"a ete ajoutee au projet"<<getTitre();
@@ -136,7 +148,7 @@ void Projet::suppTache(TacheUnitaire* tache)
 {
     for(int i=0;i<listeTaches.size();i++){
 
-        //Suppression de tous les endroits où il est marqué comme une précédence
+        //Suppression de tous les endroits où elle est marquée comme une précédence
 
         for(int j=0;j<listeTaches.at(i)->getListeTachesMeresPrecedence().size();j++)
             if(listeTaches.at(i)->getListeTachesMeresPrecedence().at(j)==tache)
@@ -148,7 +160,19 @@ void Projet::suppTache(TacheUnitaire* tache)
             listeTaches.remove(i);
 
     }
+
+    QDate de=tache->getDateEcheance();
+
     delete tache;
+
+    if(de==dateEcheance){
+        QDate newDe=listeTaches.at(0)->getDateEcheance();
+        for(int i=1;i<listeTaches.size();i++){
+            if(listeTaches.at(i)->getDateEcheance()>newDe)
+                newDe=listeTaches.at(i)->getDateEcheance();
+        }
+        dateEcheance=newDe;
+    }
 }
 
 void Projet::suppTache(TacheComposite* tache)
@@ -173,5 +197,17 @@ void Projet::suppTache(TacheComposite* tache)
         if(listeTaches.at(i)==tache)
             listeTaches.remove(i);
     }
+
+    QDate de=tache->getDateEcheance();
+
     delete tache;
+
+    if(de==dateEcheance){
+        QDate newDe=listeTaches.at(0)->getDateEcheance();
+        for(int i=1;i<listeTaches.size();i++){
+            if(listeTaches.at(i)->getDateEcheance()>newDe)
+                newDe=listeTaches.at(i)->getDateEcheance();
+        }
+        dateEcheance=newDe;
+    }
 }

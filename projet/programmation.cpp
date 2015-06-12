@@ -1,16 +1,10 @@
 #include<QDebug>
 #include "programmation.h"
 
-Programmation::Programmation(int id, Tache *ta, QDate dat, int hd, int hf):
-    identifiant(id),tache(ta),evenement(0),date(dat),heureDebut(hd),heureFin(hf)
+Programmation::Programmation(int id, QDate dat, int hd, int hf):
+    identifiant(id),date(dat),heureDebut(hd),heureFin(hf)
 {
-    qDebug()<<"Creation de la programmation"<<identifiant;
-}
-
-Programmation::Programmation(int id, Evenement *eve, QDate dat, int hd, int hf):
-    identifiant(id),tache(0),evenement(eve),date(dat),heureDebut(hd),heureFin(hf)
-{
-    qDebug()<<"Creation de la programmation"<<identifiant;
+    qDebug()<<"Debut de creation de la programmation"<<identifiant;
 }
 
 Programmation::~Programmation()

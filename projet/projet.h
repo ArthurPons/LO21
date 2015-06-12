@@ -15,19 +15,18 @@ class Projet
 private:
     QString titre;
     QString description;
-    QDate datedispo;
-    QDate dateecheance;
+    QDate dateDispo;
+    QDate dateEcheance;
     QVector<Tache*> listeTaches;
     Projet(const QString& t, const QString& d);
-    Projet(const QString& t, const QString& d, const QDate& dd, const QDate& de);
     ~Projet();
 
 public:
     QString getTitre()const{return titre;}
     QString getDescription()const{return description;}
     QVector<Tache*> getListeTaches()const{return listeTaches;}
-    QDate getDatedispo()const{return datedispo;}
-    QDate getDateecheance()const{return dateecheance;}
+    QDate getDateDispo()const{return dateDispo;}
+    QDate getDateEcheance()const{return dateEcheance;}
     Tache* getTache(const QString& id);
 
     TacheUnitaire* addTacheUnitaire(const QString& id, const QString& tit,const QString& desc,

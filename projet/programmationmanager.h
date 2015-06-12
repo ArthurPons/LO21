@@ -17,9 +17,10 @@ private:
 public:
     static ProgrammationManager& Instance();
 
-    Programmation* createProgrammation(const QString& t, const QString& d);
-    Programmation* createProgrammation(const QString& t, const QString& d, const QDate& dd, const QDate& de);
-    void suppProgrammation(Projet* projet);
+    QVector<Programmation*> getListeProgrammation()const{return listeProgrammation;}
+
+    Programmation* createProgrammationTache(int id, QDate dat, int hd, int hf, Tache *ta);
+    void suppProgrammation(Programmation* prog);
 };
 
 #endif // PROGRAMMATIONMANAGER_H
