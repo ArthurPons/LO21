@@ -112,6 +112,20 @@ ProgrammationActivite* ProgrammationManager::addProgrammationActivite(QString id
 
 }
 
+void ProgrammationManager::suppProgrammationTache(ProgrammationTache* prog)
+{
+    for(int i=0;i<listeProgrammation.size();i++){
+        if(listeProgrammation.at(i)==prog)
+            listeProgrammation.remove(i);
+    }
+
+    if(prog->getTache()->isPreemptee()){
+        prog->getTache()->setDureeRestante(prog->getTache()->getDureeRestante()+(prog->getHeureFin()-prog->getHeureDebut()));
+    }
+
+    delete prog;
+}
+
 void ProgrammationManager::suppProgrammationActivite(ProgrammationActivite* prog)
 {
     for(int i=0;i<listeProgrammation.size();i++){
@@ -122,12 +136,4 @@ void ProgrammationManager::suppProgrammationActivite(ProgrammationActivite* prog
     delete prog;
 }
 
-void ProgrammationManager::suppProgrammationTache(ProgrammationTache* prog)
-{
-    for(int i=0;i<listeProgrammation.size();i++){
-        if(listeProgrammation.at(i)==prog)
-            listeProgrammation.remove(i);
-    }
 
-    delete prog;
-}

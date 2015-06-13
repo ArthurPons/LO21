@@ -740,6 +740,7 @@ release\main.obj: ..\projet\main.cpp ..\projet\mainwindow.h \
 		..\projet\Tache.h \
 		..\projet\ProgrammationTache.h \
 		..\projet\programmation.h \
+		..\projet\programmationactivite.h \
 		..\projet\interface.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObject \
@@ -1678,7 +1679,8 @@ release\programmationmanager.obj: ..\projet\programmationmanager.cpp C:\Qt\Qt5.4
 		..\projet\Programmation.h \
 		..\projet\Tache.h \
 		..\projet\ProgrammationTache.h \
-		..\projet\programmation.h
+		..\projet\programmation.h \
+		..\projet\programmationactivite.h
 
 release\programmation.obj: ..\projet\programmation.cpp C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
@@ -1829,12 +1831,9 @@ release\programmationtache.obj: ..\projet\programmationtache.cpp C:\Qt\Qt5.4.1\5
 		..\projet\Tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector
 
-release\programmationactivite.obj: ..\projet\programmationactivite.cpp ..\projet\programmationactivite.h \
-		..\projet\programmation.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
+release\programmationactivite.obj: ..\projet\programmationactivite.cpp C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qalgorithms.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qconfig.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfeatures.h \
@@ -1863,23 +1862,49 @@ release\programmationactivite.obj: ..\projet\programmationactivite.cpp ..\projet
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobalstatic.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmutex.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnumeric.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrefcount.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qarraydata.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qshareddata.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qhash.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiterator.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlist.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qalgorithms.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrefcount.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qarraydata.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringbuilder.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpair.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtextstream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiodevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreevent.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmetatype.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qisenum.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlocale.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvariant.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringlist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatastream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregexp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qshareddata.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvector.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qset.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		..\projet\programmationactivite.h \
+		..\projet\programmation.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
 		..\projet\Tache.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvector.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 

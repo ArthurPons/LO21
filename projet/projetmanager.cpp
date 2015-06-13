@@ -12,7 +12,9 @@ ProjetManager::ProjetManager()
 ProjetManager::~ProjetManager()
 {
     qDebug()<<"Destruction de ProjetManager";
-    listeProjets.~QVector();
+    for(int i=0;i<listeProjets.size();i++){
+        suppProjet(listeProjets.at(i));
+    }
 }
 
 ProjetManager& ProjetManager::Instance()
@@ -20,7 +22,7 @@ ProjetManager& ProjetManager::Instance()
     return instance;
 }
 
-Projet* ProjetManager::createProjet(const QString& t, const QString& d)
+Projet* ProjetManager::addProjet(const QString& t, const QString& d)
 {
     Projet* projet;
     projet = new Projet(t, d);
@@ -51,6 +53,7 @@ void ProjetManager::suppProjet(Projet* projet)
             projet->suppTache(tache1);
         }
     }
+
     for(int i=0;i<listeProjets.size();i++)
         if(listeProjets.at(i)==projet)
             listeProjets.remove(i);

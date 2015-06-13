@@ -7,13 +7,13 @@ class ProgrammationTache : public Programmation
 {
     friend class ProgrammationManager;
 private:
-    ProgrammationTache(QString id, QDate dat, int hd, int hf, Tache *ta);
+    ProgrammationTache(QString id, QDate dat, int hd, int hf, TacheUnitaire *ta);
     virtual ~ProgrammationTache();
 
-    Tache* tache;
+    TacheUnitaire* tache;
 
 public:
-    Tache* getTache()const{return tache;}
+    TacheUnitaire* getTache()const{return tache;}
 };
 
 #endif // ProgrammationTache_H

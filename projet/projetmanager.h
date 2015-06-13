@@ -20,9 +20,7 @@ private:
 public:
     static ProjetManager& Instance();
 
-    Projet* createProjet(const QString& t, const QString& d);
-    Projet* createProjet(const QString& t, const QString& d, const QDate& dd, const QDate& de);
-
+    Projet* addProjet(const QString& t, const QString& d);
     void suppProjet(Projet* projet);
 };
 

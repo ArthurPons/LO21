@@ -2,8 +2,8 @@
 #define PROGRAMMATIONMANAGER_H
 
 #include<QVector>
-#include "Programmation.h"
-#include "ProgrammationTache.h"
+#include "programmation.h"
+#include "programmationtache.h"
 #include "programmationactivite.h"
 
 class ProgrammationManager

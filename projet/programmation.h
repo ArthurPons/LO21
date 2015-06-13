@@ -3,7 +3,7 @@
 
 #include <QDate>
 #include<QString>
-#include "Tache.h"
+#include "tache.h"
 
 class ProgrammationManager;
 class ProgrammationTache;
