@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     listeprojets.cpp \
     programmationmanager.cpp \
     programmation.cpp \
-    programmationtache.cpp
+    programmationtache.cpp \
+    programmationactivite.cpp
 
 HEADERS  += mainwindow.h \
     tache.h \
@@ -36,6 +37,7 @@ HEADERS  += mainwindow.h \
     listeprojets.h \
     programmationmanager.h \
     programmation.h \
-    programmationtache.h
+    programmationtache.h \
+    programmationactivite.h
 
 FORMS    += mainwindow.ui

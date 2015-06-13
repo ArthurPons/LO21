@@ -4,6 +4,7 @@
 #include<QVector>
 #include "Programmation.h"
 #include "ProgrammationTache.h"
+#include "programmationactivite.h"
 
 class ProgrammationManager
 {
@@ -21,7 +22,9 @@ public:
     QVector<Programmation*> getListeProgrammation()const{return listeProgrammation;}
 
     ProgrammationTache* addProgrammationTache(QString id, QDate dat, int hd, int hf, TacheUnitaire *ta);
+    ProgrammationActivite* addProgrammationActivite(QString id, QDate dat, int hd, int hf, QString tit, QString desc);
     void suppProgrammationTache(ProgrammationTache *prog);
+    void suppProgrammationActivite(ProgrammationActivite* prog);
 };
 
 #endif // PROGRAMMATIONMANAGER_H
