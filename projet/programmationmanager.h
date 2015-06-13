@@ -20,8 +20,8 @@ public:
 
     QVector<Programmation*> getListeProgrammation()const{return listeProgrammation;}
 
-    ProgrammationTache* addProgrammationTache(QString id, QDate dat, int hd, int hf, Tache *ta);
-    void suppProgrammation(Programmation* prog);
+    ProgrammationTache* addProgrammationTache(QString id, QDate dat, int hd, int hf, TacheUnitaire *ta);
+    void suppProgrammationTache(ProgrammationTache *prog);
 };
 
 #endif // PROGRAMMATIONMANAGER_H

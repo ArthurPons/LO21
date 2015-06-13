@@ -14,10 +14,13 @@ private:
     virtual ~TacheUnitaire();
 
     int duree;
+    int dureeRestante;
     bool preemptee;
 
 public:
     int getDuree()const{return duree;}
+    int getDureeRestante()const{return dureeRestante;}
+    void setDureeRestante(int dur){dureeRestante=dur;}
     bool isPreemptee()const{return preemptee;}
 
 };
