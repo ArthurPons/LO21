@@ -13,6 +13,7 @@
 #include <QGridLayout>
 #include <QSignalMapper>
 #include <QLineEdit>
+#include <QMessageBox>
 #include "projetmanager.h"
 
 class AjouteProjet : public QDialog
@@ -33,9 +34,6 @@ private:
 
 signals:
     void clicked(int);
-
-private:
-    QSignalMapper *sm;
 
 public slots:
 

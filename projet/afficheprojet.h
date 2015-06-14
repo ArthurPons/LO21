@@ -12,6 +12,9 @@
 #include <QCalendarWidget>
 #include <QVBoxLayout>
 #include <QVector>
+#include <QSignalMapper>
+#include <QMessageBox>
+#include <QDebug>
 #include "projetmanager.h"
 
 class AfficheProjet : public QDialog
@@ -27,8 +30,10 @@ public:
     QPushButton* supprProjet;
     Projet* proj;
     QVector<Tache*> listeTache;
+
 private:
     ~AfficheProjet();
+    QSignalMapper* sm;
 private slots:
     void supprimerTache(int i);
     void supprimerProjet();
