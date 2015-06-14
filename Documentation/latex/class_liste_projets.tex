@@ -1,23 +1,51 @@
-\hypertarget{class_liste_projets}{}\section{Référence de la classe Liste\+Projets}
+\hypertarget{class_liste_projets}{}\section{Liste\+Projets Class Reference}
 \label{class_liste_projets}\index{Liste\+Projets@{Liste\+Projets}}
 
 
 {\ttfamily \#include $<$listeprojets.\+h$>$}
 
-Graphe d\textquotesingle{}héritage de Liste\+Projets\+:\begin{figure}[H]
+Inheritance diagram for Liste\+Projets\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_liste_projets}
 \end{center}
 \end{figure}
-\subsection*{Fonctions membres publiques}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_liste_projets_ac5a81b7b05afd8678cf82899e1504266}{clicked} (int)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_liste_projets_a069a958b17e8a03352716875bcd7fe80}{Liste\+Projets} (Q\+Widget $\ast$parent=0)
 \end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{class_liste_projets_a5e745a69ba95eeae29269022a08becc4}{layout}
+\item 
+Q\+Push\+Button $\ast$ \hyperlink{class_liste_projets_ad38087a7e6e7f418ced454ad24f3db72}{add\+Prj}
+\item 
+Q\+Push\+Button $\ast$ \hyperlink{class_liste_projets_a0c34df5d18031dd6830eac4e7c3ee9ac}{bouton}
+\item 
+Q\+Vector$<$ \hyperlink{class_projet}{Projet} $\ast$ $>$ \hyperlink{class_liste_projets_a675688a1c030d0555daf8d968eaae50c}{prj}
+\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_liste_projets_aa24f013af28d699a6f78fe4142300228}{afficher\+Projet} (int i)
+\item 
+void \hyperlink{class_liste_projets_a7e51fd74bc104e3c73aa4f53a10853c5}{ajouter\+Projet} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Signal\+Mapper $\ast$ \hyperlink{class_liste_projets_ab155bcfe455d8951c5ba057e118d10c9}{sm}
+\end{DoxyCompactItemize}
 
 
-\subsection{Documentation des constructeurs et destructeur}
+\subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_liste_projets_a069a958b17e8a03352716875bcd7fe80}{}\index{Liste\+Projets@{Liste\+Projets}!Liste\+Projets@{Liste\+Projets}}
 \index{Liste\+Projets@{Liste\+Projets}!Liste\+Projets@{Liste\+Projets}}
 \subsubsection[{Liste\+Projets}]{\setlength{\rightskip}{0pt plus 5cm}Liste\+Projets\+::\+Liste\+Projets (
@@ -27,7 +55,49 @@ Graphe d\textquotesingle{}héritage de Liste\+Projets\+:\begin{figure}[H]
 )\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_liste_projets_a069a958b17e8a03352716875bcd7fe80}
 
 
-La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\subsection{Member Function Documentation}
+\hypertarget{class_liste_projets_aa24f013af28d699a6f78fe4142300228}{}\index{Liste\+Projets@{Liste\+Projets}!afficher\+Projet@{afficher\+Projet}}
+\index{afficher\+Projet@{afficher\+Projet}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{afficher\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}void Liste\+Projets\+::afficher\+Projet (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\label{class_liste_projets_aa24f013af28d699a6f78fe4142300228}
+\hypertarget{class_liste_projets_a7e51fd74bc104e3c73aa4f53a10853c5}{}\index{Liste\+Projets@{Liste\+Projets}!ajouter\+Projet@{ajouter\+Projet}}
+\index{ajouter\+Projet@{ajouter\+Projet}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{ajouter\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}void Liste\+Projets\+::ajouter\+Projet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\label{class_liste_projets_a7e51fd74bc104e3c73aa4f53a10853c5}
+\hypertarget{class_liste_projets_ac5a81b7b05afd8678cf82899e1504266}{}\index{Liste\+Projets@{Liste\+Projets}!clicked@{clicked}}
+\index{clicked@{clicked}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Liste\+Projets\+::clicked (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{class_liste_projets_ac5a81b7b05afd8678cf82899e1504266}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_liste_projets_ad38087a7e6e7f418ced454ad24f3db72}{}\index{Liste\+Projets@{Liste\+Projets}!add\+Prj@{add\+Prj}}
+\index{add\+Prj@{add\+Prj}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{add\+Prj}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Push\+Button$\ast$ Liste\+Projets\+::add\+Prj}\label{class_liste_projets_ad38087a7e6e7f418ced454ad24f3db72}
+\hypertarget{class_liste_projets_a0c34df5d18031dd6830eac4e7c3ee9ac}{}\index{Liste\+Projets@{Liste\+Projets}!bouton@{bouton}}
+\index{bouton@{bouton}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{bouton}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Push\+Button$\ast$ Liste\+Projets\+::bouton}\label{class_liste_projets_a0c34df5d18031dd6830eac4e7c3ee9ac}
+\hypertarget{class_liste_projets_a5e745a69ba95eeae29269022a08becc4}{}\index{Liste\+Projets@{Liste\+Projets}!layout@{layout}}
+\index{layout@{layout}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{layout}]{\setlength{\rightskip}{0pt plus 5cm}Q\+V\+Box\+Layout$\ast$ Liste\+Projets\+::layout}\label{class_liste_projets_a5e745a69ba95eeae29269022a08becc4}
+\hypertarget{class_liste_projets_a675688a1c030d0555daf8d968eaae50c}{}\index{Liste\+Projets@{Liste\+Projets}!prj@{prj}}
+\index{prj@{prj}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{prj}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Projet}$\ast$$>$ Liste\+Projets\+::prj}\label{class_liste_projets_a675688a1c030d0555daf8d968eaae50c}
+\hypertarget{class_liste_projets_ab155bcfe455d8951c5ba057e118d10c9}{}\index{Liste\+Projets@{Liste\+Projets}!sm@{sm}}
+\index{sm@{sm}!Liste\+Projets@{Liste\+Projets}}
+\subsubsection[{sm}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Signal\+Mapper$\ast$ Liste\+Projets\+::sm\hspace{0.3cm}{\ttfamily [private]}}\label{class_liste_projets_ab155bcfe455d8951c5ba057e118d10c9}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{listeprojets_8h}{listeprojets.\+h}\item 
-\hyperlink{listeprojets_8cpp}{listeprojets.\+cpp}\end{DoxyCompactItemize}
+projet/\hyperlink{listeprojets_8h}{listeprojets.\+h}\item 
+projet/\hyperlink{listeprojets_8cpp}{listeprojets.\+cpp}\end{DoxyCompactItemize}

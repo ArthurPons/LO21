@@ -6,6 +6,9 @@
 #include "programmationtache.h"
 #include "programmationactivite.h"
 
+//Composition entre projetManager et Projet
+//Design Pattern singleton
+
 class ProgrammationManager
 {
 private:

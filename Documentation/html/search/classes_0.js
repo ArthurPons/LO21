@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['interface',['Interface',['../class_interface.html',1,'']]]
+  ['afficheprojet',['AfficheProjet',['../class_affiche_projet.html',1,'']]],
+  ['ajouteprojet',['AjouteProjet',['../class_ajoute_projet.html',1,'']]]
 ];

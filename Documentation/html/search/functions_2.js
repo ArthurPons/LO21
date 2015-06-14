@@ -2,7 +2,6 @@ var searchData=
 [
   ['gererevent',['gererEvent',['../class_interface.html#a7e65fe818b99979831ea4aea34ce1222',1,'Interface']]],
   ['gererprojet',['gererProjet',['../class_interface.html#a2453496cddd1a8f8935c4cee547535b8',1,'Interface']]],
-  ['gerertache',['gererTache',['../class_interface.html#a579f816488ab284b650d9a6f5b2afe95',1,'Interface']]],
   ['getcellulesligne',['getCellulesLigne',['../class_interface.html#ad79d4272b59a608ae0c0b48692bdc0fc',1,'Interface']]],
   ['getdate',['getDate',['../class_programmation.html#abd1632dfa907a6bf2a84bfdbc3bef38f',1,'Programmation']]],
   ['getdatedispo',['getDateDispo',['../class_projet.html#a226d910000aaecf7e44399f2226496f5',1,'Projet::getDateDispo()'],['../class_tache.html#a5f7e485d64f7e72042e1f0ad5f378df4',1,'Tache::getDateDispo()']]],
@@ -15,6 +14,7 @@ var searchData=
   ['getheurefin',['getHeureFin',['../class_programmation.html#a8ebc1580f9e4a3a3317d4a5535e28d8b',1,'Programmation']]],
   ['getidentifiant',['getIdentifiant',['../class_programmation.html#a37380f79c4235bfedcbab7c2b9c5de5c',1,'Programmation::getIdentifiant()'],['../class_tache.html#aff63994ef1fe1b96cf14540f954e45c0',1,'Tache::getIdentifiant()']]],
   ['getlisteprogrammation',['getListeProgrammation',['../class_programmation_manager.html#a05398cf87cb227b0e2e9fbf93b36af80',1,'ProgrammationManager']]],
+  ['getlisteprojet',['getListeProjet',['../class_projet_manager.html#a2b7281842b818a8e2cd85a81ef270930',1,'ProjetManager']]],
   ['getlistesoustaches',['getListeSousTaches',['../class_tache_composite.html#a4c7408084fe783835b083501757a1c19',1,'TacheComposite']]],
   ['getlistetaches',['getListeTaches',['../class_projet.html#abc5c0c5980be9a1639651dc23789f068',1,'Projet']]],
   ['getlistetachesmeresprecedence',['getListeTachesMeresPrecedence',['../class_tache.html#afa1e10f04b303908477feee22241820f',1,'Tache']]],

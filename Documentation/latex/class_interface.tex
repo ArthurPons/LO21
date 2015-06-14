@@ -1,16 +1,16 @@
-\hypertarget{class_interface}{}\section{Référence de la classe Interface}
+\hypertarget{class_interface}{}\section{Interface Class Reference}
 \label{class_interface}\index{Interface@{Interface}}
 
 
 {\ttfamily \#include $<$interface.\+h$>$}
 
-Graphe d\textquotesingle{}héritage de Interface\+:\begin{figure}[H]
+Inheritance diagram for Interface\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_interface}
 \end{center}
 \end{figure}
-\subsection*{Fonctions membres publiques}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface} ()
@@ -21,7 +21,7 @@ void \hyperlink{class_interface_a6e75d088bb17b45927e717cfa02efb46}{creer\+Action
 \item 
 Q\+List$<$ Q\+Table\+Widget\+Item $\ast$ $>$ \hyperlink{class_interface_ad79d4272b59a608ae0c0b48692bdc0fc}{get\+Cellules\+Ligne} ()
 \end{DoxyCompactItemize}
-\subsection*{Connecteurs privés}
+\subsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_interface_adba89efb181d1e4bc73b1fcaf19da136}{quitter} ()
@@ -30,11 +30,9 @@ void \hyperlink{class_interface_aa1740b524bd3d5a616c3da169b21bbe2}{a\+Propos} ()
 \item 
 void \hyperlink{class_interface_a2453496cddd1a8f8935c4cee547535b8}{gerer\+Projet} ()
 \item 
-void \hyperlink{class_interface_a579f816488ab284b650d9a6f5b2afe95}{gerer\+Tache} ()
-\item 
 void \hyperlink{class_interface_a7e65fe818b99979831ea4aea34ce1222}{gerer\+Event} ()
 \end{DoxyCompactItemize}
-\subsection*{Attributs privés}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Q\+Menu $\ast$ \hyperlink{class_interface_a5c22d42f0a82b546269f2265dc4020bf}{options}
@@ -48,6 +46,10 @@ Q\+Action $\ast$ \hyperlink{class_interface_a2282b9ebbfc4d6b78aff0c4f09edf3ef}{p
 Q\+Date\+Edit $\ast$ \hyperlink{class_interface_ac4ca6cf95990077c3c695f54b9340d46}{semaine}
 \item 
 Q\+Date $\ast$ \hyperlink{class_interface_a25db9c3292f0f8d545d0241f11a59293}{jour\+Courant}
+\item 
+Q\+Date $\ast$ \hyperlink{class_interface_aa5946e70fad2d32fd4dc55c88bd440e5}{boucle\+Jour}
+\item 
+Q\+Date $\ast$ \hyperlink{class_interface_afa9df6cf4b8edcdea7e9c31e97c1ab3e}{date\+Courante}
 \item 
 Q\+Label $\ast$ \hyperlink{class_interface_a0b7d1dff057048c33ff74e0eb8919378}{calendar}
 \item 
@@ -71,13 +73,13 @@ Q\+Group\+Box $\ast$ \hyperlink{class_interface_a2f0340a091c08fb4d6c3357fbd156d2
 \item 
 Q\+Push\+Button $\ast$ \hyperlink{class_interface_aa11e7c29121814ee23bafd43ab68b534}{gprojet}
 \item 
-Q\+Push\+Button $\ast$ \hyperlink{class_interface_ae73e719e89ebafb21c0330d1d1b32228}{gtache}
-\item 
 Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239010}{gevt}
+\item 
+Q\+Vector$<$ \hyperlink{class_programmation}{Programmation} $\ast$ $>$ \hyperlink{class_interface_a8c9a2e9fb9a19f879383fb160430c1b6}{prog}
 \end{DoxyCompactItemize}
 
 
-\subsection{Documentation des constructeurs et destructeur}
+\subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}{}\index{Interface@{Interface}!Interface@{Interface}}
 \index{Interface@{Interface}!Interface@{Interface}}
 \subsubsection[{Interface}]{\setlength{\rightskip}{0pt plus 5cm}Interface\+::\+Interface (
@@ -87,7 +89,7 @@ Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239
 )\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}
 
 
-\subsection{Documentation des fonctions membres}
+\subsection{Member Function Documentation}
 \hypertarget{class_interface_aa1740b524bd3d5a616c3da169b21bbe2}{}\index{Interface@{Interface}!a\+Propos@{a\+Propos}}
 \index{a\+Propos@{a\+Propos}!Interface@{Interface}}
 \subsubsection[{a\+Propos}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::a\+Propos (
@@ -123,13 +125,6 @@ Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\label{class_interface_a2453496cddd1a8f8935c4cee547535b8}
-\hypertarget{class_interface_a579f816488ab284b650d9a6f5b2afe95}{}\index{Interface@{Interface}!gerer\+Tache@{gerer\+Tache}}
-\index{gerer\+Tache@{gerer\+Tache}!Interface@{Interface}}
-\subsubsection[{gerer\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::gerer\+Tache (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\label{class_interface_a579f816488ab284b650d9a6f5b2afe95}
 \hypertarget{class_interface_ad79d4272b59a608ae0c0b48692bdc0fc}{}\index{Interface@{Interface}!get\+Cellules\+Ligne@{get\+Cellules\+Ligne}}
 \index{get\+Cellules\+Ligne@{get\+Cellules\+Ligne}!Interface@{Interface}}
 \subsubsection[{get\+Cellules\+Ligne}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ Q\+Table\+Widget\+Item $\ast$ $>$ Interface\+::get\+Cellules\+Ligne (
@@ -146,25 +141,28 @@ Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\label{class_interface_adba89efb181d1e4bc73b1fcaf19da136}
 
 
-\subsection{Documentation des données membres}
+\subsection{Member Data Documentation}
 \hypertarget{class_interface_a8e1bd8a8cfb02dd361ece990addd7515}{}\index{Interface@{Interface}!aide@{aide}}
 \index{aide@{aide}!Interface@{Interface}}
 \subsubsection[{aide}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Menu$\ast$ Interface\+::aide\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a8e1bd8a8cfb02dd361ece990addd7515}
+\hypertarget{class_interface_aa5946e70fad2d32fd4dc55c88bd440e5}{}\index{Interface@{Interface}!boucle\+Jour@{boucle\+Jour}}
+\index{boucle\+Jour@{boucle\+Jour}!Interface@{Interface}}
+\subsubsection[{boucle\+Jour}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date$\ast$ Interface\+::boucle\+Jour\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_aa5946e70fad2d32fd4dc55c88bd440e5}
 \hypertarget{class_interface_a53a4b3fb1f0885aea0395658a4b36022}{}\index{Interface@{Interface}!cal@{cal}}
 \index{cal@{cal}!Interface@{Interface}}
 \subsubsection[{cal}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Calendar\+Widget$\ast$ Interface\+::cal\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a53a4b3fb1f0885aea0395658a4b36022}
 \hypertarget{class_interface_a0b7d1dff057048c33ff74e0eb8919378}{}\index{Interface@{Interface}!calendar@{calendar}}
 \index{calendar@{calendar}!Interface@{Interface}}
 \subsubsection[{calendar}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Label$\ast$ Interface\+::calendar\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a0b7d1dff057048c33ff74e0eb8919378}
+\hypertarget{class_interface_afa9df6cf4b8edcdea7e9c31e97c1ab3e}{}\index{Interface@{Interface}!date\+Courante@{date\+Courante}}
+\index{date\+Courante@{date\+Courante}!Interface@{Interface}}
+\subsubsection[{date\+Courante}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date$\ast$ Interface\+::date\+Courante\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_afa9df6cf4b8edcdea7e9c31e97c1ab3e}
 \hypertarget{class_interface_a5ad660e0308903af33f1e40daa239010}{}\index{Interface@{Interface}!gevt@{gevt}}
 \index{gevt@{gevt}!Interface@{Interface}}
 \subsubsection[{gevt}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Push\+Button$\ast$ Interface\+::gevt\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a5ad660e0308903af33f1e40daa239010}
 \hypertarget{class_interface_aa11e7c29121814ee23bafd43ab68b534}{}\index{Interface@{Interface}!gprojet@{gprojet}}
 \index{gprojet@{gprojet}!Interface@{Interface}}
 \subsubsection[{gprojet}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Push\+Button$\ast$ Interface\+::gprojet\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_aa11e7c29121814ee23bafd43ab68b534}
-\hypertarget{class_interface_ae73e719e89ebafb21c0330d1d1b32228}{}\index{Interface@{Interface}!gtache@{gtache}}
-\index{gtache@{gtache}!Interface@{Interface}}
-\subsubsection[{gtache}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Push\+Button$\ast$ Interface\+::gtache\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_ae73e719e89ebafb21c0330d1d1b32228}
 \hypertarget{class_interface_a25db9c3292f0f8d545d0241f11a59293}{}\index{Interface@{Interface}!jour\+Courant@{jour\+Courant}}
 \index{jour\+Courant@{jour\+Courant}!Interface@{Interface}}
 \subsubsection[{jour\+Courant}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date$\ast$ Interface\+::jour\+Courant\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a25db9c3292f0f8d545d0241f11a59293}
@@ -192,6 +190,9 @@ Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239
 \hypertarget{class_interface_a5c22d42f0a82b546269f2265dc4020bf}{}\index{Interface@{Interface}!options@{options}}
 \index{options@{options}!Interface@{Interface}}
 \subsubsection[{options}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Menu$\ast$ Interface\+::options\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a5c22d42f0a82b546269f2265dc4020bf}
+\hypertarget{class_interface_a8c9a2e9fb9a19f879383fb160430c1b6}{}\index{Interface@{Interface}!prog@{prog}}
+\index{prog@{prog}!Interface@{Interface}}
+\subsubsection[{prog}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Programmation}$\ast$$>$ Interface\+::prog\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a8c9a2e9fb9a19f879383fb160430c1b6}
 \hypertarget{class_interface_a2282b9ebbfc4d6b78aff0c4f09edf3ef}{}\index{Interface@{Interface}!propos@{propos}}
 \index{propos@{propos}!Interface@{Interface}}
 \subsubsection[{propos}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Action$\ast$ Interface\+::propos\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a2282b9ebbfc4d6b78aff0c4f09edf3ef}
@@ -206,7 +207,7 @@ Q\+Push\+Button $\ast$ \hyperlink{class_interface_a5ad660e0308903af33f1e40daa239
 \subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Table\+Widget$\ast$ Interface\+::table\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_add370ece6c97151da99ebab84362c6a1}
 
 
-La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{interface_8h}{interface.\+h}\item 
-\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}
+projet/\hyperlink{interface_8h}{interface.\+h}\item 
+projet/\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}

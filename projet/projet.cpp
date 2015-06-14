@@ -51,7 +51,7 @@ TacheUnitaire* Projet::addTacheUnitaire(const QString& id, const QString& tit,co
     //Si c'est bon on l'ajoute à la liste des taches
 
 
-     TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
+    TacheUnitaire* tache = new TacheUnitaire(id, tit, desc, dur, pre, this);
     listeTaches.append(tache);
     qDebug()<<"La tache unitaire"<<id<<"a ete ajoutee au projet"<<getTitre();
     return tache;
