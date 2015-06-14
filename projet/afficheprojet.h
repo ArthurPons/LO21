@@ -11,11 +11,15 @@
 #include <QSlider>
 #include <QCalendarWidget>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QVector>
 #include <QSignalMapper>
 #include <QMessageBox>
 #include <QDebug>
 #include "projetmanager.h"
+#include "ajoutetache.h"
+#include "ajouteprecedence.h"
+#include "ajouteprogrammationtache.h"
 
 class AfficheProjet : public QDialog
 {
@@ -25,19 +29,26 @@ public:
     QLabel* desc;
     QVBoxLayout layout;
     QLabel* tache;
+    QPushButton* addPrecedence;
     QPushButton* supprTache;
-    QPushButton* addTache;
+    QPushButton* addTacheU;
+    QPushButton* addTacheC;
     QPushButton* supprProjet;
     Projet* proj;
     QVector<Tache*> listeTache;
 
 private:
     ~AfficheProjet();
-    QSignalMapper* sm;
+
 private slots:
     void supprimerTache(int i);
+    void addPrec(int i);
+    void addSTacheU(int i);
+    void addSTacheC(int i);
+    void addProgTache(int i);
     void supprimerProjet();
-    void ajouteTache();
+    void ajouteTacheUnitaire();
+    void ajouteTacheComposite();
 
 };
 

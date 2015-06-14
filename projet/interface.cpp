@@ -141,7 +141,11 @@ void Interface::gererProjet()
 
 void Interface::gererEvent()
 {
-    AjouteActivite* fen=new AjouteActivite();
+    AjouteActivite* fen=new AjouteActivite(this);
     fen->exec();
 }
 
+void Interface::mettreAJour()
+{
+    this->repaint();
+}

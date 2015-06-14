@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    a.processEvents();
     MainWindow w;
     //w.show();
 
@@ -20,18 +21,15 @@ int main(int argc, char *argv[])
     ProgrammationManager& progm=ProgrammationManager::Instance();
 
     Projet* projet1=projm.addProjet("Projet1","DescriptionProjet1");
-
     //Projet* projet2=projm.addProjet("Projet2","DescriptionProjet2");
     //Projet* projet3=projm.addProjet("Projet3","DescriptionProjet3");
     //Projet* projet4=projm.addProjet("Projet4","DescriptionProjet4");
-
 
     QDate dd1(2015,9,6);
     QDate de1(2015,9,10);
     QDate dd2(2015,9,10);
     QDate de2(2015,9,11);
     QDate dprog1(2015,6,14);
-    QDate dprog2(2015,9,10);
 
     TacheUnitaire* tache1=projet1->addTacheUnitaire("t1","titre1","description1",10,1);
     TacheUnitaire* tache2=projet1->addTacheUnitaire("t2","titre2","description2",2,0);
@@ -42,9 +40,15 @@ int main(int argc, char *argv[])
 
     Programmation* prog1=progm.addProgrammationActivite("Truc à faire", dprog1, 10, 12, "lourd", "lo21");
 
-    tache1->addPrecedence(tache2);
-    tache1->addPrecedence(tache2);
-    qDebug()<<tache2->getIdentifiant();
+    int i=0;
+
+    TacheUnitaire* tach=dynamic_cast<TacheUnitaire*>(projet1->getListeTaches().at(i));
+        if(tach){
+        projet1->suppTache(tach);
+    } else {
+        TacheComposite* tach1=dynamic_cast<TacheComposite*>(projet1->getListeTaches().at(i));
+        projet1->suppTache(tach1);
+    }
 
     Interface f;
     f.setFixedSize(1300,500);

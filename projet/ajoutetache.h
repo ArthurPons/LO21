@@ -5,42 +5,45 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QTextEdit>
-#include <QDateEdit>
-#include <QList>
 #include <QLabel>
-#include <QSlider>
-#include <QCalendarWidget>
 #include <QGridLayout>
 #include <QSignalMapper>
 #include <QLineEdit>
+#include <QMessageBox>
+#include <QTimeEdit>
+#include <QRadioButton>
+#include "interface.h"
 #include "projetmanager.h"
-/*
+
 class AjouteTache : public QDialog
 {
     Q_OBJECT
 public:
-    AjouteTache(Projet* prj, QWidget* parent=0);
+    explicit
+    AjouteTache(Projet* proj, bool typ, QWidget* parent=0);
+    AjouteTache(Projet* proj, bool typ, TacheComposite* tacheMere, QWidget* parent=0);
+    Projet* prj;
     QPushButton* valider;
     QLineEdit* nom;
     QTextEdit* description;
     QLabel* texteNom;
     QLabel* texteDescription;
     QGridLayout* layout;
+    bool type;
+    QTimeEdit* duree;
+    QRadioButton *button;
+    TacheComposite* tacheMereComposite;
 
 private:
     ~AjouteTache();
 
 
 signals:
-    void clicked(int);
-
-private:
-    QSignalMapper *sm;
 
 public slots:
 
 private slots:
-    void addPrj(QString n, QString d);
+    void addTache();
 };
-*/
+
 #endif // AjouteTache_H

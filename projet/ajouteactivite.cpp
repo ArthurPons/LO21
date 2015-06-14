@@ -1,7 +1,9 @@
 #include "AjouteActivite.h"
 
-AjouteActivite::AjouteActivite(QWidget *parent) : QDialog(parent)
+AjouteActivite::AjouteActivite(Interface* inter, QWidget *parent) : QDialog(parent)
 {
+
+    Interface* f=inter;
     layout= new QGridLayout();
     valider = new QPushButton(tr("Créer l'évènement"),this);
     nom = new QLineEdit();
@@ -10,7 +12,7 @@ AjouteActivite::AjouteActivite(QWidget *parent) : QDialog(parent)
     heureDebut = new QTimeEdit();
     heureFin = new QTimeEdit();
     texteNom= new QLabel();
-    texteNom->setText("Nom de l'évèmenement' :");
+    texteNom->setText("Nom de l'évènement :");
     texteDescription= new QLabel();
     texteDescription->setText("Description de l'évènement :");
     texteDate= new QLabel();
@@ -19,6 +21,14 @@ AjouteActivite::AjouteActivite(QWidget *parent) : QDialog(parent)
     texteHd->setText("Heure de début :");
     texteHf= new QLabel();
     texteHf->setText("Heure de fin :");
+    hmin=QTime::fromString("8.00", "h.mm");
+    hmax=QTime::fromString("9.00", "h.mm");
+    hmin2=QTime::fromString("18.00", "hh.mm");
+    hmax2=QTime::fromString("19.00", "hh.mm");
+    heureDebut->setMinimumTime(hmin);
+    heureFin->setMinimumTime(hmax);
+    heureDebut->setMaximumTime(hmin2);
+    heureFin->setMaximumTime(hmax2);
     QObject::connect(valider, SIGNAL(clicked()), this, SLOT(addAct()));
     layout->addWidget(texteNom, 0 ,0);
     layout->addWidget(texteDescription, 1 ,0);
@@ -44,6 +54,6 @@ void AjouteActivite::addAct(){
     int heureD = heureDebut->time().hour();
     int heureF = heureFin->time().hour();
     Programmation* proga = progm.addProgrammationActivite(nom->text(), date->date(), heureD, heureF, "Activité", description->toPlainText());
-    QMessageBox::information(this,tr("Info"),tr("l'évènement a été crée"),QMessageBox::Close);
+    f->mettreAJour();
     this->close();
 }

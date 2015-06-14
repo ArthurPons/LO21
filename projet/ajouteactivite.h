@@ -16,13 +16,14 @@
 #include <QMessageBox>
 #include <QTimeEdit>
 #include "programmationmanager.h"
+#include "interface.h"
 
 class AjouteActivite : public QDialog
 {
     Q_OBJECT
 public:
     explicit
-    AjouteActivite(QWidget* parent=0);
+    AjouteActivite(Interface* inter, QWidget* parent=0);
     QPushButton* valider;
     QLineEdit* nom;
     QTextEdit* description;
@@ -35,6 +36,11 @@ public:
     QLabel* texteDate;
     QLabel* texteHf;
     QGridLayout* layout;
+    Interface* f;
+    QTime hmin;
+    QTime hmax;
+    QTime hmin2;
+    QTime hmax2;
 
 private:
     ~AjouteActivite();
@@ -49,4 +55,3 @@ private slots:
 };
 
 #endif // AjouteActivite_H
-

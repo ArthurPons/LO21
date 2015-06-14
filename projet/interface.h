@@ -74,6 +74,10 @@ public:
     QList<QTableWidgetItem*> getCellulesLigne();
 
 
+public slots:
+
+    void mettreAJour();
+
 private slots:
 
     void quitter();

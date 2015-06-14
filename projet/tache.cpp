@@ -7,6 +7,7 @@
 Tache::Tache(const QString &id, const QString &t, const QString &d, Projet* p):
     identifiant(id),titre(t),description(d),projet(p),tacheMereComposite(0)
 {
+
     qDebug()<<"Debut de la creation de la Tache"<<id;
 }
 
