@@ -25,6 +25,9 @@
 #include <QHeaderView>
 #include <QGroupBox>
 #include <QPushButton>
+#include <QVector>
+#include <QDebug>
+#include "programmationmanager.h"
 
 
 class Interface : public QMainWindow
@@ -40,6 +43,8 @@ class Interface : public QMainWindow
 
     QDateEdit* semaine;
     QDate* jourCourant;
+    QDate* boucleJour;
+    QDate* dateCourante;
     QLabel* calendar;
     QVBoxLayout* layout;
     QHBoxLayout* layout1;
@@ -53,8 +58,9 @@ class Interface : public QMainWindow
 
     QGroupBox* menuCote;
     QPushButton* gprojet;
-    QPushButton* gtache;
     QPushButton* gevt;
+
+    QVector<Programmation*> prog;
 
 
 
@@ -73,7 +79,6 @@ private slots:
     void quitter();
     void aPropos();
     void gererProjet();
-    void gererTache();
     void gererEvent();
 
 };

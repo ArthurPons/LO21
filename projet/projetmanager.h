@@ -20,6 +20,8 @@ private:
 public:
     static ProjetManager& Instance();
 
+    QVector<Projet*> getListeProjet()const{return listeProjets;}
+
     Projet* addProjet(const QString& t, const QString& d);
     void suppProjet(Projet* projet);
 };

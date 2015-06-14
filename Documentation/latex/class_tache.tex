@@ -1,0 +1,230 @@
+\hypertarget{class_tache}{}\section{Référence de la classe Tache}
+\label{class_tache}\index{Tache@{Tache}}
+
+
+{\ttfamily \#include $<$tache.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Tache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tache}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_projet}{Projet} $\ast$ \hyperlink{class_tache_aa6d1abc3712b5a8b571bb3c131129ac7}{get\+Projet} () const 
+\item 
+Q\+String \hyperlink{class_tache_aff63994ef1fe1b96cf14540f954e45c0}{get\+Identifiant} () const 
+\item 
+Q\+String \hyperlink{class_tache_ab9e56c6eaaa23d2c66148ff5a89724e6}{get\+Titre} () const 
+\item 
+Q\+String \hyperlink{class_tache_a02954f46ea1310fb0d5ceceeb94298cc}{get\+Description} () const 
+\item 
+Q\+Date \hyperlink{class_tache_a5f7e485d64f7e72042e1f0ad5f378df4}{get\+Date\+Dispo} () const 
+\item 
+Q\+Date \hyperlink{class_tache_ad44bf074be085367c3a58b81be680d70}{get\+Date\+Echeance} () const 
+\item 
+\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$ \hyperlink{class_tache_a5d8c5f16db0287ed0539c9206f244e02}{get\+Tache\+Mere\+Composite} () const 
+\item 
+Q\+Vector$<$ \hyperlink{class_tache}{Tache} $\ast$ $>$ \hyperlink{class_tache_afa1e10f04b303908477feee22241820f}{get\+Liste\+Taches\+Meres\+Precedence} () const 
+\item 
+void \hyperlink{class_tache_ad5ed4f92ccbc0895813908c750d918a2}{set\+Tache\+Mere\+Composite} (\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$mere)
+\item 
+void \hyperlink{class_tache_a10659477f457bc4ceafbee41b155eb66}{add\+Precedence} (\hyperlink{class_tache}{Tache} $\ast$precedence)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tache_af712b59bd6e56adc46904a6445431ae7}{Tache} (const Q\+String \&id, const Q\+String \&t, const Q\+String \&d, \hyperlink{class_projet}{Projet} $\ast$p)
+\item 
+\hyperlink{class_tache_a5b02c50c65270708b1a18c1a810ca00a}{Tache} (const Q\+String \&id, const Q\+String \&t, const Q\+String \&d, const Q\+Date \&dd, const Q\+Date \&de, \hyperlink{class_projet}{Projet} $\ast$p)
+\item 
+virtual \hyperlink{class_tache_a7ff832b739f8365acbe60275c7868c63}{$\sim$\+Tache} ()
+\item 
+bool \hyperlink{class_tache_a579d9a3b88293522b7326e5d11815091}{check\+Precedence} (\hyperlink{class_tache}{Tache} $\ast$precedence)
+\item 
+void \hyperlink{class_tache_a00babe6049701a1148eaca5336454731}{supp\+Precedence} (\hyperlink{class_tache}{Tache} $\ast$precedence)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{class_tache_a9af1773c9b835900bba8814cccee450e}{identifiant}
+\item 
+Q\+String \hyperlink{class_tache_a1d3d20046c0c4cc8482f71bb555b79cf}{titre}
+\item 
+Q\+String \hyperlink{class_tache_ab3d06410b2c62ebfbe20f570c41dc4d4}{description}
+\item 
+Q\+Date \hyperlink{class_tache_ac8758b826b1be639dad8bcb556659a36}{date\+Dispo}
+\item 
+Q\+Date \hyperlink{class_tache_a7671c127da40ae35075f069a64396f45}{date\+Echeance}
+\item 
+Q\+Vector$<$ \hyperlink{class_tache}{Tache} $\ast$ $>$ \hyperlink{class_tache_a0f73920789e27b7c2aeb47d171d5e543}{liste\+Taches\+Meres\+Precedence}
+\item 
+\hyperlink{class_projet}{Projet} $\ast$ \hyperlink{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}{projet}
+\item 
+\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$ \hyperlink{class_tache_a62e6fe2722630c7bdf9a4a6a42364a19}{tache\+Mere\+Composite}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tache_ab87b41c3faa36955cc370972f5cce344}{Projet}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_tache_af712b59bd6e56adc46904a6445431ae7}{}\index{Tache@{Tache}!Tache@{Tache}}
+\index{Tache@{Tache}!Tache@{Tache}}
+\subsubsection[{Tache}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+::\+Tache (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{t, }
+\item[{const Q\+String \&}]{d, }
+\item[{{\bf Projet} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_af712b59bd6e56adc46904a6445431ae7}
+\hypertarget{class_tache_a5b02c50c65270708b1a18c1a810ca00a}{}\index{Tache@{Tache}!Tache@{Tache}}
+\index{Tache@{Tache}!Tache@{Tache}}
+\subsubsection[{Tache}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+::\+Tache (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{t, }
+\item[{const Q\+String \&}]{d, }
+\item[{const Q\+Date \&}]{dd, }
+\item[{const Q\+Date \&}]{de, }
+\item[{{\bf Projet} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a5b02c50c65270708b1a18c1a810ca00a}
+\hypertarget{class_tache_a7ff832b739f8365acbe60275c7868c63}{}\index{Tache@{Tache}!````~Tache@{$\sim$\+Tache}}
+\index{````~Tache@{$\sim$\+Tache}!Tache@{Tache}}
+\subsubsection[{$\sim$\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+::$\sim$\+Tache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tache_a7ff832b739f8365acbe60275c7868c63}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_tache_a10659477f457bc4ceafbee41b155eb66}{}\index{Tache@{Tache}!add\+Precedence@{add\+Precedence}}
+\index{add\+Precedence@{add\+Precedence}!Tache@{Tache}}
+\subsubsection[{add\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}void Tache\+::add\+Precedence (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache} $\ast$}]{precedence}
+\end{DoxyParamCaption}
+)}\label{class_tache_a10659477f457bc4ceafbee41b155eb66}
+\hypertarget{class_tache_a579d9a3b88293522b7326e5d11815091}{}\index{Tache@{Tache}!check\+Precedence@{check\+Precedence}}
+\index{check\+Precedence@{check\+Precedence}!Tache@{Tache}}
+\subsubsection[{check\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}bool Tache\+::check\+Precedence (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache} $\ast$}]{precedence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a579d9a3b88293522b7326e5d11815091}
+\hypertarget{class_tache_a5f7e485d64f7e72042e1f0ad5f378df4}{}\index{Tache@{Tache}!get\+Date\+Dispo@{get\+Date\+Dispo}}
+\index{get\+Date\+Dispo@{get\+Date\+Dispo}!Tache@{Tache}}
+\subsubsection[{get\+Date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Tache\+::get\+Date\+Dispo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_a5f7e485d64f7e72042e1f0ad5f378df4}
+\hypertarget{class_tache_ad44bf074be085367c3a58b81be680d70}{}\index{Tache@{Tache}!get\+Date\+Echeance@{get\+Date\+Echeance}}
+\index{get\+Date\+Echeance@{get\+Date\+Echeance}!Tache@{Tache}}
+\subsubsection[{get\+Date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Tache\+::get\+Date\+Echeance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_ad44bf074be085367c3a58b81be680d70}
+\hypertarget{class_tache_a02954f46ea1310fb0d5ceceeb94298cc}{}\index{Tache@{Tache}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Tache@{Tache}}
+\subsubsection[{get\+Description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_a02954f46ea1310fb0d5ceceeb94298cc}
+\hypertarget{class_tache_aff63994ef1fe1b96cf14540f954e45c0}{}\index{Tache@{Tache}!get\+Identifiant@{get\+Identifiant}}
+\index{get\+Identifiant@{get\+Identifiant}!Tache@{Tache}}
+\subsubsection[{get\+Identifiant}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::get\+Identifiant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_aff63994ef1fe1b96cf14540f954e45c0}
+\hypertarget{class_tache_afa1e10f04b303908477feee22241820f}{}\index{Tache@{Tache}!get\+Liste\+Taches\+Meres\+Precedence@{get\+Liste\+Taches\+Meres\+Precedence}}
+\index{get\+Liste\+Taches\+Meres\+Precedence@{get\+Liste\+Taches\+Meres\+Precedence}!Tache@{Tache}}
+\subsubsection[{get\+Liste\+Taches\+Meres\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Tache\+::get\+Liste\+Taches\+Meres\+Precedence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_afa1e10f04b303908477feee22241820f}
+\hypertarget{class_tache_aa6d1abc3712b5a8b571bb3c131129ac7}{}\index{Tache@{Tache}!get\+Projet@{get\+Projet}}
+\index{get\+Projet@{get\+Projet}!Tache@{Tache}}
+\subsubsection[{get\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet}$\ast$ Tache\+::get\+Projet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_aa6d1abc3712b5a8b571bb3c131129ac7}
+\hypertarget{class_tache_a5d8c5f16db0287ed0539c9206f244e02}{}\index{Tache@{Tache}!get\+Tache\+Mere\+Composite@{get\+Tache\+Mere\+Composite}}
+\index{get\+Tache\+Mere\+Composite@{get\+Tache\+Mere\+Composite}!Tache@{Tache}}
+\subsubsection[{get\+Tache\+Mere\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Composite}$\ast$ Tache\+::get\+Tache\+Mere\+Composite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_a5d8c5f16db0287ed0539c9206f244e02}
+\hypertarget{class_tache_ab9e56c6eaaa23d2c66148ff5a89724e6}{}\index{Tache@{Tache}!get\+Titre@{get\+Titre}}
+\index{get\+Titre@{get\+Titre}!Tache@{Tache}}
+\subsubsection[{get\+Titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::get\+Titre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_ab9e56c6eaaa23d2c66148ff5a89724e6}
+\hypertarget{class_tache_ad5ed4f92ccbc0895813908c750d918a2}{}\index{Tache@{Tache}!set\+Tache\+Mere\+Composite@{set\+Tache\+Mere\+Composite}}
+\index{set\+Tache\+Mere\+Composite@{set\+Tache\+Mere\+Composite}!Tache@{Tache}}
+\subsubsection[{set\+Tache\+Mere\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}void Tache\+::set\+Tache\+Mere\+Composite (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache\+Composite} $\ast$}]{mere}
+\end{DoxyParamCaption}
+)}\label{class_tache_ad5ed4f92ccbc0895813908c750d918a2}
+\hypertarget{class_tache_a00babe6049701a1148eaca5336454731}{}\index{Tache@{Tache}!supp\+Precedence@{supp\+Precedence}}
+\index{supp\+Precedence@{supp\+Precedence}!Tache@{Tache}}
+\subsubsection[{supp\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}void Tache\+::supp\+Precedence (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache} $\ast$}]{precedence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a00babe6049701a1148eaca5336454731}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_tache_ab87b41c3faa36955cc370972f5cce344}{}\index{Tache@{Tache}!Projet@{Projet}}
+\index{Projet@{Projet}!Tache@{Tache}}
+\subsubsection[{Projet}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Projet}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_tache_ab87b41c3faa36955cc370972f5cce344}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_tache_ac8758b826b1be639dad8bcb556659a36}{}\index{Tache@{Tache}!date\+Dispo@{date\+Dispo}}
+\index{date\+Dispo@{date\+Dispo}!Tache@{Tache}}
+\subsubsection[{date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Tache\+::date\+Dispo\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_ac8758b826b1be639dad8bcb556659a36}
+\hypertarget{class_tache_a7671c127da40ae35075f069a64396f45}{}\index{Tache@{Tache}!date\+Echeance@{date\+Echeance}}
+\index{date\+Echeance@{date\+Echeance}!Tache@{Tache}}
+\subsubsection[{date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Tache\+::date\+Echeance\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a7671c127da40ae35075f069a64396f45}
+\hypertarget{class_tache_ab3d06410b2c62ebfbe20f570c41dc4d4}{}\index{Tache@{Tache}!description@{description}}
+\index{description@{description}!Tache@{Tache}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::description\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_ab3d06410b2c62ebfbe20f570c41dc4d4}
+\hypertarget{class_tache_a9af1773c9b835900bba8814cccee450e}{}\index{Tache@{Tache}!identifiant@{identifiant}}
+\index{identifiant@{identifiant}!Tache@{Tache}}
+\subsubsection[{identifiant}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::identifiant\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a9af1773c9b835900bba8814cccee450e}
+\hypertarget{class_tache_a0f73920789e27b7c2aeb47d171d5e543}{}\index{Tache@{Tache}!liste\+Taches\+Meres\+Precedence@{liste\+Taches\+Meres\+Precedence}}
+\index{liste\+Taches\+Meres\+Precedence@{liste\+Taches\+Meres\+Precedence}!Tache@{Tache}}
+\subsubsection[{liste\+Taches\+Meres\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Tache\+::liste\+Taches\+Meres\+Precedence\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a0f73920789e27b7c2aeb47d171d5e543}
+\hypertarget{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}{}\index{Tache@{Tache}!projet@{projet}}
+\index{projet@{projet}!Tache@{Tache}}
+\subsubsection[{projet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet}$\ast$ Tache\+::projet\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}
+\hypertarget{class_tache_a62e6fe2722630c7bdf9a4a6a42364a19}{}\index{Tache@{Tache}!tache\+Mere\+Composite@{tache\+Mere\+Composite}}
+\index{tache\+Mere\+Composite@{tache\+Mere\+Composite}!Tache@{Tache}}
+\subsubsection[{tache\+Mere\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Composite}$\ast$ Tache\+::tache\+Mere\+Composite\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a62e6fe2722630c7bdf9a4a6a42364a19}
+\hypertarget{class_tache_a1d3d20046c0c4cc8482f71bb555b79cf}{}\index{Tache@{Tache}!titre@{titre}}
+\index{titre@{titre}!Tache@{Tache}}
+\subsubsection[{titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Tache\+::titre\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a1d3d20046c0c4cc8482f71bb555b79cf}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tache_8h}{tache.\+h}\item 
+\hyperlink{tache_8cpp}{tache.\+cpp}\end{DoxyCompactItemize}

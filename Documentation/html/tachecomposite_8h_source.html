@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>23h59:  Fichier source de tachecomposite.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="23h59.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">23h59
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Calendrier + Gestion de projet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">tachecomposite.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="tachecomposite_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TACHECOMPOSITE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TACHECOMPOSITE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="tache_8h.html">tache.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_tache_composite.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tache_composite.html">TacheComposite</a> : <span class="keyword">public</span> <a class="code" href="class_tache.html">Tache</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_tache_composite.html#ab87b41c3faa36955cc370972f5cce344">    8</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_projet.html">Projet</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_tache_composite.html#a3042d6bf7df70fe0e56f314224fbae53">TacheComposite</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; tit, <span class="keyword">const</span> QString&amp; desc, <a class="code" href="class_projet.html">Projet</a> *p);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_tache_composite.html#a3042d6bf7df70fe0e56f314224fbae53">TacheComposite</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; tit, <span class="keyword">const</span> QString&amp; desc, <span class="keyword">const</span> QDate&amp; dd,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                   <span class="keyword">const</span> QDate&amp; de, <a class="code" href="class_projet.html">Projet</a> *p);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_tache_composite.html#a70ddee42aa910b22a06e8197f5873698">~TacheComposite</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_tache_composite.html#ac73545ce9cef80cbdc145a233465df6e">   15</a></span>&#160;    QVector&lt;Tache*&gt; <a class="code" href="class_tache_composite.html#ac73545ce9cef80cbdc145a233465df6e">listeSousTaches</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tache_composite.html#ab4243a926687c17556eeaa34ecbe1567">addSousTache</a>(<a class="code" href="class_tache.html">Tache</a> *tache);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_tache_composite.html#a4c7408084fe783835b083501757a1c19">   20</a></span>&#160;    QVector&lt;Tache*&gt; <a class="code" href="class_tache_composite.html#a4c7408084fe783835b083501757a1c19">getListeSousTaches</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_tache_composite.html#ac73545ce9cef80cbdc145a233465df6e">listeSousTaches</a>;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif // TACHECOMPOSITE_H</span></div>
+<div class="ttc" id="class_tache_composite_html_a3042d6bf7df70fe0e56f314224fbae53"><div class="ttname"><a href="class_tache_composite.html#a3042d6bf7df70fe0e56f314224fbae53">TacheComposite::TacheComposite</a></div><div class="ttdeci">TacheComposite(const QString &amp;id, const QString &amp;tit, const QString &amp;desc, Projet *p)</div><div class="ttdef"><b>Definition:</b> tachecomposite.cpp:4</div></div>
+<div class="ttc" id="class_tache_composite_html"><div class="ttname"><a href="class_tache_composite.html">TacheComposite</a></div><div class="ttdef"><b>Definition:</b> tachecomposite.h:6</div></div>
+<div class="ttc" id="class_tache_composite_html_ac73545ce9cef80cbdc145a233465df6e"><div class="ttname"><a href="class_tache_composite.html#ac73545ce9cef80cbdc145a233465df6e">TacheComposite::listeSousTaches</a></div><div class="ttdeci">QVector&lt; Tache * &gt; listeSousTaches</div><div class="ttdef"><b>Definition:</b> tachecomposite.h:15</div></div>
+<div class="ttc" id="class_tache_composite_html_a4c7408084fe783835b083501757a1c19"><div class="ttname"><a href="class_tache_composite.html#a4c7408084fe783835b083501757a1c19">TacheComposite::getListeSousTaches</a></div><div class="ttdeci">QVector&lt; Tache * &gt; getListeSousTaches() const </div><div class="ttdef"><b>Definition:</b> tachecomposite.h:20</div></div>
+<div class="ttc" id="class_tache_composite_html_ab4243a926687c17556eeaa34ecbe1567"><div class="ttname"><a href="class_tache_composite.html#ab4243a926687c17556eeaa34ecbe1567">TacheComposite::addSousTache</a></div><div class="ttdeci">void addSousTache(Tache *tache)</div><div class="ttdef"><b>Definition:</b> tachecomposite.cpp:22</div></div>
+<div class="ttc" id="class_tache_html"><div class="ttname"><a href="class_tache.html">Tache</a></div><div class="ttdef"><b>Definition:</b> tache.h:12</div></div>
+<div class="ttc" id="class_tache_composite_html_a70ddee42aa910b22a06e8197f5873698"><div class="ttname"><a href="class_tache_composite.html#a70ddee42aa910b22a06e8197f5873698">TacheComposite::~TacheComposite</a></div><div class="ttdeci">virtual ~TacheComposite()</div><div class="ttdef"><b>Definition:</b> tachecomposite.cpp:17</div></div>
+<div class="ttc" id="class_projet_html"><div class="ttname"><a href="class_projet.html">Projet</a></div><div class="ttdef"><b>Definition:</b> projet.h:12</div></div>
+<div class="ttc" id="tache_8h_html"><div class="ttname"><a href="tache_8h.html">tache.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 13 Juin 2015 17:34:30 pour 23h59 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

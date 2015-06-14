@@ -11,3 +11,4 @@ Programmation::~Programmation()
 {
     qDebug()<<"Suppression de la programmation"<<identifiant;
 }
+

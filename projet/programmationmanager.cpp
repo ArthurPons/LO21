@@ -30,6 +30,7 @@ ProgrammationTache* ProgrammationManager::addProgrammationTache(QString id, QDat
         }
 
     if(dat<QDate::currentDate()){
+        qDebug()<<"Impossible de programmer une tache dans le passe";
         qDebug()<<"Impossible de programmer une tache dans la passe";
         return 0;
     }
@@ -135,5 +136,3 @@ void ProgrammationManager::suppProgrammationActivite(ProgrammationActivite* prog
 
     delete prog;
 }
-
-

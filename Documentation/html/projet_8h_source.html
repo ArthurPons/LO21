@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>23h59:  Fichier source de projet.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="23h59.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">23h59
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Calendrier + Gestion de projet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">projet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="projet_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PROJET_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PROJET_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;QVector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;QDate&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tache_8h.html">tache.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tacheunitaire_8h.html">tacheunitaire.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tachecomposite_8h.html">tachecomposite.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//Composition entre projet et Tache, projet endosse le rôle d&#39;un TacheManager</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_projet.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_projet.html">Projet</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_projet.html#aaaed9857b3481233fa7c581b5c86151d">   14</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_projet_manager.html">ProjetManager</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_projet.html#a9759849c856c2ac63f94751b876fd289">   16</a></span>&#160;    QString <a class="code" href="class_projet.html#a9759849c856c2ac63f94751b876fd289">titre</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_projet.html#ac2e3a37d5f0201390991b97f258ce0eb">   17</a></span>&#160;    QString <a class="code" href="class_projet.html#ac2e3a37d5f0201390991b97f258ce0eb">description</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_projet.html#a8a89803d629bb571062921008e6a2639">   18</a></span>&#160;    QDate <a class="code" href="class_projet.html#a8a89803d629bb571062921008e6a2639">dateDispo</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_projet.html#a868ee370bb8f071b830dda61f55d99cd">   19</a></span>&#160;    QDate <a class="code" href="class_projet.html#a868ee370bb8f071b830dda61f55d99cd">dateEcheance</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_projet.html#a268bc6fc9be6d5e266439cc6371cd617">   20</a></span>&#160;    QVector&lt;Tache*&gt; <a class="code" href="class_projet.html#a268bc6fc9be6d5e266439cc6371cd617">listeTaches</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_projet.html#a0149f821f689f5910c7c6d0278d3dd4b">Projet</a>(<span class="keyword">const</span> QString&amp; t, <span class="keyword">const</span> QString&amp; d);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_projet.html#a26e3e136385eca01dda79df7fba4e03d">~Projet</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_projet.html#aafdae1361272085ee8683738d70d0612">   25</a></span>&#160;    QString <a class="code" href="class_projet.html#aafdae1361272085ee8683738d70d0612">getTitre</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="class_projet.html#a9759849c856c2ac63f94751b876fd289">titre</a>;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_projet.html#a4b939075b8f652846f8fc6457343219e">   26</a></span>&#160;    QString <a class="code" href="class_projet.html#a4b939075b8f652846f8fc6457343219e">getDescription</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="class_projet.html#ac2e3a37d5f0201390991b97f258ce0eb">description</a>;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_projet.html#abc5c0c5980be9a1639651dc23789f068">   27</a></span>&#160;    QVector&lt;Tache*&gt; <a class="code" href="class_projet.html#abc5c0c5980be9a1639651dc23789f068">getListeTaches</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="class_projet.html#a268bc6fc9be6d5e266439cc6371cd617">listeTaches</a>;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_projet.html#a226d910000aaecf7e44399f2226496f5">   28</a></span>&#160;    QDate <a class="code" href="class_projet.html#a226d910000aaecf7e44399f2226496f5">getDateDispo</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="class_projet.html#a8a89803d629bb571062921008e6a2639">dateDispo</a>;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_projet.html#a6a54a69a00cbaebd362e02f8e7dc3803">   29</a></span>&#160;    QDate <a class="code" href="class_projet.html#a6a54a69a00cbaebd362e02f8e7dc3803">getDateEcheance</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="class_projet.html#a868ee370bb8f071b830dda61f55d99cd">dateEcheance</a>;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_tache.html">Tache</a>* <a class="code" href="class_projet.html#a4bd470370df8fd883386069a90b958e2">getTache</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_tache_unitaire.html">TacheUnitaire</a>* <a class="code" href="class_projet.html#a3dfe2bda911378a958b57a6684624804">addTacheUnitaire</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; tit,<span class="keyword">const</span> QString&amp; desc,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                    <span class="keyword">const</span> <span class="keywordtype">int</span> dur, <span class="keyword">const</span> <span class="keywordtype">bool</span> pre);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_tache_unitaire.html">TacheUnitaire</a>* <a class="code" href="class_projet.html#a3dfe2bda911378a958b57a6684624804">addTacheUnitaire</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; tit, <span class="keyword">const</span> QString&amp; desc, <span class="keyword">const</span> QDate&amp; dd, <span class="keyword">const</span> QDate&amp; de,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                    <span class="keyword">const</span> <span class="keywordtype">int</span> dur, <span class="keyword">const</span> <span class="keywordtype">bool</span> pre);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_tache_composite.html">TacheComposite</a>* <a class="code" href="class_projet.html#aa5f49aee0f30445f1e612311848b78ba">addTacheComposite</a>(<span class="keyword">const</span> QString &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> QString &amp;tit, <span class="keyword">const</span> QString &amp;desc);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_tache_composite.html">TacheComposite</a>* <a class="code" href="class_projet.html#aa5f49aee0f30445f1e612311848b78ba">addTacheComposite</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; tit, <span class="keyword">const</span> QString&amp; desc, <span class="keyword">const</span> QDate&amp; dd,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                      <span class="keyword">const</span> QDate&amp; de);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projet.html#a649b8123c195bc575871576c9f350d14">suppTache</a>(<a class="code" href="class_tache_unitaire.html">TacheUnitaire</a>* tache);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projet.html#a649b8123c195bc575871576c9f350d14">suppTache</a>(<a class="code" href="class_tache_composite.html">TacheComposite</a>* tache);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // PROJET_H</span></div>
+<div class="ttc" id="class_projet_html_abc5c0c5980be9a1639651dc23789f068"><div class="ttname"><a href="class_projet.html#abc5c0c5980be9a1639651dc23789f068">Projet::getListeTaches</a></div><div class="ttdeci">QVector&lt; Tache * &gt; getListeTaches() const </div><div class="ttdef"><b>Definition:</b> projet.h:27</div></div>
+<div class="ttc" id="class_projet_manager_html"><div class="ttname"><a href="class_projet_manager.html">ProjetManager</a></div><div class="ttdef"><b>Definition:</b> projetmanager.h:10</div></div>
+<div class="ttc" id="class_tache_unitaire_html"><div class="ttname"><a href="class_tache_unitaire.html">TacheUnitaire</a></div><div class="ttdef"><b>Definition:</b> tacheunitaire.h:6</div></div>
+<div class="ttc" id="class_projet_html_a226d910000aaecf7e44399f2226496f5"><div class="ttname"><a href="class_projet.html#a226d910000aaecf7e44399f2226496f5">Projet::getDateDispo</a></div><div class="ttdeci">QDate getDateDispo() const </div><div class="ttdef"><b>Definition:</b> projet.h:28</div></div>
+<div class="ttc" id="class_projet_html_a868ee370bb8f071b830dda61f55d99cd"><div class="ttname"><a href="class_projet.html#a868ee370bb8f071b830dda61f55d99cd">Projet::dateEcheance</a></div><div class="ttdeci">QDate dateEcheance</div><div class="ttdef"><b>Definition:</b> projet.h:19</div></div>
+<div class="ttc" id="class_projet_html_a8a89803d629bb571062921008e6a2639"><div class="ttname"><a href="class_projet.html#a8a89803d629bb571062921008e6a2639">Projet::dateDispo</a></div><div class="ttdeci">QDate dateDispo</div><div class="ttdef"><b>Definition:</b> projet.h:18</div></div>
+<div class="ttc" id="class_projet_html_ac2e3a37d5f0201390991b97f258ce0eb"><div class="ttname"><a href="class_projet.html#ac2e3a37d5f0201390991b97f258ce0eb">Projet::description</a></div><div class="ttdeci">QString description</div><div class="ttdef"><b>Definition:</b> projet.h:17</div></div>
+<div class="ttc" id="class_tache_composite_html"><div class="ttname"><a href="class_tache_composite.html">TacheComposite</a></div><div class="ttdef"><b>Definition:</b> tachecomposite.h:6</div></div>
+<div class="ttc" id="class_projet_html_a6a54a69a00cbaebd362e02f8e7dc3803"><div class="ttname"><a href="class_projet.html#a6a54a69a00cbaebd362e02f8e7dc3803">Projet::getDateEcheance</a></div><div class="ttdeci">QDate getDateEcheance() const </div><div class="ttdef"><b>Definition:</b> projet.h:29</div></div>
+<div class="ttc" id="class_projet_html_a268bc6fc9be6d5e266439cc6371cd617"><div class="ttname"><a href="class_projet.html#a268bc6fc9be6d5e266439cc6371cd617">Projet::listeTaches</a></div><div class="ttdeci">QVector&lt; Tache * &gt; listeTaches</div><div class="ttdef"><b>Definition:</b> projet.h:20</div></div>
+<div class="ttc" id="class_tache_html"><div class="ttname"><a href="class_tache.html">Tache</a></div><div class="ttdef"><b>Definition:</b> tache.h:12</div></div>
+<div class="ttc" id="tachecomposite_8h_html"><div class="ttname"><a href="tachecomposite_8h.html">tachecomposite.h</a></div></div>
+<div class="ttc" id="class_projet_html_a0149f821f689f5910c7c6d0278d3dd4b"><div class="ttname"><a href="class_projet.html#a0149f821f689f5910c7c6d0278d3dd4b">Projet::Projet</a></div><div class="ttdeci">Projet(const QString &amp;t, const QString &amp;d)</div><div class="ttdef"><b>Definition:</b> projet.cpp:7</div></div>
+<div class="ttc" id="class_projet_html_a4b939075b8f652846f8fc6457343219e"><div class="ttname"><a href="class_projet.html#a4b939075b8f652846f8fc6457343219e">Projet::getDescription</a></div><div class="ttdeci">QString getDescription() const </div><div class="ttdef"><b>Definition:</b> projet.h:26</div></div>
+<div class="ttc" id="class_projet_html"><div class="ttname"><a href="class_projet.html">Projet</a></div><div class="ttdef"><b>Definition:</b> projet.h:12</div></div>
+<div class="ttc" id="class_projet_html_a26e3e136385eca01dda79df7fba4e03d"><div class="ttname"><a href="class_projet.html#a26e3e136385eca01dda79df7fba4e03d">Projet::~Projet</a></div><div class="ttdeci">~Projet()</div><div class="ttdef"><b>Definition:</b> projet.cpp:13</div></div>
+<div class="ttc" id="tacheunitaire_8h_html"><div class="ttname"><a href="tacheunitaire_8h.html">tacheunitaire.h</a></div></div>
+<div class="ttc" id="class_projet_html_a9759849c856c2ac63f94751b876fd289"><div class="ttname"><a href="class_projet.html#a9759849c856c2ac63f94751b876fd289">Projet::titre</a></div><div class="ttdeci">QString titre</div><div class="ttdef"><b>Definition:</b> projet.h:16</div></div>
+<div class="ttc" id="class_projet_html_a649b8123c195bc575871576c9f350d14"><div class="ttname"><a href="class_projet.html#a649b8123c195bc575871576c9f350d14">Projet::suppTache</a></div><div class="ttdeci">void suppTache(TacheUnitaire *tache)</div><div class="ttdef"><b>Definition:</b> projet.cpp:130</div></div>
+<div class="ttc" id="class_projet_html_aafdae1361272085ee8683738d70d0612"><div class="ttname"><a href="class_projet.html#aafdae1361272085ee8683738d70d0612">Projet::getTitre</a></div><div class="ttdeci">QString getTitre() const </div><div class="ttdef"><b>Definition:</b> projet.h:25</div></div>
+<div class="ttc" id="tache_8h_html"><div class="ttname"><a href="tache_8h.html">tache.h</a></div></div>
+<div class="ttc" id="class_projet_html_a4bd470370df8fd883386069a90b958e2"><div class="ttname"><a href="class_projet.html#a4bd470370df8fd883386069a90b958e2">Projet::getTache</a></div><div class="ttdeci">Tache * getTache(const QString &amp;id)</div><div class="ttdef"><b>Definition:</b> projet.cpp:21</div></div>
+<div class="ttc" id="class_projet_html_a3dfe2bda911378a958b57a6684624804"><div class="ttname"><a href="class_projet.html#a3dfe2bda911378a958b57a6684624804">Projet::addTacheUnitaire</a></div><div class="ttdeci">TacheUnitaire * addTacheUnitaire(const QString &amp;id, const QString &amp;tit, const QString &amp;desc, const int dur, const bool pre)</div><div class="ttdef"><b>Definition:</b> projet.cpp:33</div></div>
+<div class="ttc" id="class_projet_html_aa5f49aee0f30445f1e612311848b78ba"><div class="ttname"><a href="class_projet.html#aa5f49aee0f30445f1e612311848b78ba">Projet::addTacheComposite</a></div><div class="ttdeci">TacheComposite * addTacheComposite(const QString &amp;id, const QString &amp;tit, const QString &amp;desc)</div><div class="ttdef"><b>Definition:</b> projet.cpp:93</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 13 Juin 2015 17:34:30 pour 23h59 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

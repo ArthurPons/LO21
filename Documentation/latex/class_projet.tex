@@ -1,0 +1,209 @@
+\hypertarget{class_projet}{}\section{Référence de la classe Projet}
+\label{class_projet}\index{Projet@{Projet}}
+
+
+{\ttfamily \#include $<$projet.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{class_projet_aafdae1361272085ee8683738d70d0612}{get\+Titre} () const 
+\item 
+Q\+String \hyperlink{class_projet_a4b939075b8f652846f8fc6457343219e}{get\+Description} () const 
+\item 
+Q\+Vector$<$ \hyperlink{class_tache}{Tache} $\ast$ $>$ \hyperlink{class_projet_abc5c0c5980be9a1639651dc23789f068}{get\+Liste\+Taches} () const 
+\item 
+Q\+Date \hyperlink{class_projet_a226d910000aaecf7e44399f2226496f5}{get\+Date\+Dispo} () const 
+\item 
+Q\+Date \hyperlink{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}{get\+Date\+Echeance} () const 
+\item 
+\hyperlink{class_tache}{Tache} $\ast$ \hyperlink{class_projet_a4bd470370df8fd883386069a90b958e2}{get\+Tache} (const Q\+String \&id)
+\item 
+\hyperlink{class_tache_unitaire}{Tache\+Unitaire} $\ast$ \hyperlink{class_projet_a3dfe2bda911378a958b57a6684624804}{add\+Tache\+Unitaire} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc, const int dur, const bool pre)
+\item 
+\hyperlink{class_tache_unitaire}{Tache\+Unitaire} $\ast$ \hyperlink{class_projet_a8434e7255cace66ff199cb0ba6636535}{add\+Tache\+Unitaire} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc, const Q\+Date \&dd, const Q\+Date \&de, const int dur, const bool pre)
+\item 
+\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$ \hyperlink{class_projet_aa5f49aee0f30445f1e612311848b78ba}{add\+Tache\+Composite} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc)
+\item 
+\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$ \hyperlink{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}{add\+Tache\+Composite} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc, const Q\+Date \&dd, const Q\+Date \&de)
+\item 
+void \hyperlink{class_projet_a649b8123c195bc575871576c9f350d14}{supp\+Tache} (\hyperlink{class_tache_unitaire}{Tache\+Unitaire} $\ast$tache)
+\item 
+void \hyperlink{class_projet_a1af5c7716e8893066418afc5e8c09f3c}{supp\+Tache} (\hyperlink{class_tache_composite}{Tache\+Composite} $\ast$tache)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_projet_a0149f821f689f5910c7c6d0278d3dd4b}{Projet} (const Q\+String \&t, const Q\+String \&d)
+\item 
+\hyperlink{class_projet_a26e3e136385eca01dda79df7fba4e03d}{$\sim$\+Projet} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{class_projet_a9759849c856c2ac63f94751b876fd289}{titre}
+\item 
+Q\+String \hyperlink{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}{description}
+\item 
+Q\+Date \hyperlink{class_projet_a8a89803d629bb571062921008e6a2639}{date\+Dispo}
+\item 
+Q\+Date \hyperlink{class_projet_a868ee370bb8f071b830dda61f55d99cd}{date\+Echeance}
+\item 
+Q\+Vector$<$ \hyperlink{class_tache}{Tache} $\ast$ $>$ \hyperlink{class_projet_a268bc6fc9be6d5e266439cc6371cd617}{liste\+Taches}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_projet_a0149f821f689f5910c7c6d0278d3dd4b}{}\index{Projet@{Projet}!Projet@{Projet}}
+\index{Projet@{Projet}!Projet@{Projet}}
+\subsubsection[{Projet}]{\setlength{\rightskip}{0pt plus 5cm}Projet\+::\+Projet (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{t, }
+\item[{const Q\+String \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a0149f821f689f5910c7c6d0278d3dd4b}
+\hypertarget{class_projet_a26e3e136385eca01dda79df7fba4e03d}{}\index{Projet@{Projet}!````~Projet@{$\sim$\+Projet}}
+\index{````~Projet@{$\sim$\+Projet}!Projet@{Projet}}
+\subsubsection[{$\sim$\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}Projet\+::$\sim$\+Projet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a26e3e136385eca01dda79df7fba4e03d}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_projet_aa5f49aee0f30445f1e612311848b78ba}{}\index{Projet@{Projet}!add\+Tache\+Composite@{add\+Tache\+Composite}}
+\index{add\+Tache\+Composite@{add\+Tache\+Composite}!Projet@{Projet}}
+\subsubsection[{add\+Tache\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Composite} $\ast$ Projet\+::add\+Tache\+Composite (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc}
+\end{DoxyParamCaption}
+)}\label{class_projet_aa5f49aee0f30445f1e612311848b78ba}
+\hypertarget{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}{}\index{Projet@{Projet}!add\+Tache\+Composite@{add\+Tache\+Composite}}
+\index{add\+Tache\+Composite@{add\+Tache\+Composite}!Projet@{Projet}}
+\subsubsection[{add\+Tache\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Composite} $\ast$ Projet\+::add\+Tache\+Composite (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc, }
+\item[{const Q\+Date \&}]{dd, }
+\item[{const Q\+Date \&}]{de}
+\end{DoxyParamCaption}
+)}\label{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}
+\hypertarget{class_projet_a3dfe2bda911378a958b57a6684624804}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
+\index{add\+Tache\+Unitaire@{add\+Tache\+Unitaire}!Projet@{Projet}}
+\subsubsection[{add\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Unitaire} $\ast$ Projet\+::add\+Tache\+Unitaire (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc, }
+\item[{const int}]{dur, }
+\item[{const bool}]{pre}
+\end{DoxyParamCaption}
+)}\label{class_projet_a3dfe2bda911378a958b57a6684624804}
+\hypertarget{class_projet_a8434e7255cace66ff199cb0ba6636535}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
+\index{add\+Tache\+Unitaire@{add\+Tache\+Unitaire}!Projet@{Projet}}
+\subsubsection[{add\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Unitaire} $\ast$ Projet\+::add\+Tache\+Unitaire (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc, }
+\item[{const Q\+Date \&}]{dd, }
+\item[{const Q\+Date \&}]{de, }
+\item[{const int}]{dur, }
+\item[{const bool}]{pre}
+\end{DoxyParamCaption}
+)}\label{class_projet_a8434e7255cace66ff199cb0ba6636535}
+\hypertarget{class_projet_a226d910000aaecf7e44399f2226496f5}{}\index{Projet@{Projet}!get\+Date\+Dispo@{get\+Date\+Dispo}}
+\index{get\+Date\+Dispo@{get\+Date\+Dispo}!Projet@{Projet}}
+\subsubsection[{get\+Date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::get\+Date\+Dispo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a226d910000aaecf7e44399f2226496f5}
+\hypertarget{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}{}\index{Projet@{Projet}!get\+Date\+Echeance@{get\+Date\+Echeance}}
+\index{get\+Date\+Echeance@{get\+Date\+Echeance}!Projet@{Projet}}
+\subsubsection[{get\+Date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::get\+Date\+Echeance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}
+\hypertarget{class_projet_a4b939075b8f652846f8fc6457343219e}{}\index{Projet@{Projet}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Projet@{Projet}}
+\subsubsection[{get\+Description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a4b939075b8f652846f8fc6457343219e}
+\hypertarget{class_projet_abc5c0c5980be9a1639651dc23789f068}{}\index{Projet@{Projet}!get\+Liste\+Taches@{get\+Liste\+Taches}}
+\index{get\+Liste\+Taches@{get\+Liste\+Taches}!Projet@{Projet}}
+\subsubsection[{get\+Liste\+Taches}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Projet\+::get\+Liste\+Taches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_abc5c0c5980be9a1639651dc23789f068}
+\hypertarget{class_projet_a4bd470370df8fd883386069a90b958e2}{}\index{Projet@{Projet}!get\+Tache@{get\+Tache}}
+\index{get\+Tache@{get\+Tache}!Projet@{Projet}}
+\subsubsection[{get\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache} $\ast$ Projet\+::get\+Tache (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id}
+\end{DoxyParamCaption}
+)}\label{class_projet_a4bd470370df8fd883386069a90b958e2}
+\hypertarget{class_projet_aafdae1361272085ee8683738d70d0612}{}\index{Projet@{Projet}!get\+Titre@{get\+Titre}}
+\index{get\+Titre@{get\+Titre}!Projet@{Projet}}
+\subsubsection[{get\+Titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::get\+Titre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_aafdae1361272085ee8683738d70d0612}
+\hypertarget{class_projet_a649b8123c195bc575871576c9f350d14}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
+\index{supp\+Tache@{supp\+Tache}!Projet@{Projet}}
+\subsubsection[{supp\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+::supp\+Tache (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache\+Unitaire} $\ast$}]{tache}
+\end{DoxyParamCaption}
+)}\label{class_projet_a649b8123c195bc575871576c9f350d14}
+\hypertarget{class_projet_a1af5c7716e8893066418afc5e8c09f3c}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
+\index{supp\+Tache@{supp\+Tache}!Projet@{Projet}}
+\subsubsection[{supp\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+::supp\+Tache (
+\begin{DoxyParamCaption}
+\item[{{\bf Tache\+Composite} $\ast$}]{tache}
+\end{DoxyParamCaption}
+)}\label{class_projet_a1af5c7716e8893066418afc5e8c09f3c}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_projet_aaaed9857b3481233fa7c581b5c86151d}{}\index{Projet@{Projet}!Projet\+Manager@{Projet\+Manager}}
+\index{Projet\+Manager@{Projet\+Manager}!Projet@{Projet}}
+\subsubsection[{Projet\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Projet\+Manager}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_projet_aaaed9857b3481233fa7c581b5c86151d}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_projet_a8a89803d629bb571062921008e6a2639}{}\index{Projet@{Projet}!date\+Dispo@{date\+Dispo}}
+\index{date\+Dispo@{date\+Dispo}!Projet@{Projet}}
+\subsubsection[{date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::date\+Dispo\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a8a89803d629bb571062921008e6a2639}
+\hypertarget{class_projet_a868ee370bb8f071b830dda61f55d99cd}{}\index{Projet@{Projet}!date\+Echeance@{date\+Echeance}}
+\index{date\+Echeance@{date\+Echeance}!Projet@{Projet}}
+\subsubsection[{date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::date\+Echeance\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a868ee370bb8f071b830dda61f55d99cd}
+\hypertarget{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}{}\index{Projet@{Projet}!description@{description}}
+\index{description@{description}!Projet@{Projet}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::description\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}
+\hypertarget{class_projet_a268bc6fc9be6d5e266439cc6371cd617}{}\index{Projet@{Projet}!liste\+Taches@{liste\+Taches}}
+\index{liste\+Taches@{liste\+Taches}!Projet@{Projet}}
+\subsubsection[{liste\+Taches}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Projet\+::liste\+Taches\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a268bc6fc9be6d5e266439cc6371cd617}
+\hypertarget{class_projet_a9759849c856c2ac63f94751b876fd289}{}\index{Projet@{Projet}!titre@{titre}}
+\index{titre@{titre}!Projet@{Projet}}
+\subsubsection[{titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::titre\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a9759849c856c2ac63f94751b876fd289}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{projet_8h}{projet.\+h}\item 
+\hyperlink{projet_8cpp}{projet.\+cpp}\end{DoxyCompactItemize}

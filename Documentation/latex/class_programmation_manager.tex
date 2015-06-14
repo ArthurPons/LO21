@@ -1,0 +1,145 @@
+\hypertarget{class_programmation_manager}{}\section{Référence de la classe Programmation\+Manager}
+\label{class_programmation_manager}\index{Programmation\+Manager@{Programmation\+Manager}}
+
+
+{\ttfamily \#include $<$programmationmanager.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Vector$<$ \hyperlink{class_programmation}{Programmation} $\ast$ $>$ \hyperlink{class_programmation_manager_a05398cf87cb227b0e2e9fbf93b36af80}{get\+Liste\+Programmation} () const 
+\item 
+\hyperlink{class_programmation_tache}{Programmation\+Tache} $\ast$ \hyperlink{class_programmation_manager_a286ba93621f944ed4e3d52a6c32b9f46}{add\+Programmation\+Tache} (Q\+String id, Q\+Date dat, int hd, int hf, \hyperlink{class_tache_unitaire}{Tache\+Unitaire} $\ast$ta)
+\item 
+\hyperlink{class_programmation_activite}{Programmation\+Activite} $\ast$ \hyperlink{class_programmation_manager_afcead9271094c4b839a750527406c366}{add\+Programmation\+Activite} (Q\+String id, Q\+Date dat, int hd, int hf, Q\+String tit, Q\+String desc)
+\item 
+void \hyperlink{class_programmation_manager_af3c39775fa3ea5a8642181dbed0a519c}{supp\+Programmation\+Tache} (\hyperlink{class_programmation_tache}{Programmation\+Tache} $\ast$prog)
+\item 
+void \hyperlink{class_programmation_manager_a2781cb1d7ae670b5b779cbe76f7714a6}{supp\+Programmation\+Activite} (\hyperlink{class_programmation_activite}{Programmation\+Activite} $\ast$prog)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_programmation_manager}{Programmation\+Manager} \& \hyperlink{class_programmation_manager_a8b2d81872d9d34cc33e0a0b348875550}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_programmation_manager_ac493a099c33e7ea0cf8eb4b6036f0a1a}{Programmation\+Manager} ()
+\item 
+\hyperlink{class_programmation_manager_a51a54dc0fee78a0b831519f3cde27ff6}{$\sim$\+Programmation\+Manager} ()
+\item 
+\hyperlink{class_programmation_manager}{Programmation\+Manager} \& \hyperlink{class_programmation_manager_a64a3749fe471a9cb58c598d4308ab994}{operator=} (const \hyperlink{class_programmation_manager}{Programmation\+Manager} \&)
+\item 
+\hyperlink{class_programmation_manager_a05cc9a749fdd300053ea89e947d03571}{Programmation\+Manager} (const \hyperlink{class_programmation_manager}{Programmation\+Manager} \&)
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Vector$<$ \hyperlink{class_programmation}{Programmation} $\ast$ $>$ \hyperlink{class_programmation_manager_a23540a1467db12d716d19641d70447b8}{liste\+Programmation}
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_programmation_manager}{Programmation\+Manager} \hyperlink{class_programmation_manager_a04ca8715bceaec304a821a6d61b5a94d}{instance} =\hyperlink{class_programmation_manager}{Programmation\+Manager}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_programmation_manager_ac493a099c33e7ea0cf8eb4b6036f0a1a}{}\index{Programmation\+Manager@{Programmation\+Manager}!Programmation\+Manager@{Programmation\+Manager}}
+\index{Programmation\+Manager@{Programmation\+Manager}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{Programmation\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Programmation\+Manager\+::\+Programmation\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_programmation_manager_ac493a099c33e7ea0cf8eb4b6036f0a1a}
+\hypertarget{class_programmation_manager_a51a54dc0fee78a0b831519f3cde27ff6}{}\index{Programmation\+Manager@{Programmation\+Manager}!````~Programmation\+Manager@{$\sim$\+Programmation\+Manager}}
+\index{````~Programmation\+Manager@{$\sim$\+Programmation\+Manager}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{$\sim$\+Programmation\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Programmation\+Manager\+::$\sim$\+Programmation\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_programmation_manager_a51a54dc0fee78a0b831519f3cde27ff6}
+\hypertarget{class_programmation_manager_a05cc9a749fdd300053ea89e947d03571}{}\index{Programmation\+Manager@{Programmation\+Manager}!Programmation\+Manager@{Programmation\+Manager}}
+\index{Programmation\+Manager@{Programmation\+Manager}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{Programmation\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Programmation\+Manager\+::\+Programmation\+Manager (
+\begin{DoxyParamCaption}
+\item[{const {\bf Programmation\+Manager} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_programmation_manager_a05cc9a749fdd300053ea89e947d03571}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_programmation_manager_afcead9271094c4b839a750527406c366}{}\index{Programmation\+Manager@{Programmation\+Manager}!add\+Programmation\+Activite@{add\+Programmation\+Activite}}
+\index{add\+Programmation\+Activite@{add\+Programmation\+Activite}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{add\+Programmation\+Activite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Programmation\+Activite} $\ast$ Programmation\+Manager\+::add\+Programmation\+Activite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{id, }
+\item[{Q\+Date}]{dat, }
+\item[{int}]{hd, }
+\item[{int}]{hf, }
+\item[{Q\+String}]{tit, }
+\item[{Q\+String}]{desc}
+\end{DoxyParamCaption}
+)}\label{class_programmation_manager_afcead9271094c4b839a750527406c366}
+\hypertarget{class_programmation_manager_a286ba93621f944ed4e3d52a6c32b9f46}{}\index{Programmation\+Manager@{Programmation\+Manager}!add\+Programmation\+Tache@{add\+Programmation\+Tache}}
+\index{add\+Programmation\+Tache@{add\+Programmation\+Tache}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{add\+Programmation\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Programmation\+Tache} $\ast$ Programmation\+Manager\+::add\+Programmation\+Tache (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{id, }
+\item[{Q\+Date}]{dat, }
+\item[{int}]{hd, }
+\item[{int}]{hf, }
+\item[{{\bf Tache\+Unitaire} $\ast$}]{ta}
+\end{DoxyParamCaption}
+)}\label{class_programmation_manager_a286ba93621f944ed4e3d52a6c32b9f46}
+\hypertarget{class_programmation_manager_a05398cf87cb227b0e2e9fbf93b36af80}{}\index{Programmation\+Manager@{Programmation\+Manager}!get\+Liste\+Programmation@{get\+Liste\+Programmation}}
+\index{get\+Liste\+Programmation@{get\+Liste\+Programmation}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{get\+Liste\+Programmation}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Programmation}$\ast$$>$ Programmation\+Manager\+::get\+Liste\+Programmation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_programmation_manager_a05398cf87cb227b0e2e9fbf93b36af80}
+\hypertarget{class_programmation_manager_a8b2d81872d9d34cc33e0a0b348875550}{}\index{Programmation\+Manager@{Programmation\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Programmation\+Manager} \& Programmation\+Manager\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_programmation_manager_a8b2d81872d9d34cc33e0a0b348875550}
+\hypertarget{class_programmation_manager_a64a3749fe471a9cb58c598d4308ab994}{}\index{Programmation\+Manager@{Programmation\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Programmation\+Manager}\& Programmation\+Manager\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Programmation\+Manager} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_programmation_manager_a64a3749fe471a9cb58c598d4308ab994}
+\hypertarget{class_programmation_manager_a2781cb1d7ae670b5b779cbe76f7714a6}{}\index{Programmation\+Manager@{Programmation\+Manager}!supp\+Programmation\+Activite@{supp\+Programmation\+Activite}}
+\index{supp\+Programmation\+Activite@{supp\+Programmation\+Activite}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{supp\+Programmation\+Activite}]{\setlength{\rightskip}{0pt plus 5cm}void Programmation\+Manager\+::supp\+Programmation\+Activite (
+\begin{DoxyParamCaption}
+\item[{{\bf Programmation\+Activite} $\ast$}]{prog}
+\end{DoxyParamCaption}
+)}\label{class_programmation_manager_a2781cb1d7ae670b5b779cbe76f7714a6}
+\hypertarget{class_programmation_manager_af3c39775fa3ea5a8642181dbed0a519c}{}\index{Programmation\+Manager@{Programmation\+Manager}!supp\+Programmation\+Tache@{supp\+Programmation\+Tache}}
+\index{supp\+Programmation\+Tache@{supp\+Programmation\+Tache}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{supp\+Programmation\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Programmation\+Manager\+::supp\+Programmation\+Tache (
+\begin{DoxyParamCaption}
+\item[{{\bf Programmation\+Tache} $\ast$}]{prog}
+\end{DoxyParamCaption}
+)}\label{class_programmation_manager_af3c39775fa3ea5a8642181dbed0a519c}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_programmation_manager_a04ca8715bceaec304a821a6d61b5a94d}{}\index{Programmation\+Manager@{Programmation\+Manager}!instance@{instance}}
+\index{instance@{instance}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Programmation\+Manager} Programmation\+Manager\+::instance ={\bf Programmation\+Manager}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_programmation_manager_a04ca8715bceaec304a821a6d61b5a94d}
+\hypertarget{class_programmation_manager_a23540a1467db12d716d19641d70447b8}{}\index{Programmation\+Manager@{Programmation\+Manager}!liste\+Programmation@{liste\+Programmation}}
+\index{liste\+Programmation@{liste\+Programmation}!Programmation\+Manager@{Programmation\+Manager}}
+\subsubsection[{liste\+Programmation}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Programmation}$\ast$$>$ Programmation\+Manager\+::liste\+Programmation\hspace{0.3cm}{\ttfamily [private]}}\label{class_programmation_manager_a23540a1467db12d716d19641d70447b8}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{programmationmanager_8h}{programmationmanager.\+h}\item 
+\hyperlink{programmationmanager_8cpp}{programmationmanager.\+cpp}\end{DoxyCompactItemize}

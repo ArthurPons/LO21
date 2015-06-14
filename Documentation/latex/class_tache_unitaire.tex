@@ -1,0 +1,138 @@
+\hypertarget{class_tache_unitaire}{}\section{Référence de la classe Tache\+Unitaire}
+\label{class_tache_unitaire}\index{Tache\+Unitaire@{Tache\+Unitaire}}
+
+
+{\ttfamily \#include $<$tacheunitaire.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Tache\+Unitaire\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tache_unitaire}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tache_unitaire_a2f1c93887c652e5581df4357bc72949b}{get\+Duree} () const 
+\item 
+int \hyperlink{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}{get\+Duree\+Restante} () const 
+\item 
+void \hyperlink{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}{set\+Duree\+Restante} (int dur)
+\item 
+bool \hyperlink{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}{is\+Preemptee} () const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tache_unitaire_acca628b1c239bf191fbbf869ad15cdd2}{Tache\+Unitaire} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc, const int \&dur, const bool \&pre, \hyperlink{class_projet}{Projet} $\ast$p)
+\item 
+\hyperlink{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}{Tache\+Unitaire} (const Q\+String \&id, const Q\+String \&tit, const Q\+String \&desc, const Q\+Date \&dd, const Q\+Date \&de, const int \&dur, const bool \&pre, \hyperlink{class_projet}{Projet} $\ast$p)
+\item 
+virtual \hyperlink{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}{$\sim$\+Tache\+Unitaire} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tache_unitaire_a5510c1941069a4391e076ec45e0201fc}{duree}
+\item 
+int \hyperlink{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}{duree\+Restante}
+\item 
+bool \hyperlink{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}{preemptee}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_tache_unitaire_acca628b1c239bf191fbbf869ad15cdd2}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+Unitaire\+::\+Tache\+Unitaire (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc, }
+\item[{const int \&}]{dur, }
+\item[{const bool \&}]{pre, }
+\item[{{\bf Projet} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_acca628b1c239bf191fbbf869ad15cdd2}
+\hypertarget{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+Unitaire\+::\+Tache\+Unitaire (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{id, }
+\item[{const Q\+String \&}]{tit, }
+\item[{const Q\+String \&}]{desc, }
+\item[{const Q\+Date \&}]{dd, }
+\item[{const Q\+Date \&}]{de, }
+\item[{const int \&}]{dur, }
+\item[{const bool \&}]{pre, }
+\item[{{\bf Projet} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}
+\hypertarget{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!````~Tache\+Unitaire@{$\sim$\+Tache\+Unitaire}}
+\index{````~Tache\+Unitaire@{$\sim$\+Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{$\sim$\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+Unitaire\+::$\sim$\+Tache\+Unitaire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_tache_unitaire_a2f1c93887c652e5581df4357bc72949b}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!get\+Duree@{get\+Duree}}
+\index{get\+Duree@{get\+Duree}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{get\+Duree}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::get\+Duree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a2f1c93887c652e5581df4357bc72949b}
+\hypertarget{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!get\+Duree\+Restante@{get\+Duree\+Restante}}
+\index{get\+Duree\+Restante@{get\+Duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{get\+Duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::get\+Duree\+Restante (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}
+\hypertarget{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!is\+Preemptee@{is\+Preemptee}}
+\index{is\+Preemptee@{is\+Preemptee}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{is\+Preemptee}]{\setlength{\rightskip}{0pt plus 5cm}bool Tache\+Unitaire\+::is\+Preemptee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}
+\hypertarget{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!set\+Duree\+Restante@{set\+Duree\+Restante}}
+\index{set\+Duree\+Restante@{set\+Duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{set\+Duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}void Tache\+Unitaire\+::set\+Duree\+Restante (
+\begin{DoxyParamCaption}
+\item[{int}]{dur}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Projet@{Projet}}
+\index{Projet@{Projet}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{Projet}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Projet}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_tache_unitaire_a5510c1941069a4391e076ec45e0201fc}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!duree@{duree}}
+\index{duree@{duree}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{duree}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::duree\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a5510c1941069a4391e076ec45e0201fc}
+\hypertarget{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!duree\+Restante@{duree\+Restante}}
+\index{duree\+Restante@{duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::duree\+Restante\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}
+\hypertarget{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!preemptee@{preemptee}}
+\index{preemptee@{preemptee}!Tache\+Unitaire@{Tache\+Unitaire}}
+\subsubsection[{preemptee}]{\setlength{\rightskip}{0pt plus 5cm}bool Tache\+Unitaire\+::preemptee\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tacheunitaire_8h}{tacheunitaire.\+h}\item 
+\hyperlink{tacheunitaire_8cpp}{tacheunitaire.\+cpp}\end{DoxyCompactItemize}

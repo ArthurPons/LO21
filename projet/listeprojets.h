@@ -1,20 +1,42 @@
+
 #ifndef LISTEPROJETS_H
 #define LISTEPROJETS_H
 
-#include <QObject>
 #include <QWidget>
 #include <QDialog>
+#include <QObject>
+#include <QPushButton>
+#include <QTextEdit>
+#include <QDateEdit>
+#include <QList>
+#include <QLabel>
+#include <QSlider>
+#include <QCalendarWidget>
+#include <QVBoxLayout>
+#include <QDebug>
+#include <QVector>
+#include "QSignalMapper"
+#include "projetmanager.h"
 
 class ListeProjets : public QDialog
 {
     Q_OBJECT
 public:
     explicit ListeProjets(QWidget *parent = 0);
-    //ListeProjets(QWidget *parent,ProjectManager& pm);
+    QVBoxLayout* layout;
+    QPushButton* addPrj;
+    QPushButton* bouton;
+    QVector<Projet*> prj;
 
 signals:
+    void clicked(int);
 
-public slots:
+private:
+    QSignalMapper *sm;
+
+private slots:
+    void afficherProjet(int i);
+    void ajouterProjet();
 };
 
 #endif // LISTEPROJETS_H

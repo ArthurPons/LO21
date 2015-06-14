@@ -1,4 +1,5 @@
 #include "Interface.h"
+#include "listeprojets.h"
 
 Interface::Interface()
 {
@@ -8,12 +9,13 @@ Interface::Interface()
 
     semaine = new QDateEdit(QDate::currentDate(),this);
     jourCourant = new QDate();
+    boucleJour= new QDate();
+    dateCourante= new QDate();
     calendar = new QLabel(QString("Calendrier"),this);
     table = new QTableWidget(12,7,this);
     cal = new QCalendarWidget(this);
     menuCote = new QGroupBox(tr("Menu"),this);
     gprojet = new QPushButton(tr("Afficher les projets"),this);
-    gtache = new QPushButton(tr("Afficher les taches"),this);
     gevt = new QPushButton(tr("Ajouter un évènement"),this);
     layout = new QVBoxLayout;
     layout1 = new QHBoxLayout;
@@ -38,7 +40,6 @@ Interface::Interface()
     table->verticalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     layout4->addWidget(gprojet);
-    layout4->addWidget(gtache);
     layout4->addWidget(gevt);
     layout4->addStretch(1);
     menuCote->setLayout(layout4);
@@ -53,12 +54,13 @@ Interface::Interface()
 
     widget->setLayout(layout);
 
+    ProgrammationManager& progm=ProgrammationManager::Instance();
+    prog = progm.getListeProgrammation();
 
     Interface::getCellulesLigne();
 
     //Fixation des slots
     QObject::connect(gprojet, SIGNAL(clicked()), this, SLOT(gererProjet()));
-    QObject::connect(gtache, SIGNAL(clicked()), this, SLOT(gererTache()));
     QObject::connect(gevt, SIGNAL(clicked()), this, SLOT(gererEvent()));
 
     creerActionMenu();
@@ -90,28 +92,34 @@ void Interface::creerMenu()
 QList<QTableWidgetItem*> Interface::getCellulesLigne()
 {
     QList<QTableWidgetItem*> listIt;
+    boucleJour=&boucleJour->currentDate();
+    jourCourant=&jourCourant->currentDate();
+    *boucleJour=boucleJour->addDays(-jourCourant->dayOfWeek()+1);
+    qDebug()<<boucleJour->toString();
+
     for(int i = 0; i<table->columnCount(); i++)
     {
-
-        if(table->horizontalHeaderItem(i)->text().toLower() == (semaine->date().toString("dddd").toLower())
-        && jourCourant->currentDate() == semaine->date())
-        {
-
-            QTableWidgetItem* ligne = new QTableWidgetItem(table->horizontalHeaderItem(i)->text());
-            ligne->setForeground(Qt::black);
-            ligne->setBackground(Qt::green);
-            table->setHorizontalHeaderItem(i,ligne);
-
-            QTableWidgetItem * ite = table->item(0,i);
-            listIt << ite;
-            table->setItem(0,i,new QTableWidgetItem());
-            table->horizontalHeaderItem(i)->setBackground(Qt::green);
-        }
+        for(int j=0;j<table->rowCount();j++)
+            {
+                for(int k=0; k<prog.size();k++)
+                {
+                   if(*boucleJour==prog.at(k)->getDate() && (prog.at(k)->getHeureDebut()-8<=j &&
+                                                            prog.at(k)->getHeureFin()-8>=j)){
+                 qDebug()<<"affichage programmation";
+                 QTableWidgetItem* progra = new QTableWidgetItem();
+                 QString text=prog.at(k)->getIdentifiant();
+                 progra->setText(text);
+                 table->setItem(j,i,progra);
+                    }
+                }
+            }
+        *boucleJour=boucleJour->addDays(1);
     }
     return listIt;
 }
 
-//Définition des slots vituels
+
+//Définition des slots virtuels
 
 void Interface::quitter()
 {
@@ -125,15 +133,13 @@ void Interface::aPropos()
 
 void Interface::gererProjet()
 {
-
-}
-
-void Interface::gererTache()
-{
-
+    ListeProjets* fen=new ListeProjets();
+    fen->setFixedWidth(300);
+    fen->show();
 }
 
 void Interface::gererEvent()
 {
 
 }
+
