@@ -1,5 +1,6 @@
 #include "Interface.h"
 #include "listeprojets.h"
+#include "ajouteactivite.h"
 
 Interface::Interface()
 {
@@ -135,11 +136,12 @@ void Interface::gererProjet()
 {
     ListeProjets* fen=new ListeProjets();
     fen->setFixedWidth(300);
-    fen->show();
+    fen->exec();
 }
 
 void Interface::gererEvent()
 {
-
+    AjouteActivite* fen=new AjouteActivite();
+    fen->exec();
 }
 

@@ -3,7 +3,7 @@
 AfficheProjet::AfficheProjet(Projet* prj, QWidget *parent) : QDialog(parent)
 {
     this->setWindowTitle(prj->getTitre());
-    Projet* proj = prj;
+    proj = prj;
     listeTache=proj->getListeTaches();
     sm = new QSignalMapper(this);
     QVBoxLayout* layout = new QVBoxLayout();
@@ -54,7 +54,7 @@ void AfficheProjet::ajouteTache()
 {
     /*AjouteTache* add= new AjouteTache(proj);
     add->setFixedWidth(300);
-    add->show();*/
+    add->exec();*/
 }
 
 AfficheProjet::~AfficheProjet(){

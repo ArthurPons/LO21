@@ -1,3 +1,4 @@
+#include <QApplication>
 #include "listeprojets.h"
 #include "afficheprojet.h"
 #include "ajouteprojet.h"
@@ -8,8 +9,10 @@ ListeProjets::ListeProjets(QWidget *parent) : QDialog(parent)
     QVBoxLayout* layout = new QVBoxLayout();
     QPushButton* addPrj= new QPushButton(tr("Ajouter un projet"), this);
     ProjetManager& projm=ProjetManager::Instance();
+
     prj = projm.getListeProjet();
     sm=new QSignalMapper(this);
+
     for(int i=0;i<prj.size();i++){
         qDebug()<<prj.size();
         QString text = prj.at(i)->getTitre();
@@ -19,6 +22,7 @@ ListeProjets::ListeProjets(QWidget *parent) : QDialog(parent)
         connect(sm, SIGNAL(mapped(int)),this, SLOT(afficherProjet(int)));
         layout->addWidget(bouton);
     }
+
     QObject::connect(addPrj, SIGNAL(clicked()), this, SLOT(ajouterProjet()));
 
     layout->addWidget(addPrj);
@@ -29,8 +33,8 @@ void ListeProjets::ajouterProjet()
 {
     AjouteProjet* add= new AjouteProjet();
     add->setFixedWidth(300);
-    add->show();
-    this->close();
+    add->exec();
+    qDebug()<<5;
 }
 
 void ListeProjets::afficherProjet(int i)
@@ -39,5 +43,5 @@ void ListeProjets::afficherProjet(int i)
     prj = projm.getListeProjet();
     Projet * proj =prj.at(i);
     AfficheProjet* aff= new AfficheProjet(proj);
-    aff->show();
+    aff->exec();
 }

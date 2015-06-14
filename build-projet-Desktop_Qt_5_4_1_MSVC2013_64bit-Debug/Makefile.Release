@@ -58,11 +58,13 @@ SOURCES       = ..\projet\main.cpp \
 		..\projet\programmationactivite.cpp \
 		..\projet\ajouteprojet.cpp \
 		..\projet\ajoutetache.cpp \
-		..\projet\afficheprojet.cpp release\moc_mainwindow.cpp \
+		..\projet\afficheprojet.cpp \
+		..\projet\ajouteactivite.cpp release\moc_mainwindow.cpp \
 		release\moc_interface.cpp \
 		release\moc_listeprojets.cpp \
 		release\moc_ajouteprojet.cpp \
-		release\moc_afficheprojet.cpp
+		release\moc_afficheprojet.cpp \
+		release\moc_ajouteactivite.cpp
 OBJECTS       = release\main.obj \
 		release\mainwindow.obj \
 		release\tache.obj \
@@ -79,11 +81,13 @@ OBJECTS       = release\main.obj \
 		release\ajouteprojet.obj \
 		release\ajoutetache.obj \
 		release\afficheprojet.obj \
+		release\ajouteactivite.obj \
 		release\moc_mainwindow.obj \
 		release\moc_interface.obj \
 		release\moc_listeprojets.obj \
 		release\moc_ajouteprojet.obj \
-		release\moc_afficheprojet.obj
+		release\moc_afficheprojet.obj \
+		release\moc_ajouteactivite.obj
 
 DIST          =  ..\projet\mainwindow.h \
 		..\projet\tache.h \
@@ -100,7 +104,8 @@ DIST          =  ..\projet\mainwindow.h \
 		..\projet\programmationactivite.h \
 		..\projet\ajoutetache.h \
 		..\projet\ajouteprojet.h \
-		..\projet\afficheprojet.h ..\projet\main.cpp \
+		..\projet\afficheprojet.h \
+		..\projet\ajouteactivite.h ..\projet\main.cpp \
 		..\projet\mainwindow.cpp \
 		..\projet\tache.cpp \
 		..\projet\projet.cpp \
@@ -115,7 +120,8 @@ DIST          =  ..\projet\mainwindow.h \
 		..\projet\programmationactivite.cpp \
 		..\projet\ajouteprojet.cpp \
 		..\projet\ajoutetache.cpp \
-		..\projet\afficheprojet.cpp
+		..\projet\afficheprojet.cpp \
+		..\projet\ajouteactivite.cpp
 QMAKE_TARGET  = projet
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = projet.exe
@@ -204,7 +210,7 @@ dist:
 	$(ZIP) projet.zip $(SOURCES) $(DIST) ..\projet\projet.pro C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\spec_pre.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\common\shell-win32.conf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\qconfig.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_clucene_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_core.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_declarative.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_declarative_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_enginio.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_enginio_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_help.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_location.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_network.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_script.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webengine.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webengine_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webenginecore.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webenginecore_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webenginewidgets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webkit.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webkit_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webkitwidgets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webkitwidgets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\qt_functions.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\qt_config.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\win32\qt_config.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\win32-msvc2013\qmake.conf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\spec_post.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\exclusive_builds.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\default_pre.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\win32\default_pre.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\resolve_config.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\default_post.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\build_pass.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\win32\rtti.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\precompile_header.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\warn_on.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\qt.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\resources.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\moc.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\win32\opengl.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\uic.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\win32\windows.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\testcase_targets.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\exceptions.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\yacc.prf C:\Qt\Qt5.4.1\5.4\msvc2013_64\mkspecs\features\lex.prf ..\projet\projet.pro C:/Qt/Qt5.4.1/5.4/msvc2013_64/lib/qtmain.prl C:/Qt/Qt5.4.1/5.4/msvc2013_64/lib/Qt5Core.prl C:/Qt/Qt5.4.1/5.4/msvc2013_64/lib/Qt5Widgets.prl C:/Qt/Qt5.4.1/5.4/msvc2013_64/lib/Qt5Gui.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.obj release\mainwindow.obj release\tache.obj release\projet.obj release\projetmanager.obj release\tacheunitaire.obj release\tachecomposite.obj release\interface.obj release\listeprojets.obj release\programmationmanager.obj release\programmation.obj release\programmationtache.obj release\programmationactivite.obj release\ajouteprojet.obj release\ajoutetache.obj release\afficheprojet.obj release\moc_mainwindow.obj release\moc_interface.obj release\moc_listeprojets.obj release\moc_ajouteprojet.obj release\moc_afficheprojet.obj
+	-$(DEL_FILE) release\main.obj release\mainwindow.obj release\tache.obj release\projet.obj release\projetmanager.obj release\tacheunitaire.obj release\tachecomposite.obj release\interface.obj release\listeprojets.obj release\programmationmanager.obj release\programmation.obj release\programmationtache.obj release\programmationactivite.obj release\ajouteprojet.obj release\ajoutetache.obj release\afficheprojet.obj release\ajouteactivite.obj release\moc_mainwindow.obj release\moc_interface.obj release\moc_listeprojets.obj release\moc_ajouteprojet.obj release\moc_afficheprojet.obj release\moc_ajouteactivite.obj
 	-$(DEL_FILE) release\projet.exp
 
 distclean: clean 
@@ -221,9 +227,9 @@ compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: release\moc_mainwindow.cpp release\moc_interface.cpp release\moc_listeprojets.cpp release\moc_ajouteprojet.cpp release\moc_afficheprojet.cpp
+compiler_moc_header_make_all: release\moc_mainwindow.cpp release\moc_interface.cpp release\moc_listeprojets.cpp release\moc_ajouteprojet.cpp release\moc_afficheprojet.cpp release\moc_ajouteactivite.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_mainwindow.cpp release\moc_interface.cpp release\moc_listeprojets.cpp release\moc_ajouteprojet.cpp release\moc_afficheprojet.cpp
+	-$(DEL_FILE) release\moc_mainwindow.cpp release\moc_interface.cpp release\moc_listeprojets.cpp release\moc_ajouteprojet.cpp release\moc_afficheprojet.cpp release\moc_ajouteactivite.cpp
 release\moc_mainwindow.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
@@ -497,13 +503,19 @@ release\moc_interface.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
+		..\projet\programmationmanager.h \
+		..\projet\programmation.h \
+		..\projet\tache.h \
+		..\projet\programmationtache.h \
+		..\projet\programmationactivite.h \
 		..\projet\interface.h
 	C:\Qt\Qt5.4.1\5.4\msvc2013_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Arthur/Desktop/GI01/LO21-Projet/projet -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtWidgets -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtGui -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtANGLE -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtCore -I. ..\projet\interface.h -o release\moc_interface.cpp
 
-release\moc_listeprojets.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObject \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
+release\moc_listeprojets.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qconfig.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfeatures.h \
@@ -532,7 +544,11 @@ release\moc_listeprojets.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObje
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobalstatic.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmutex.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnumeric.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
@@ -550,10 +566,6 @@ release\moc_listeprojets.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObje
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qisenum.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject_impl.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs_win.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmargins.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpaintdevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrect.h \
@@ -605,6 +617,50 @@ release\moc_listeprojets.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObje
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObject \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDateEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdatetimeedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvalidator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregularexpression.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlabel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QCalendarWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qcalendarwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		..\projet\projetmanager.h \
+		..\projet\Projet.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
+		..\projet\tache.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
+		..\projet\tacheunitaire.h \
+		..\projet\tachecomposite.h \
 		..\projet\listeprojets.h
 	C:\Qt\Qt5.4.1\5.4\msvc2013_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Arthur/Desktop/GI01/LO21-Projet/projet -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtWidgets -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtGui -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtANGLE -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtCore -I. ..\projet\listeprojets.h -o release\moc_listeprojets.cpp
 
@@ -748,9 +804,11 @@ release\moc_ajouteprojet.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QW
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		..\projet\projetmanager.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
-		..\projet\projet.h \
+		..\projet\Projet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
 		..\projet\tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
@@ -897,8 +955,13 @@ release\moc_afficheprojet.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\Q
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		..\projet\projetmanager.h \
-		..\projet\projet.h \
+		..\projet\Projet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
 		..\projet\tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
@@ -906,6 +969,160 @@ release\moc_afficheprojet.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\Q
 		..\projet\tachecomposite.h \
 		..\projet\afficheprojet.h
 	C:\Qt\Qt5.4.1\5.4\msvc2013_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Arthur/Desktop/GI01/LO21-Projet/projet -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtWidgets -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtGui -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtANGLE -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtCore -I. ..\projet\afficheprojet.h -o release\moc_afficheprojet.cpp
+
+release\moc_ajouteactivite.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qconfig.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfeatures.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtypetraits.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsysinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlogging.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qflags.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv7.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv6.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv5.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_ia64.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_mips.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_x86.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_gcc.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_unix.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmutex.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnumeric.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrefcount.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qarraydata.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qalgorithms.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiterator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreevent.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmetatype.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qisenum.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmargins.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrect.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsize.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpalette.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcolor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qrgb.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringlist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatastream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiodevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpair.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregexp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qbrush.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvector.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qmatrix.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpolygon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qregion.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qline.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtransform.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpainterpath.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qimage.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpixelformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpixmap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qshareddata.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qhash.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfont.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qkeysequence.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qevent.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvariant.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtextstream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlocale.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qset.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qurl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qurlquery.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfile.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDateEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdatetimeedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvalidator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregularexpression.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlabel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QCalendarWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qcalendarwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGridLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTimeEdit \
+		..\projet\programmationmanager.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		..\projet\programmation.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
+		..\projet\tache.h \
+		..\projet\programmationtache.h \
+		..\projet\programmationactivite.h \
+		..\projet\ajouteactivite.h
+	C:\Qt\Qt5.4.1\5.4\msvc2013_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Arthur/Desktop/GI01/LO21-Projet/projet -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtWidgets -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtGui -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtANGLE -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtCore -I. ..\projet\ajouteactivite.h -o release\moc_ajouteactivite.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1050,6 +1267,7 @@ release\main.obj: ..\projet\main.cpp ..\projet\mainwindow.h \
 		..\projet\tacheunitaire.h \
 		..\projet\tachecomposite.h \
 		..\projet\projetmanager.h \
+		..\projet\Projet.h \
 		..\projet\programmationmanager.h \
 		..\projet\programmation.h \
 		..\projet\programmationtache.h \
@@ -1112,8 +1330,19 @@ release\main.obj: ..\projet\main.cpp ..\projet\mainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		..\projet\listeprojets.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h
 
 release\mainwindow.obj: ..\projet\mainwindow.cpp ..\projet\mainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
@@ -1485,13 +1714,14 @@ release\projetmanager.obj: ..\projet\projetmanager.cpp C:\Qt\Qt5.4.1\5.4\msvc201
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontiguouscache.h \
 		..\projet\projetmanager.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
-		..\projet\projet.h \
+		..\projet\Projet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
 		..\projet\tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
 		..\projet\tacheunitaire.h \
-		..\projet\tachecomposite.h
+		..\projet\tachecomposite.h \
+		..\projet\projet.h
 
 release\tacheunitaire.obj: ..\projet\tacheunitaire.cpp C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
@@ -1806,13 +2036,39 @@ release\interface.obj: ..\projet\interface.cpp ..\projet\Interface.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgroupbox.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
+		..\projet\programmationmanager.h \
+		..\projet\programmation.h \
+		..\projet\tache.h \
+		..\projet\programmationtache.h \
+		..\projet\programmationactivite.h \
+		..\projet\listeprojets.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		..\projet\projetmanager.h \
+		..\projet\Projet.h \
+		..\projet\tacheunitaire.h \
+		..\projet\tachecomposite.h \
+		..\projet\ajouteactivite.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGridLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTimeEdit
 
-release\listeprojets.obj: ..\projet\listeprojets.cpp ..\projet\listeprojets.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObject \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
+release\listeprojets.obj: ..\projet\listeprojets.cpp C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QApplication \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qapplication.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qconfig.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfeatures.h \
@@ -1841,13 +2097,16 @@ release\listeprojets.obj: ..\projet\listeprojets.cpp ..\projet\listeprojets.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobalstatic.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmutex.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnumeric.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrefcount.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qarraydata.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlist.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qalgorithms.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiterator.h \
@@ -1859,15 +2118,17 @@ release\listeprojets.obj: ..\projet\listeprojets.cpp ..\projet\listeprojets.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qisenum.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject_impl.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsize.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmargins.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpaintdevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrect.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsize.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpalette.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcolor.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qrgb.h \
@@ -1896,7 +2157,6 @@ release\listeprojets.obj: ..\projet\listeprojets.cpp ..\projet\listeprojets.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontmetrics.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontinfo.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qsizepolicy.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcursor.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qkeysequence.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qevent.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvariant.h \
@@ -1912,8 +2172,63 @@ release\listeprojets.obj: ..\projet\listeprojets.cpp ..\projet\listeprojets.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qguiapplication.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qinputmethod.h \
+		..\projet\listeprojets.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QObject \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDateEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdatetimeedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvalidator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregularexpression.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlabel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QCalendarWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qcalendarwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		..\projet\projetmanager.h \
+		..\projet\Projet.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
+		..\projet\tache.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
+		..\projet\tacheunitaire.h \
+		..\projet\tachecomposite.h \
+		..\projet\afficheprojet.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
+		..\projet\ajouteprojet.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGridLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h
 
 release\programmationmanager.obj: ..\projet\programmationmanager.cpp C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
@@ -2358,9 +2673,11 @@ release\ajouteprojet.obj: ..\projet\ajouteprojet.cpp ..\projet\AjouteProjet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		..\projet\projetmanager.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
-		..\projet\projet.h \
+		..\projet\Projet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
 		..\projet\tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
@@ -2508,13 +2825,171 @@ release\afficheprojet.obj: ..\projet\afficheprojet.cpp ..\projet\afficheprojet.h
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDebug \
 		..\projet\projetmanager.h \
-		..\projet\projet.h \
+		..\projet\Projet.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
 		..\projet\tache.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
 		..\projet\tacheunitaire.h \
 		..\projet\tachecomposite.h
+
+release\ajouteactivite.obj: ..\projet\ajouteactivite.cpp ..\projet\AjouteActivite.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qconfig.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfeatures.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtypetraits.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsysinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlogging.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qflags.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv7.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv6.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_armv5.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_ia64.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_mips.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_x86.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_gcc.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qatomic_unix.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmutex.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnumeric.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qnamespace.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstring.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qchar.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrefcount.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qarraydata.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qalgorithms.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiterator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreevent.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmetatype.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qisenum.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qobject_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmargins.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qrect.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsize.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpoint.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpalette.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcolor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qrgb.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringlist.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatastream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qiodevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qpair.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregexp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qbrush.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvector.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qmatrix.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpolygon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qregion.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qline.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtransform.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpainterpath.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qimage.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpixelformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpixmap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qshareddata.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qhash.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfont.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qfontinfo.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qkeysequence.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qevent.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qvariant.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qmap.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdebug.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qtextstream.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qlocale.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qset.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qurl.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qurlquery.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfile.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDateEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdatetimeedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qdatetime.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvalidator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregularexpression.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QList \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlabel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QSlider \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QCalendarWidget \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qcalendarwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGridLayout \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QSignalMapper \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTimeEdit \
+		..\projet\programmationmanager.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVector \
+		..\projet\programmation.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QDate \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QString \
+		..\projet\tache.h \
+		..\projet\programmationtache.h \
+		..\projet\programmationactivite.h
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 
@@ -2525,6 +3000,8 @@ release\moc_listeprojets.obj: release\moc_listeprojets.cpp
 release\moc_ajouteprojet.obj: release\moc_ajouteprojet.cpp 
 
 release\moc_afficheprojet.obj: release\moc_afficheprojet.cpp 
+
+release\moc_ajouteactivite.obj: release\moc_ajouteactivite.cpp 
 
 ####### Install
 

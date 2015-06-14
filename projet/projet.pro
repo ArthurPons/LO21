@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     programmationactivite.cpp \
     ajouteprojet.cpp \
     ajoutetache.cpp \
-    afficheprojet.cpp
+    afficheprojet.cpp \
+    ajouteactivite.cpp
 
 HEADERS  += mainwindow.h \
     tache.h \
@@ -44,6 +45,7 @@ HEADERS  += mainwindow.h \
     programmationactivite.h \
     ajoutetache.h \
     ajouteprojet.h \
-    afficheprojet.h
+    afficheprojet.h \
+    ajouteactivite.h
 
 FORMS    += mainwindow.ui
