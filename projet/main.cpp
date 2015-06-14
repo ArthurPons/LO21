@@ -42,7 +42,9 @@ int main(int argc, char *argv[])
 
     Programmation* prog1=progm.addProgrammationActivite("Truc à faire", dprog1, 10, 12, "lourd", "lo21");
 
-    projm.suppProjet(projet1);
+    tache1->addPrecedence(tache2);
+    tache1->addPrecedence(tache2);
+    qDebug()<<tache2->getIdentifiant();
 
     Interface f;
     f.setFixedSize(1300,500);

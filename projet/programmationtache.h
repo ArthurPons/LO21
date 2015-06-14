@@ -14,7 +14,7 @@ class ProgrammationTache : public Programmation
 {
     friend class ProgrammationManager;
 private:
-    ProgrammationTache(QString id, QDate dat, int hd, int hf, TacheUnitaire *ta); /*!<Constructeur*/
+    ProgrammationTache(const QString& id, const QDate& dat, const int& hd, const int& hf, TacheUnitaire *ta); /*!<Constructeur*/
     virtual ~ProgrammationTache(); /*!<Destructeur*/
 
     TacheUnitaire* tache; /*!<Tache programmée par une ProgrammationTache*/

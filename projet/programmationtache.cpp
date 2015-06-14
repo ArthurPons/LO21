@@ -1,7 +1,7 @@
 #include<QDebug>
 #include "ProgrammationTache.h"
 
-ProgrammationTache::ProgrammationTache(QString id, QDate dat, int hd, int hf, TacheUnitaire *ta):
+ProgrammationTache::ProgrammationTache(const QString &id, const QDate &dat, const int &hd, const int &hf, TacheUnitaire *ta):
     Programmation(id,dat,hd,hf),tache(ta)
 {
     qDebug()<<"Construction de la programmation"<<id;

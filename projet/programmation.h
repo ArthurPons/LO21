@@ -18,7 +18,7 @@ class Programmation
 {
     friend class ProgrammationManager;
 protected:
-    Programmation(QString id, QDate dat, int hd, int hf); /*!<Constructeur*/
+    Programmation(const QString& id, const QDate& dat, const int& hd, const int& hf); /*!<Constructeur*/
     virtual ~Programmation(); /*!<Destructeur*/
 
     QString identifiant; /*!<Identifiant d'une Programmation. Il est unique*/

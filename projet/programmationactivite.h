@@ -14,15 +14,16 @@ class ProgrammationActivite : public Programmation
 {
     friend class ProgrammationManager;
 private:
-    ProgrammationActivite(QString id, QDate dat, int hd, int hf, QString tit, QString desc); /*!<Constructeur*/
+    ProgrammationActivite(const QString& id, const QDate& dat, const int& hd,
+                          const int& hf, const QString& tit, const QString& desc); /*!<Constructeur*/
     virtual ~ProgrammationActivite(); /*!<Destructeur*/
 
-   QString titre; /*!<Titre de l'activite*/
-   QString description; /*!<Description de l'activite*/
+   QString titre; /*!<Titre de l'activite programmée*/
+   QString description; /*!<Description de l'activité programmée*/
 
 public:
     QString getTitre()const{return titre;} /*!<Retourne le titre de l'activité programmée*/
-    QString getDescritpion()const{return description;} /*!<Retourne la description de l'activité programmée*/
+    QString getDescription()const{return description;} /*!<Retourne la description de l'activité programmée*/
 };
 
 
