@@ -2,6 +2,11 @@
 \label{class_tache_unitaire}\index{Tache\+Unitaire@{Tache\+Unitaire}}
 
 
+Classe représentant une tâche unitaire.  
+
+
+
+
 {\ttfamily \#include $<$tacheunitaire.\+h$>$}
 
 Inheritance diagram for Tache\+Unitaire\+:\begin{figure}[H]
@@ -47,6 +52,11 @@ class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+Classe représentant une tâche unitaire. 
+
+Une tâche unitaire est une tâche et hérite donc de la classe tâche. Une tâche unitaire possède une durée qui représente le temps de travail nécéssaire pour qu\textquotesingle{}elle soit achevée. Une tâche unitaire peut être préemptée. Une tâche unitaire préemptée peut être programmée plusieurs fois. Pour être finie, une tâche unitaire doit avoir été programmée pour aussi longtemps que sa durée. 
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_tache_unitaire_acca628b1c239bf191fbbf869ad15cdd2}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
 \index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
@@ -60,7 +70,7 @@ class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
 \item[{{\bf Projet} $\ast$}]{p}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_acca628b1c239bf191fbbf869ad15cdd2}
-\hypertarget{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
+Constructeur \hypertarget{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
 \index{Tache\+Unitaire@{Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+Unitaire\+::\+Tache\+Unitaire (
 \begin{DoxyParamCaption}
@@ -74,14 +84,14 @@ class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
 \item[{{\bf Projet} $\ast$}]{p}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_ab97fdcb6d8d43ff76d46a7ae650eba3d}
-\hypertarget{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!````~Tache\+Unitaire@{$\sim$\+Tache\+Unitaire}}
+Constructeur surchargé avec les dates \hypertarget{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!````~Tache\+Unitaire@{$\sim$\+Tache\+Unitaire}}
 \index{````~Tache\+Unitaire@{$\sim$\+Tache\+Unitaire}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{$\sim$\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+Unitaire\+::$\sim$\+Tache\+Unitaire (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{class_tache_unitaire_a54c9937fb3088c48348883ad1b385f8c}
-
+Destructeur 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_tache_unitaire_a2f1c93887c652e5581df4357bc72949b}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!get\+Duree@{get\+Duree}}
@@ -91,28 +101,28 @@ class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a2f1c93887c652e5581df4357bc72949b}
-\hypertarget{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!get\+Duree\+Restante@{get\+Duree\+Restante}}
+Renvoie la durée d\textquotesingle{}une tâche unitaire \hypertarget{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!get\+Duree\+Restante@{get\+Duree\+Restante}}
 \index{get\+Duree\+Restante@{get\+Duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{get\+Duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::get\+Duree\+Restante (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_aa9b7e58e61dfded16d5a2508d33734c5}
-\hypertarget{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!is\+Preemptee@{is\+Preemptee}}
+Renvoie la durée restante d\textquotesingle{}une tâche unitaire \hypertarget{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!is\+Preemptee@{is\+Preemptee}}
 \index{is\+Preemptee@{is\+Preemptee}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{is\+Preemptee}]{\setlength{\rightskip}{0pt plus 5cm}bool Tache\+Unitaire\+::is\+Preemptee (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a4a25bc2f0b3e6ebd6c0617d22328c986}
-\hypertarget{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!set\+Duree\+Restante@{set\+Duree\+Restante}}
+Renvoie si une tâche unitaire est préemptée ou pas \hypertarget{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!set\+Duree\+Restante@{set\+Duree\+Restante}}
 \index{set\+Duree\+Restante@{set\+Duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{set\+Duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}void Tache\+Unitaire\+::set\+Duree\+Restante (
 \begin{DoxyParamCaption}
 \item[{int}]{dur}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_unitaire_a5b1dc4cb5b374fce9c26abb4c954cef8}
-
+Affecte l\textquotesingle{}argument à la durée restante d\textquotesingle{}une tâche unitaire 
 
 \subsection{Friends And Related Function Documentation}
 \hypertarget{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!Projet@{Projet}}
@@ -124,13 +134,13 @@ class \hyperlink{class_tache_unitaire_ab87b41c3faa36955cc370972f5cce344}{Projet}
 \hypertarget{class_tache_unitaire_a5510c1941069a4391e076ec45e0201fc}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!duree@{duree}}
 \index{duree@{duree}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{duree}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::duree\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a5510c1941069a4391e076ec45e0201fc}
-\hypertarget{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!duree\+Restante@{duree\+Restante}}
+La durée d\textquotesingle{}une tâche unitaire, en heure \hypertarget{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!duree\+Restante@{duree\+Restante}}
 \index{duree\+Restante@{duree\+Restante}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{duree\+Restante}]{\setlength{\rightskip}{0pt plus 5cm}int Tache\+Unitaire\+::duree\+Restante\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a73dd33a7047739e49c80373aeae3158e}
-\hypertarget{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!preemptee@{preemptee}}
+La durée restante d\textquotesingle{}une tâche unitaire en heure \hypertarget{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}{}\index{Tache\+Unitaire@{Tache\+Unitaire}!preemptee@{preemptee}}
 \index{preemptee@{preemptee}!Tache\+Unitaire@{Tache\+Unitaire}}
 \subsubsection[{preemptee}]{\setlength{\rightskip}{0pt plus 5cm}bool Tache\+Unitaire\+::preemptee\hspace{0.3cm}{\ttfamily [private]}}\label{class_tache_unitaire_a21bc1074f99a80976a52d910e3c21041}
-
+Représente si une tâche unitaire est préemptée ou pas 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -2,6 +2,11 @@
 \label{class_projet_manager}\index{Projet\+Manager@{Projet\+Manager}}
 
 
+Classe représentant le manager de projet.  
+
+
+
+
 {\ttfamily \#include $<$projetmanager.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -41,6 +46,11 @@ static \hyperlink{class_projet_manager}{Projet\+Manager} \hyperlink{class_projet
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Classe représentant le manager de projet. 
+
+Le manager de projet est unique et ne doit être instancié qu\textquotesingle{}une seule fois. Il utilise donc le design pattern singleton. Il y a une composition entre \hyperlink{class_projet_manager}{Projet\+Manager} et \hyperlink{class_projet}{Projet}. En effet, \hyperlink{class_projet_manager}{Projet\+Manager} détermine la durée de vie d\textquotesingle{}un \hyperlink{class_projet}{Projet}. 
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_projet_manager_a98d8ba59bd9bc6eec2ec5285102ac9a1}{}\index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
 \index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
@@ -49,21 +59,21 @@ static \hyperlink{class_projet_manager}{Projet\+Manager} \hyperlink{class_projet
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_manager_a98d8ba59bd9bc6eec2ec5285102ac9a1}
-\hypertarget{class_projet_manager_af5a44cde2f8d92f05bb7e52a18aa883a}{}\index{Projet\+Manager@{Projet\+Manager}!````~Projet\+Manager@{$\sim$\+Projet\+Manager}}
+Constructeur \hypertarget{class_projet_manager_af5a44cde2f8d92f05bb7e52a18aa883a}{}\index{Projet\+Manager@{Projet\+Manager}!````~Projet\+Manager@{$\sim$\+Projet\+Manager}}
 \index{````~Projet\+Manager@{$\sim$\+Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{$\sim$\+Projet\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Projet\+Manager\+::$\sim$\+Projet\+Manager (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_manager_af5a44cde2f8d92f05bb7e52a18aa883a}
-\hypertarget{class_projet_manager_abfdc065f2c1819e13c8adc1562536f35}{}\index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
+Destructeur \hypertarget{class_projet_manager_abfdc065f2c1819e13c8adc1562536f35}{}\index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
 \index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{Projet\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Projet\+Manager\+::\+Projet\+Manager (
 \begin{DoxyParamCaption}
 \item[{const {\bf Projet\+Manager} \&}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_projet_manager_abfdc065f2c1819e13c8adc1562536f35}
-
+Constructeur par recopie 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_projet_manager_a1c547839afb77faaa3eb2f37e0c869a7}{}\index{Projet\+Manager@{Projet\+Manager}!add\+Projet@{add\+Projet}}
@@ -74,44 +84,44 @@ static \hyperlink{class_projet_manager}{Projet\+Manager} \hyperlink{class_projet
 \item[{const Q\+String \&}]{d}
 \end{DoxyParamCaption}
 )}\label{class_projet_manager_a1c547839afb77faaa3eb2f37e0c869a7}
-\hypertarget{class_projet_manager_a2b7281842b818a8e2cd85a81ef270930}{}\index{Projet\+Manager@{Projet\+Manager}!get\+Liste\+Projet@{get\+Liste\+Projet}}
+Créer et ajoute un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_manager_a2b7281842b818a8e2cd85a81ef270930}{}\index{Projet\+Manager@{Projet\+Manager}!get\+Liste\+Projet@{get\+Liste\+Projet}}
 \index{get\+Liste\+Projet@{get\+Liste\+Projet}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{get\+Liste\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Projet}$\ast$$>$ Projet\+Manager\+::get\+Liste\+Projet (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_manager_a2b7281842b818a8e2cd85a81ef270930}
-\hypertarget{class_projet_manager_ad61417127cad478ea812d560b18b975d}{}\index{Projet\+Manager@{Projet\+Manager}!Instance@{Instance}}
+Renvoie un vecteur contenant tous les projets \hypertarget{class_projet_manager_ad61417127cad478ea812d560b18b975d}{}\index{Projet\+Manager@{Projet\+Manager}!Instance@{Instance}}
 \index{Instance@{Instance}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet\+Manager} \& Projet\+Manager\+::\+Instance (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_projet_manager_ad61417127cad478ea812d560b18b975d}
-\hypertarget{class_projet_manager_a25b560fb4e617952ad093bbe74315aaa}{}\index{Projet\+Manager@{Projet\+Manager}!operator=@{operator=}}
+Instancie \hyperlink{class_projet_manager}{Projet\+Manager} \hypertarget{class_projet_manager_a25b560fb4e617952ad093bbe74315aaa}{}\index{Projet\+Manager@{Projet\+Manager}!operator=@{operator=}}
 \index{operator=@{operator=}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet\+Manager}\& Projet\+Manager\+::operator= (
 \begin{DoxyParamCaption}
 \item[{const {\bf Projet\+Manager} \&}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_projet_manager_a25b560fb4e617952ad093bbe74315aaa}
-\hypertarget{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}{}\index{Projet\+Manager@{Projet\+Manager}!supp\+Projet@{supp\+Projet}}
+Opérateur de recopie \hypertarget{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}{}\index{Projet\+Manager@{Projet\+Manager}!supp\+Projet@{supp\+Projet}}
 \index{supp\+Projet@{supp\+Projet}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{supp\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+Manager\+::supp\+Projet (
 \begin{DoxyParamCaption}
 \item[{{\bf Projet} $\ast$}]{projet}
 \end{DoxyParamCaption}
 )}\label{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}
-
+Détruit un \hyperlink{class_projet}{Projet} 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_projet_manager_a88d70fa1123219b8dbb749818a441afa}{}\index{Projet\+Manager@{Projet\+Manager}!instance@{instance}}
 \index{instance@{instance}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet\+Manager} Projet\+Manager\+::instance ={\bf Projet\+Manager}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_projet_manager_a88d70fa1123219b8dbb749818a441afa}
-\hypertarget{class_projet_manager_a46c2e5dab1e538225fa022030e3a31d1}{}\index{Projet\+Manager@{Projet\+Manager}!liste\+Projets@{liste\+Projets}}
+Instance unique de \hyperlink{class_projet_manager}{Projet\+Manager} \hypertarget{class_projet_manager_a46c2e5dab1e538225fa022030e3a31d1}{}\index{Projet\+Manager@{Projet\+Manager}!liste\+Projets@{liste\+Projets}}
 \index{liste\+Projets@{liste\+Projets}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{liste\+Projets}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Projet}$\ast$$>$ Projet\+Manager\+::liste\+Projets\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_manager_a46c2e5dab1e538225fa022030e3a31d1}
-
+Vecteur de tous les \hyperlink{class_projet}{Projet} 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

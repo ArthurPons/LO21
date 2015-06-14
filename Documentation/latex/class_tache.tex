@@ -93,7 +93,7 @@ Une tâche est forcément associée à un \hyperlink{class_projet}{Projet}.
 \item[{{\bf Projet} $\ast$}]{p}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_af712b59bd6e56adc46904a6445431ae7}
-\hypertarget{class_tache_a5b02c50c65270708b1a18c1a810ca00a}{}\index{Tache@{Tache}!Tache@{Tache}}
+Constructeur \hypertarget{class_tache_a5b02c50c65270708b1a18c1a810ca00a}{}\index{Tache@{Tache}!Tache@{Tache}}
 \index{Tache@{Tache}!Tache@{Tache}}
 \subsubsection[{Tache}]{\setlength{\rightskip}{0pt plus 5cm}Tache\+::\+Tache (
 \begin{DoxyParamCaption}
@@ -112,7 +112,7 @@ Une tâche est forcément associée à un \hyperlink{class_projet}{Projet}.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tache_a7ff832b739f8365acbe60275c7868c63}
-
+Destructeur 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_tache_a10659477f457bc4ceafbee41b155eb66}{}\index{Tache@{Tache}!add\+Precedence@{add\+Precedence}}
@@ -129,7 +129,7 @@ Ajoute une tâche comme précédence d\textquotesingle{}une autre tâche. \hyper
 \item[{{\bf Tache} $\ast$}]{precedence}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a579d9a3b88293522b7326e5d11815091}
-\hypertarget{class_tache_a5f7e485d64f7e72042e1f0ad5f378df4}{}\index{Tache@{Tache}!get\+Date\+Dispo@{get\+Date\+Dispo}}
+Vérifie si la tâche passée en argument peut précéder une autre tâche \hypertarget{class_tache_a5f7e485d64f7e72042e1f0ad5f378df4}{}\index{Tache@{Tache}!get\+Date\+Dispo@{get\+Date\+Dispo}}
 \index{get\+Date\+Dispo@{get\+Date\+Dispo}!Tache@{Tache}}
 \subsubsection[{get\+Date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Tache\+::get\+Date\+Dispo (
 \begin{DoxyParamCaption}
@@ -164,7 +164,7 @@ Retourne l\textquotesingle{}identifiant d\textquotesingle{}une tâche. \hypertar
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tache_afa1e10f04b303908477feee22241820f}
-Retourne une liste de tâche précédant une autre tâche. \hypertarget{class_tache_aa6d1abc3712b5a8b571bb3c131129ac7}{}\index{Tache@{Tache}!get\+Projet@{get\+Projet}}
+Retourne un vecteur de tâche précédant une autre tâche. \hypertarget{class_tache_aa6d1abc3712b5a8b571bb3c131129ac7}{}\index{Tache@{Tache}!get\+Projet@{get\+Projet}}
 \index{get\+Projet@{get\+Projet}!Tache@{Tache}}
 \subsubsection[{get\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet}$\ast$ Tache\+::get\+Projet (
 \begin{DoxyParamCaption}
@@ -199,7 +199,7 @@ Affecte une tâche en tant que tâche dont une autre tâche est composition. \hy
 \item[{{\bf Tache} $\ast$}]{precedence}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a00babe6049701a1148eaca5336454731}
-
+Supprime la tâche passée en argument comme précédence d\textquotesingle{}une autre tâche 
 
 \subsection{Friends And Related Function Documentation}
 \hypertarget{class_tache_ab87b41c3faa36955cc370972f5cce344}{}\index{Tache@{Tache}!Projet@{Projet}}
@@ -223,7 +223,7 @@ Description d\textquotesingle{}une tâche \hypertarget{class_tache_a9af1773c9b83
 Identifiant d\textquotesingle{}une tâche. Il est unique au sein d\textquotesingle{}un même projet. \hypertarget{class_tache_a0f73920789e27b7c2aeb47d171d5e543}{}\index{Tache@{Tache}!liste\+Taches\+Meres\+Precedence@{liste\+Taches\+Meres\+Precedence}}
 \index{liste\+Taches\+Meres\+Precedence@{liste\+Taches\+Meres\+Precedence}!Tache@{Tache}}
 \subsubsection[{liste\+Taches\+Meres\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Tache\+::liste\+Taches\+Meres\+Precedence\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a0f73920789e27b7c2aeb47d171d5e543}
-Liste des tâches précédant une tâche. \hypertarget{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}{}\index{Tache@{Tache}!projet@{projet}}
+Vecteur des tâches précédant une tâche. \hypertarget{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}{}\index{Tache@{Tache}!projet@{projet}}
 \index{projet@{projet}!Tache@{Tache}}
 \subsubsection[{projet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet}$\ast$ Tache\+::projet\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tache_a0c6d513a2a376b18cb73ab726fe4dec1}
 Pointe vers le projet dont une tâche fait partie. \hypertarget{class_tache_a62e6fe2722630c7bdf9a4a6a42364a19}{}\index{Tache@{Tache}!tache\+Mere\+Composite@{tache\+Mere\+Composite}}

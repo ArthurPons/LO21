@@ -119,6 +119,9 @@ $(document).ready(function(){initNavTree('class_projet_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Classe représentant le manager de projet.  
+ <a href="class_projet_manager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="projetmanager_8h_source.html">projetmanager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -156,7 +159,10 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a88d70fa1123219b8dbb749818a441afa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_projet_manager.html">ProjetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projet_manager.html#a88d70fa1123219b8dbb749818a441afa">instance</a> =<a class="el" href="class_projet_manager.html">ProjetManager</a>()</td></tr>
 <tr class="separator:a88d70fa1123219b8dbb749818a441afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe représentant le manager de projet. </p>
+<p>Le manager de projet est unique et ne doit être instancié qu'une seule fois. Il utilise donc le design pattern singleton. Il y a une composition entre <a class="el" href="class_projet_manager.html" title="Classe représentant le manager de projet. ">ProjetManager</a> et <a class="el" href="class_projet.html" title="Classe représentant un projet. ">Projet</a>. En effet, <a class="el" href="class_projet_manager.html" title="Classe représentant le manager de projet. ">ProjetManager</a> détermine la durée de vie d'un <a class="el" href="class_projet.html" title="Classe représentant un projet. ">Projet</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a98d8ba59bd9bc6eec2ec5285102ac9a1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +183,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructeur </p>
 
 </div>
 </div>
@@ -200,6 +207,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destructeur </p>
 
 </div>
 </div>
@@ -224,6 +232,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructeur par recopie </p>
 
 </div>
 </div>
@@ -251,6 +260,7 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Créer et ajoute un <a class="el" href="class_projet.html" title="Classe représentant un projet. ">Projet</a> </p>
 
 </div>
 </div>
@@ -274,6 +284,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Renvoie un vecteur contenant tous les projets </p>
 
 </div>
 </div>
@@ -297,6 +308,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Instancie <a class="el" href="class_projet_manager.html" title="Classe représentant le manager de projet. ">ProjetManager</a> </p>
 
 </div>
 </div>
@@ -321,6 +333,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Opérateur de recopie </p>
 
 </div>
 </div>
@@ -337,6 +350,7 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Détruit un <a class="el" href="class_projet.html" title="Classe représentant un projet. ">Projet</a> </p>
 
 </div>
 </div>
@@ -358,6 +372,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Instance unique de <a class="el" href="class_projet_manager.html" title="Classe représentant le manager de projet. ">ProjetManager</a> </p>
 
 </div>
 </div>
@@ -378,6 +393,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Vecteur de tous les <a class="el" href="class_projet.html" title="Classe représentant un projet. ">Projet</a> </p>
 
 </div>
 </div>
@@ -391,7 +407,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_projet_manager.html">ProjetManager</a></li>
-    <li class="footer">Generated on Sun Jun 14 2015 12:20:49 for LO21 by
+    <li class="footer">Generated on Sun Jun 14 2015 13:14:31 for LO21 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

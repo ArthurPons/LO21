@@ -2,6 +2,11 @@
 \label{class_projet}\index{Projet@{Projet}}
 
 
+Classe représentant un projet.  
+
+
+
+
 {\ttfamily \#include $<$projet.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -58,6 +63,11 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Classe représentant un projet. 
+
+Un \hyperlink{class_projet}{Projet} a pour responsabilité la durée de vie d\textquotesingle{}une tâche. En effet, une \hyperlink{class_tache}{Tache} ne peut pas exister sans faire partie dans \hyperlink{class_projet}{Projet}. Il y a donc une composition entre \hyperlink{class_projet}{Projet} et \hyperlink{class_tache}{Tache}. 
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_projet_a0149f821f689f5910c7c6d0278d3dd4b}{}\index{Projet@{Projet}!Projet@{Projet}}
 \index{Projet@{Projet}!Projet@{Projet}}
@@ -67,14 +77,14 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \item[{const Q\+String \&}]{d}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a0149f821f689f5910c7c6d0278d3dd4b}
-\hypertarget{class_projet_a26e3e136385eca01dda79df7fba4e03d}{}\index{Projet@{Projet}!````~Projet@{$\sim$\+Projet}}
+Constructeur \hypertarget{class_projet_a26e3e136385eca01dda79df7fba4e03d}{}\index{Projet@{Projet}!````~Projet@{$\sim$\+Projet}}
 \index{````~Projet@{$\sim$\+Projet}!Projet@{Projet}}
 \subsubsection[{$\sim$\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}Projet\+::$\sim$\+Projet (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a26e3e136385eca01dda79df7fba4e03d}
-
+Destructeur 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_projet_aa5f49aee0f30445f1e612311848b78ba}{}\index{Projet@{Projet}!add\+Tache\+Composite@{add\+Tache\+Composite}}
@@ -86,7 +96,7 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \item[{const Q\+String \&}]{desc}
 \end{DoxyParamCaption}
 )}\label{class_projet_aa5f49aee0f30445f1e612311848b78ba}
-\hypertarget{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}{}\index{Projet@{Projet}!add\+Tache\+Composite@{add\+Tache\+Composite}}
+Créer puis ajoute une \hyperlink{class_tache_composite}{Tache\+Composite} au projet \hypertarget{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}{}\index{Projet@{Projet}!add\+Tache\+Composite@{add\+Tache\+Composite}}
 \index{add\+Tache\+Composite@{add\+Tache\+Composite}!Projet@{Projet}}
 \subsubsection[{add\+Tache\+Composite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Composite} $\ast$ Projet\+::add\+Tache\+Composite (
 \begin{DoxyParamCaption}
@@ -97,7 +107,7 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \item[{const Q\+Date \&}]{de}
 \end{DoxyParamCaption}
 )}\label{class_projet_aee6a754a368eb0ea47b2fa7317ea5055}
-\hypertarget{class_projet_a3dfe2bda911378a958b57a6684624804}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
+Créer puis ajoute une \hyperlink{class_tache_composite}{Tache\+Composite} au projet. Surchargée avec les dates \hypertarget{class_projet_a3dfe2bda911378a958b57a6684624804}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
 \index{add\+Tache\+Unitaire@{add\+Tache\+Unitaire}!Projet@{Projet}}
 \subsubsection[{add\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Unitaire} $\ast$ Projet\+::add\+Tache\+Unitaire (
 \begin{DoxyParamCaption}
@@ -108,7 +118,7 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \item[{const bool}]{pre}
 \end{DoxyParamCaption}
 )}\label{class_projet_a3dfe2bda911378a958b57a6684624804}
-\hypertarget{class_projet_a8434e7255cace66ff199cb0ba6636535}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
+Créer puis ajoute une \hyperlink{class_tache_unitaire}{Tache\+Unitaire} au projet \hypertarget{class_projet_a8434e7255cace66ff199cb0ba6636535}{}\index{Projet@{Projet}!add\+Tache\+Unitaire@{add\+Tache\+Unitaire}}
 \index{add\+Tache\+Unitaire@{add\+Tache\+Unitaire}!Projet@{Projet}}
 \subsubsection[{add\+Tache\+Unitaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache\+Unitaire} $\ast$ Projet\+::add\+Tache\+Unitaire (
 \begin{DoxyParamCaption}
@@ -121,63 +131,63 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \item[{const bool}]{pre}
 \end{DoxyParamCaption}
 )}\label{class_projet_a8434e7255cace66ff199cb0ba6636535}
-\hypertarget{class_projet_a226d910000aaecf7e44399f2226496f5}{}\index{Projet@{Projet}!get\+Date\+Dispo@{get\+Date\+Dispo}}
+Créer puis ajoute une \hyperlink{class_tache_unitaire}{Tache\+Unitaire} au projet. Surchargée avec les dates \hypertarget{class_projet_a226d910000aaecf7e44399f2226496f5}{}\index{Projet@{Projet}!get\+Date\+Dispo@{get\+Date\+Dispo}}
 \index{get\+Date\+Dispo@{get\+Date\+Dispo}!Projet@{Projet}}
 \subsubsection[{get\+Date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::get\+Date\+Dispo (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a226d910000aaecf7e44399f2226496f5}
-\hypertarget{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}{}\index{Projet@{Projet}!get\+Date\+Echeance@{get\+Date\+Echeance}}
+Renvoie la date de disponiblité d\textquotesingle{}un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}{}\index{Projet@{Projet}!get\+Date\+Echeance@{get\+Date\+Echeance}}
 \index{get\+Date\+Echeance@{get\+Date\+Echeance}!Projet@{Projet}}
 \subsubsection[{get\+Date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::get\+Date\+Echeance (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a6a54a69a00cbaebd362e02f8e7dc3803}
-\hypertarget{class_projet_a4b939075b8f652846f8fc6457343219e}{}\index{Projet@{Projet}!get\+Description@{get\+Description}}
+Renvoie la date d\textquotesingle{}échéance d\textquotesingle{}un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a4b939075b8f652846f8fc6457343219e}{}\index{Projet@{Projet}!get\+Description@{get\+Description}}
 \index{get\+Description@{get\+Description}!Projet@{Projet}}
 \subsubsection[{get\+Description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::get\+Description (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_a4b939075b8f652846f8fc6457343219e}
-\hypertarget{class_projet_abc5c0c5980be9a1639651dc23789f068}{}\index{Projet@{Projet}!get\+Liste\+Taches@{get\+Liste\+Taches}}
+Renvoie la description d\textquotesingle{}un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_abc5c0c5980be9a1639651dc23789f068}{}\index{Projet@{Projet}!get\+Liste\+Taches@{get\+Liste\+Taches}}
 \index{get\+Liste\+Taches@{get\+Liste\+Taches}!Projet@{Projet}}
 \subsubsection[{get\+Liste\+Taches}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Projet\+::get\+Liste\+Taches (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_abc5c0c5980be9a1639651dc23789f068}
-\hypertarget{class_projet_a4bd470370df8fd883386069a90b958e2}{}\index{Projet@{Projet}!get\+Tache@{get\+Tache}}
+Renvoie le vecteur de \hyperlink{class_tache}{Tache} composants un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a4bd470370df8fd883386069a90b958e2}{}\index{Projet@{Projet}!get\+Tache@{get\+Tache}}
 \index{get\+Tache@{get\+Tache}!Projet@{Projet}}
 \subsubsection[{get\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tache} $\ast$ Projet\+::get\+Tache (
 \begin{DoxyParamCaption}
 \item[{const Q\+String \&}]{id}
 \end{DoxyParamCaption}
 )}\label{class_projet_a4bd470370df8fd883386069a90b958e2}
-\hypertarget{class_projet_aafdae1361272085ee8683738d70d0612}{}\index{Projet@{Projet}!get\+Titre@{get\+Titre}}
+Renvoie un pointeur vers la \hyperlink{class_tache}{Tache} identifiée par l\textquotesingle{}argument si celle-\/ci est dans le \hyperlink{class_projet}{Projet} \hypertarget{class_projet_aafdae1361272085ee8683738d70d0612}{}\index{Projet@{Projet}!get\+Titre@{get\+Titre}}
 \index{get\+Titre@{get\+Titre}!Projet@{Projet}}
 \subsubsection[{get\+Titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::get\+Titre (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_aafdae1361272085ee8683738d70d0612}
-\hypertarget{class_projet_a649b8123c195bc575871576c9f350d14}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
+Renvoie le titre d\textquotesingle{}un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a649b8123c195bc575871576c9f350d14}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
 \index{supp\+Tache@{supp\+Tache}!Projet@{Projet}}
 \subsubsection[{supp\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+::supp\+Tache (
 \begin{DoxyParamCaption}
 \item[{{\bf Tache\+Unitaire} $\ast$}]{tache}
 \end{DoxyParamCaption}
 )}\label{class_projet_a649b8123c195bc575871576c9f350d14}
-\hypertarget{class_projet_a1af5c7716e8893066418afc5e8c09f3c}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
+Supprime la \hyperlink{class_tache_unitaire}{Tache\+Unitaire} passée en argument \hypertarget{class_projet_a1af5c7716e8893066418afc5e8c09f3c}{}\index{Projet@{Projet}!supp\+Tache@{supp\+Tache}}
 \index{supp\+Tache@{supp\+Tache}!Projet@{Projet}}
 \subsubsection[{supp\+Tache}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+::supp\+Tache (
 \begin{DoxyParamCaption}
 \item[{{\bf Tache\+Composite} $\ast$}]{tache}
 \end{DoxyParamCaption}
 )}\label{class_projet_a1af5c7716e8893066418afc5e8c09f3c}
-
+Supprime la \hyperlink{class_tache_composite}{Tache\+Composite} passée en argument 
 
 \subsection{Friends And Related Function Documentation}
 \hypertarget{class_projet_aaaed9857b3481233fa7c581b5c86151d}{}\index{Projet@{Projet}!Projet\+Manager@{Projet\+Manager}}
@@ -189,19 +199,19 @@ class \hyperlink{class_projet_aaaed9857b3481233fa7c581b5c86151d}{Projet\+Manager
 \hypertarget{class_projet_a8a89803d629bb571062921008e6a2639}{}\index{Projet@{Projet}!date\+Dispo@{date\+Dispo}}
 \index{date\+Dispo@{date\+Dispo}!Projet@{Projet}}
 \subsubsection[{date\+Dispo}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::date\+Dispo\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a8a89803d629bb571062921008e6a2639}
-\hypertarget{class_projet_a868ee370bb8f071b830dda61f55d99cd}{}\index{Projet@{Projet}!date\+Echeance@{date\+Echeance}}
+Date de disponibilité d\textquotesingle{}un \hyperlink{class_projet}{Projet}. Est égale à la borne inférieure des dates de disponiblités des \hyperlink{class_tache}{Tache} composants ce \hyperlink{class_projet}{Projet}. \hypertarget{class_projet_a868ee370bb8f071b830dda61f55d99cd}{}\index{Projet@{Projet}!date\+Echeance@{date\+Echeance}}
 \index{date\+Echeance@{date\+Echeance}!Projet@{Projet}}
 \subsubsection[{date\+Echeance}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Projet\+::date\+Echeance\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a868ee370bb8f071b830dda61f55d99cd}
-\hypertarget{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}{}\index{Projet@{Projet}!description@{description}}
+Date d\textquotesingle{}échéance d\textquotesingle{}un \hyperlink{class_projet}{Projet}. Est égale à la borne supérieure des dates d\textquotesingle{}échéance des \hyperlink{class_tache}{Tache} composants ce \hyperlink{class_projet}{Projet}. \hypertarget{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}{}\index{Projet@{Projet}!description@{description}}
 \index{description@{description}!Projet@{Projet}}
 \subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::description\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_ac2e3a37d5f0201390991b97f258ce0eb}
-\hypertarget{class_projet_a268bc6fc9be6d5e266439cc6371cd617}{}\index{Projet@{Projet}!liste\+Taches@{liste\+Taches}}
+Description d\textquotesingle{}un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a268bc6fc9be6d5e266439cc6371cd617}{}\index{Projet@{Projet}!liste\+Taches@{liste\+Taches}}
 \index{liste\+Taches@{liste\+Taches}!Projet@{Projet}}
 \subsubsection[{liste\+Taches}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<${\bf Tache}$\ast$$>$ Projet\+::liste\+Taches\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a268bc6fc9be6d5e266439cc6371cd617}
-\hypertarget{class_projet_a9759849c856c2ac63f94751b876fd289}{}\index{Projet@{Projet}!titre@{titre}}
+Vecteur de l\textquotesingle{}ensemble des \hyperlink{class_tache}{Tache} composants un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_a9759849c856c2ac63f94751b876fd289}{}\index{Projet@{Projet}!titre@{titre}}
 \index{titre@{titre}!Projet@{Projet}}
 \subsubsection[{titre}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Projet\+::titre\hspace{0.3cm}{\ttfamily [private]}}\label{class_projet_a9759849c856c2ac63f94751b876fd289}
-
+Titre d\textquotesingle{}un \hyperlink{class_projet}{Projet}, il est unique 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
