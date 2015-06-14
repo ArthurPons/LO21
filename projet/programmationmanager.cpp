@@ -23,11 +23,15 @@ ProgrammationTache* ProgrammationManager::addProgrammationTache(QString id, QDat
 {
     qDebug()<<"Prog"<<id;
 
+    //On vérifie les dates
+
     if(!ta->getDateDispo().isNull() && !ta->getDateEcheance().isNull())
         if(ta->getDateDispo()>dat || dat>ta->getDateEcheance()){
             qDebug()<<"Programmation impossible, les dates ne concordent pas";
             return 0;
         }
+
+    //On vérifie si l'on ne programme pas dans le passé
 
     if(dat<QDate::currentDate()){
         qDebug()<<"Impossible de programmer une tache dans le passe";
@@ -35,10 +39,14 @@ ProgrammationTache* ProgrammationManager::addProgrammationTache(QString id, QDat
         return 0;
     }
 
+    //On vérifie les horaires
+
     if(hd>hf || hd<0 || hd>23 || hf<1 || hf>24 || hf==hd){
         qDebug()<<"Problème avec les heures de debut et/ou de fin";
         return 0;
     }
+
+    //On vérifie les données vis-à-vis des autres programmations
 
     for(int i=0;i<listeProgrammation.size();i++){
         ProgrammationTache* progra=static_cast<ProgrammationTache*>(listeProgrammation.at(i));
@@ -60,6 +68,8 @@ ProgrammationTache* ProgrammationManager::addProgrammationTache(QString id, QDat
         }
     }
 
+    //On vérifie la durée restante puis on met à jour la durée restante de la tâche si c'est bon
+
     if(ta->isPreemptee()){
         if(!((hf-hd)>ta->getDureeRestante()))
             ta->setDureeRestante(ta->getDureeRestante()-(hf-hd));
@@ -74,10 +84,14 @@ ProgrammationTache* ProgrammationManager::addProgrammationTache(QString id, QDat
             return 0;
         }
 
+    //Si l'on arrive ici on créer et on ajoute la tache
+
     ProgrammationTache* prog = new ProgrammationTache(id, dat, hd, hf, ta);
     listeProgrammation.append(prog);
     return prog;
 }
+
+//Similaire
 
 ProgrammationActivite* ProgrammationManager::addProgrammationActivite(QString id, QDate dat, int hd, int hf, QString tit, QString desc)
 {

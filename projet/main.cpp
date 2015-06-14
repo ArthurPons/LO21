@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
 
     Programmation* prog1=progm.addProgrammationActivite("Truc à faire", dprog1, 10, 12, "lourd", "lo21");
 
+    projm.suppProjet(projet1);
+
     Interface f;
     f.setFixedSize(1300,500);
     f.show();

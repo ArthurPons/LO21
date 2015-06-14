@@ -7,11 +7,9 @@
 #include "tacheunitaire.h"
 #include "tachecomposite.h"
 
-//Composition entre projet et Tache, projet endosse le rôle d'un TacheManager
-
-/*! \brief Classe représentant un projet.
+/*! \brief Classe représentant un Projet.
  *
- * Un Projet a pour responsabilité la durée de vie d'une tâche.
+ * Un Projet a pour responsabilité la durée de vie d'une Tache.
  * En effet, une Tache ne peut pas exister sans faire partie dans Projet.
  * Il y a donc une composition entre Projet et Tache.
  */

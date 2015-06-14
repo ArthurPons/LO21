@@ -2,7 +2,7 @@
 \label{class_projet_manager}\index{Projet\+Manager@{Projet\+Manager}}
 
 
-Classe représentant le manager de projet.  
+Classe représentant le manager de \hyperlink{class_projet}{Projet}.  
 
 
 
@@ -16,7 +16,7 @@ Q\+Vector$<$ \hyperlink{class_projet}{Projet} $\ast$ $>$ \hyperlink{class_projet
 \item 
 \hyperlink{class_projet}{Projet} $\ast$ \hyperlink{class_projet_manager_a1c547839afb77faaa3eb2f37e0c869a7}{add\+Projet} (const Q\+String \&t, const Q\+String \&d)
 \item 
-void \hyperlink{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}{supp\+Projet} (\hyperlink{class_projet}{Projet} $\ast$projet)
+void \hyperlink{class_projet_manager_a03685affdec85e48e6f4ab5128da0701}{supp\+Projet} (\hyperlink{class_projet}{Projet} $\ast$\hyperlink{class_projet}{Projet})
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -47,9 +47,9 @@ static \hyperlink{class_projet_manager}{Projet\+Manager} \hyperlink{class_projet
 
 
 \subsection{Detailed Description}
-Classe représentant le manager de projet. 
+Classe représentant le manager de \hyperlink{class_projet}{Projet}. 
 
-Le manager de projet est unique et ne doit être instancié qu\textquotesingle{}une seule fois. Il utilise donc le design pattern singleton. Il y a une composition entre \hyperlink{class_projet_manager}{Projet\+Manager} et \hyperlink{class_projet}{Projet}. En effet, \hyperlink{class_projet_manager}{Projet\+Manager} détermine la durée de vie d\textquotesingle{}un \hyperlink{class_projet}{Projet}. 
+Le manager de \hyperlink{class_projet}{Projet} est unique et ne doit être instancié qu\textquotesingle{}une seule fois. Il utilise donc le design pattern singleton. Il y a une composition entre \hyperlink{class_projet_manager}{Projet\+Manager} et \hyperlink{class_projet}{Projet}. En effet, \hyperlink{class_projet_manager}{Projet\+Manager} détermine la durée de vie d\textquotesingle{}un \hyperlink{class_projet}{Projet}. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_projet_manager_a98d8ba59bd9bc6eec2ec5285102ac9a1}{}\index{Projet\+Manager@{Projet\+Manager}!Projet\+Manager@{Projet\+Manager}}
@@ -91,7 +91,7 @@ Créer et ajoute un \hyperlink{class_projet}{Projet} \hypertarget{class_projet_m
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_projet_manager_a2b7281842b818a8e2cd85a81ef270930}
-Renvoie un vecteur contenant tous les projets \hypertarget{class_projet_manager_ad61417127cad478ea812d560b18b975d}{}\index{Projet\+Manager@{Projet\+Manager}!Instance@{Instance}}
+Renvoie un vecteur contenant tous les Projets \hypertarget{class_projet_manager_ad61417127cad478ea812d560b18b975d}{}\index{Projet\+Manager@{Projet\+Manager}!Instance@{Instance}}
 \index{Instance@{Instance}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projet\+Manager} \& Projet\+Manager\+::\+Instance (
 \begin{DoxyParamCaption}
@@ -105,13 +105,13 @@ Instancie \hyperlink{class_projet_manager}{Projet\+Manager} \hypertarget{class_p
 \item[{const {\bf Projet\+Manager} \&}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_projet_manager_a25b560fb4e617952ad093bbe74315aaa}
-Opérateur de recopie \hypertarget{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}{}\index{Projet\+Manager@{Projet\+Manager}!supp\+Projet@{supp\+Projet}}
+Opérateur d\textquotesingle{}affectation \hypertarget{class_projet_manager_a03685affdec85e48e6f4ab5128da0701}{}\index{Projet\+Manager@{Projet\+Manager}!supp\+Projet@{supp\+Projet}}
 \index{supp\+Projet@{supp\+Projet}!Projet\+Manager@{Projet\+Manager}}
 \subsubsection[{supp\+Projet}]{\setlength{\rightskip}{0pt plus 5cm}void Projet\+Manager\+::supp\+Projet (
 \begin{DoxyParamCaption}
-\item[{{\bf Projet} $\ast$}]{projet}
+\item[{{\bf Projet} $\ast$}]{Projet}
 \end{DoxyParamCaption}
-)}\label{class_projet_manager_a7c76e23d621d3e904e3e2a1bdc4c176c}
+)}\label{class_projet_manager_a03685affdec85e48e6f4ab5128da0701}
 Détruit un \hyperlink{class_projet}{Projet} 
 
 \subsection{Member Data Documentation}

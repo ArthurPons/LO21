@@ -7,7 +7,7 @@ var class_projet_manager =
     [ "getListeProjet", "class_projet_manager.html#a2b7281842b818a8e2cd85a81ef270930", null ],
     [ "Instance", "class_projet_manager.html#ad61417127cad478ea812d560b18b975d", null ],
     [ "operator=", "class_projet_manager.html#a25b560fb4e617952ad093bbe74315aaa", null ],
-    [ "suppProjet", "class_projet_manager.html#a7c76e23d621d3e904e3e2a1bdc4c176c", null ],
+    [ "suppProjet", "class_projet_manager.html#a03685affdec85e48e6f4ab5128da0701", null ],
     [ "instance", "class_projet_manager.html#a88d70fa1123219b8dbb749818a441afa", null ],
     [ "listeProjets", "class_projet_manager.html#a46c2e5dab1e538225fa022030e3a31d1", null ]
 ];
